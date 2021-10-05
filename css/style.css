@@ -185,6 +185,12 @@ p {
  *	Created by Ire Aderinokun
  *
  */
+.nav__region {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
 .nav-container {
   background: #fff -webkit-gradient(linear, left bottom, left top, from(#DAE7FF), color-stop(145.19%, rgba(229, 235, 248, 0)));
   background: #fff linear-gradient(0deg, #DAE7FF 0%, rgba(229, 235, 248, 0) 145.19%);
@@ -406,7 +412,7 @@ span#toggleMenu-text {
 }
 
 #nav > ul > li > ul > li:not(:last-child) a {
-  border-bottom: 1px solid #fff;
+  border-bottom: none;
 }
 
 /* Third Level Dropdown */
@@ -414,6 +420,17 @@ span#toggleMenu-text {
   #nav > ul > li > ul > li > ul {
     top: 0;
     left: 15em;
+    /* width of ul */
+  }
+  #nav > ul > li > ul > li > ul > li > div {
+    top: 0;
+    left: 15em;
+    min-width: 41rem;
+    padding: 0.5rem;
+    height: 29.125rem;
+    background: #F0F8F7;
+    color: #0B327D;
+    overflow-y: scroll;
     /* width of ul */
   }
 }
@@ -478,6 +495,16 @@ span#toggleMenu-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.country {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 600px;
 }
 
 /* Javascript classes */
@@ -803,6 +830,11 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
   font-size: 0.75rem;
   color: #2C2C2C;
   position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
 }
 
 .calculation__select::after {

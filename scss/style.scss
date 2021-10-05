@@ -37,6 +37,14 @@ $nav-togglemenu-background-color: #C6D9FF;
  *
  */
 
+ .nav {
+	 &__region {
+		 font-weight: bold;
+		 margin-bottom: 10px;
+		 font-size: 1.1rem;
+	 }
+ }
+
 .nav-container {
   	background: #fff linear-gradient(0deg, #DAE7FF 0%, rgba(229, 235, 248, 0) 145.19%);
     min-height: $nav-min-height;
@@ -184,14 +192,26 @@ span#toggleMenu-text {
     background-color: $nav-background-hover-color; }
 
 #nav > ul > li > ul > li:not(:last-child) a {
-  border-bottom: 1px solid $nav-border-color; }
+  border-bottom: none; }
 
 /* Third Level Dropdown */
 @media screen and (min-width: 40em) {
   #nav > ul > li > ul > li > ul {
     top: 0;
     left: $nav-item-width;
-    /* width of ul */ } }
+    /* width of ul */ } 
+	
+	#nav > ul > li > ul > li > ul > li > div {
+    top: 0;
+    left: $nav-item-width;
+	min-width: 41rem;
+	padding: 0.5rem;
+	height: 29.125rem;
+	background: $colorw;
+	color: $pryme-color;
+	overflow-y: scroll;
+    /* width of ul */ }
+	}
 
 @media screen and (max-width: 40em) {
   #nav > ul > li > ul > li > ul {
@@ -237,6 +257,11 @@ span#toggleMenu-text {
 
 .flex {
 	display: flex;
+}
+.country {
+	display: flex;
+	justify-content: space-between;
+	width: 600px;
 }
 
 /* Javascript classes */
@@ -506,11 +531,11 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 		font-size: 0.75rem;
 		color: $colord;
 		position: relative;
-		// -webkit-appearance: none;
-		// -moz-appearance: none;
-		// -ms-appearance: none;
-		// appearance: none;
-		// outline: 0;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		outline: 0;
 	} 
 	&__select::after {
 		content: "▼";
