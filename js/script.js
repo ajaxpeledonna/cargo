@@ -27,7 +27,7 @@ $(document).ready(function() {
 	})
 
     // Add plus mark to li that have a sub menu
-    //$('li:has("ul") > a').append('<span class="plusMark">+</span>');
+    $('li:has("ul") > a').append('<span class="plusMark">></span>');
 
 
 

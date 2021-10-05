@@ -192,6 +192,7 @@ span#toggleMenu-text {
     top: 0;
     left: $nav-item-width;
     /* width of ul */ } }
+
 @media screen and (max-width: 40em) {
   #nav > ul > li > ul > li > ul {
     width: 100%;
@@ -206,6 +207,37 @@ span#toggleMenu-text {
 
 #nav > ul > li > ul > li > ul > li:not(:last-child) > a {
   border-bottom: 1px solid $nav-border-color; }
+
+
+
+  /* 4 Level Dropdown */
+@media screen and (min-width: 40em) {
+  #nav > ul > li > ul > li > ul > li > ul{
+    top: 0;
+    left: $nav-item-width;
+	overflow: scroll;
+	overflow-x: hidden;
+	height: 23rem;
+    /* width of ul */ } }
+@media screen and (max-width: 40em) {
+  #nav > ul > li > ul > li > ul > li > ul{
+    width: 100%;
+    position: relative; }
+    #nav > ul > li > ul > li > ul > li > ul:not(.js-showElement) {
+      display: none; } }
+
+#nav > ul > li > ul > li > ul > li > ul > li > a {
+  background-color: $nav-background-color; }
+  #nav > ul > li > ul > li > ul > li > ul > li > a:hover, #nav > ul > li > ul > li > ul > li > ul > li > a:focus {
+    background-color: $nav-border-color; }
+
+#nav > ul > li > ul > li > ul > li > ul > li:not(:last-child) > a {
+  border-bottom: 1px solid $nav-border-color; }
+
+
+.flex {
+	display: flex;
+}
 
 /* Javascript classes */
 #nav .js-hideElement {

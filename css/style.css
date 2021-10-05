@@ -440,6 +440,46 @@ span#toggleMenu-text {
   border-bottom: 1px solid #fff;
 }
 
+/* 4 Level Dropdown */
+@media screen and (min-width: 40em) {
+  #nav > ul > li > ul > li > ul > li > ul {
+    top: 0;
+    left: 15em;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 23rem;
+    /* width of ul */
+  }
+}
+
+@media screen and (max-width: 40em) {
+  #nav > ul > li > ul > li > ul > li > ul {
+    width: 100%;
+    position: relative;
+  }
+  #nav > ul > li > ul > li > ul > li > ul:not(.js-showElement) {
+    display: none;
+  }
+}
+
+#nav > ul > li > ul > li > ul > li > ul > li > a {
+  background-color: #F0F8F7;
+}
+
+#nav > ul > li > ul > li > ul > li > ul > li > a:hover, #nav > ul > li > ul > li > ul > li > ul > li > a:focus {
+  background-color: #fff;
+}
+
+#nav > ul > li > ul > li > ul > li > ul > li:not(:last-child) > a {
+  border-bottom: 1px solid #fff;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /* Javascript classes */
 #nav .js-hideElement {
   display: none;
