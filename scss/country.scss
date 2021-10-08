@@ -856,3 +856,119 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
         filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
     }
 }
+
+.route {
+    background: $pryme-color;
+    padding: 3.2rem 0;
+
+    &__wrapper {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: $colorw;
+    }
+
+
+.tabs {
+  position: relative;
+  margin: 3rem 0;
+  min-height: 20rem;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.tabs::before,
+.tabs::after {
+  content: "";
+  display: table;
+}
+.tabs::after {
+  clear: both;
+}
+.tab {
+  float: left;
+  margin-right: 0.7rem;
+}
+// .tab:first-child {
+//   margin-left: 100px;
+// }
+.tab-switch {
+  display: none;
+}
+.tab-label {
+  position: relative;
+  display: block;
+  line-height: 2.75em;
+  height: 3.5em;
+  padding: 0 1.618em;
+  background: $colorw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $pryme-color;
+  cursor: pointer;
+  top: 0;
+  transition: all 0.25s;
+  span {
+      opacity: 0;
+      width: 0;
+      transition: 0.3s;
+  }
+}
+.tab-label:hover {
+  top: -0.25rem;
+  transition: top 0.25s;
+}
+.tab-content {
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  top: 2.75em;
+  left: 0;
+  padding: 1.618rem 1.618rem 1.618rem 0;
+  color: $colorw;
+  border-bottom: 0.25rem solid #bdc3c7;
+  opacity: 0;
+  &__title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 3rem 0 1rem;
+  }
+  p {
+      font-size: 14px;
+      max-width: 42.5rem;
+  }
+}
+.tab-switch:checked + .tab-label {
+  background: linear-gradient(180deg, #EB0202 0%, #9F0202 100%);
+  color: $colorw;
+  border-bottom: 0;
+  transition: all 0.35s;
+  z-index: 1;
+  top: -0.0625rem;
+  
+  span {
+      opacity: 1;
+      margin-left: 1.8rem;
+      width: auto;
+      transition: 0.3s;
+  }
+  .tabs-icon {
+    stroke: $colorw;
+    background: none;
+    }
+}
+.tabs-icon {
+    stroke: $pryme-color;
+    //background: $colorw;
+}
+.tab-switch:checked + label + .tab-content {
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.35s;
+}
+}

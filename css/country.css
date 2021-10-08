@@ -1280,4 +1280,147 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
   -webkit-filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
           filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
 }
+
+.route {
+  background: #0B327D;
+  padding: 3.2rem 0;
+}
+
+.route__wrapper {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.route__title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #F0F8F7;
+}
+
+.route .tabs {
+  position: relative;
+  margin: 3rem 0;
+  min-height: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+}
+
+.route .tabs::before,
+.route .tabs::after {
+  content: "";
+  display: table;
+}
+
+.route .tabs::after {
+  clear: both;
+}
+
+.route .tab {
+  float: left;
+  margin-right: 0.7rem;
+}
+
+.route .tab-switch {
+  display: none;
+}
+
+.route .tab-label {
+  position: relative;
+  display: block;
+  line-height: 2.75em;
+  height: 3.5em;
+  padding: 0 1.618em;
+  background: #F0F8F7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #0B327D;
+  cursor: pointer;
+  top: 0;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.route .tab-label span {
+  opacity: 0;
+  width: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.route .tab-label:hover {
+  top: -0.25rem;
+  -webkit-transition: top 0.25s;
+  transition: top 0.25s;
+}
+
+.route .tab-content {
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  top: 2.75em;
+  left: 0;
+  padding: 1.618rem 1.618rem 1.618rem 0;
+  color: #F0F8F7;
+  border-bottom: 0.25rem solid #bdc3c7;
+  opacity: 0;
+}
+
+.route .tab-content__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 3rem 0 1rem;
+}
+
+.route .tab-content p {
+  font-size: 14px;
+  max-width: 42.5rem;
+}
+
+.route .tab-switch:checked + .tab-label {
+  background: -webkit-gradient(linear, left top, left bottom, from(#EB0202), to(#9F0202));
+  background: linear-gradient(180deg, #EB0202 0%, #9F0202 100%);
+  color: #F0F8F7;
+  border-bottom: 0;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  z-index: 1;
+  top: -0.0625rem;
+}
+
+.route .tab-switch:checked + .tab-label span {
+  opacity: 1;
+  margin-left: 1.8rem;
+  width: auto;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.route .tab-switch:checked + .tab-label .tabs-icon {
+  stroke: #F0F8F7;
+  background: none;
+}
+
+.route .tabs-icon {
+  stroke: #0B327D;
+}
+
+.route .tab-switch:checked + label + .tab-content {
+  z-index: 2;
+  opacity: 1;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
 /*# sourceMappingURL=country.css.map */
