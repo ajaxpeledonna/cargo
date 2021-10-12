@@ -650,15 +650,15 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 	}
 	&__title::before {
 		content: "01";
-		font-size: 150px;
-		font-weight: 400;
+		font-size: 210px;
+		font-weight: 900;
 		position: absolute;
-		letter-spacing: 0.4rem;
-		top: 3.125rem;
-		left: -9rem;
-		font-family: 'Staatliches', cursive;
+		letter-spacing: -0.7rem;
+		top: 2.125rem;
+        left: -11rem;
+		font-family: 'Roboto', sans-serif;
 		opacity: 0.1;
-		color: transparent;
+		color: $pryme-color;
     	-webkit-text-stroke: 3px $pryme-color;
 	}
 	&__text {
@@ -860,7 +860,8 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 .route {
     background: $pryme-color;
     padding: 3.2rem 0;
-
+    position: relative;
+    height: auto;
     &__wrapper {
         max-width: 100%;
         width: 100%;
@@ -870,13 +871,28 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
         font-size: 2.5rem;
         font-weight: 600;
         color: $colorw;
+        position: relative;
+        margin-top: 2rem;
     }
+    &__title::before {
+		content: "02";
+		font-size: 220px;
+		font-weight: 900;
+		position: absolute;
+		letter-spacing: -0.3rem;
+		top: 2.125rem;
+        left: -12.5rem;
+		font-family: 'Roboto', sans-serif;
+		opacity: 0.1;
+		color: $colorw;
+        z-index: 2;
+	}
 
 
 .tabs {
   position: relative;
   margin: 3rem 0;
-  min-height: 20rem;
+  min-height: 30rem;
   display: flex;
   justify-content: flex-start;
   width: 100%;
@@ -893,6 +909,9 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
   float: left;
   margin-right: 0.7rem;
 }
+.tab:first-child{
+  margin-left: 6rem;
+}
 // .tab:first-child {
 //   margin-left: 100px;
 // }
@@ -903,7 +922,7 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
   position: relative;
   display: block;
   line-height: 2.75em;
-  height: 3.5em;
+  height: 3em;
   padding: 0 1.618em;
   background: $colorw;
   display: flex;
@@ -931,16 +950,79 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
   left: 0;
   padding: 1.618rem 1.618rem 1.618rem 0;
   color: $colorw;
-  border-bottom: 0.25rem solid #bdc3c7;
   opacity: 0;
+  &__wrap:last-child {
+      margin-left: 7.5rem;
+  }
   &__title {
       font-size: 1.5rem;
       font-weight: 600;
       margin: 3rem 0 1rem;
   }
+  &__sub-title {
+      color: $pryme-color;
+      font-size: 1.6rem;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 2.5rem;
+  }
   p {
-      font-size: 14px;
+      font-size: 0.875rem;
       max-width: 42.5rem;
+      margin-top: 0.5rem;
+  }
+  &__advantages {
+      background: $colorw;
+      width: 100%;
+      height: auto;
+      padding: 2.5rem 3.125rem 5rem;
+      margin-top: 6.25rem;
+  }
+  &__row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 1.25rem 0.3125rem 0.3125rem;
+      width: 8.75rem;
+      height: 8.75rem;
+      margin-right: 1.25rem;
+      font-size: 0.8rem;
+      filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
+      text-align: center;
+      line-height: 100%;
+      &--plus {
+          background: $pryme-color;
+      }
+      &--minus {
+          background: $colorw;
+          color: $pryme-color;
+      }
+  }
+  &__plus {
+      display: flex;
+  
+  }
+  &__minus {
+      display: flex;
+  }
+  &__icon-wrap {
+      width: 4.375rem;
+      height: 4.25rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+  }
+  &__icon {
+      margin-bottom: 0.25rem;
+  }
+  &__sm-text {
+      font-size: 0.65rem;
   }
 }
 .tab-switch:checked + .tab-label {
@@ -971,4 +1053,239 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
   opacity: 1;
   transition: all 0.35s;
 }
+}
+
+.pricing {
+    background: $main-color;
+    padding: 12.5rem 0 3.125rem;
+    color: $colorw;
+    &__text {
+        margin-top: 2rem;
+        max-width: 45.5rem;
+    }
+    &__table-wrap {
+        background: $colorw;
+        padding: 1.8rem 3rem;
+        margin: 6rem 0 1.25rem;
+    }
+    &__table {
+        color: #ffffff;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 25rem;
+    }
+    &__table-th {
+        padding: 0rem 0.3125rem;
+        background: #E98C00;
+        width: 193px;
+        height: 32px;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    &__table-td {
+        padding: 0rem 1.25rem;
+        width: 12rem;
+        height: 32px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-align: center;
+        line-height: 110%;
+        &--last {
+            font-size: 12px;
+            font-weight: 700;
+        }
+    }
+    tr {
+        background: #9DBFFF;
+    }
+    tr:nth-child(even) {
+        background: #C6D9FF;
+    }
+    &__sm-text {
+        font-size: 0.8rem;
+    }
+    &__sub-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 2rem 0 1.2rem;
+    }
+    &__list {
+        margin-left: 1.25rem;
+        li {
+            list-style-type: square;
+            font-weight: 400;
+            line-height: 180%;
+        }
+        
+    }
+    &__spec-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: 4rem 0 1.5rem;
+    }
+    &__spec-text {
+        margin-top: 1rem;
+        max-width: 45rem;
+    }
+    &__map {
+        margin-top: 3.2rem;
+        width: 100%;
+    }
+}
+
+.transport {
+    background: $colorw;
+    height: 200px;
+}
+
+.questions {
+    background: $pryme-color;
+    padding: 40px;
+    height: auto; 
+    position: relative;
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 3.2rem 0;
+        color: $colorw;
+        position: relative;
+    }
+    &__title::before {
+		content: "04";
+		font-size: 220px;
+		font-weight: 900;
+		position: absolute;
+		letter-spacing: -0.3rem;
+		top: 2.125rem;
+        left: -12.5rem;
+		font-family: 'Roboto', sans-serif;
+		opacity: 0.1;
+		color: $colorw;
+        z-index: 2;
+	}
+    .accordion {
+        max-width: 55rem;
+        margin: 0 auto;
+    }
+    .accordion__item {
+        margin: 5px auto;
+        border-bottom: 1px solid $colorw;
+        padding: 5px 0;
+    }
+    .accordion__item .accordion__title {
+        position: relative;
+        display: block;
+        padding: 13px 60px 15px 0;
+        margin-bottom: 2px;
+        color: $colorw;
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-decoration: none;
+        -webkit-transition: background-color 0.2s;
+        transition: background-color 0.2s;
+        cursor: pointer;
+    }
+    
+    .accordion__item .accordion__title:hover {
+        transition: all 0.5s ease-out;
+    }
+    .accordion__item .accordion__title:active {
+        transition: all 0.5s ease-out;
+        padding: 13px 60px 15px 13px;
+    }
+    .accordion__item .accordion-active {
+        background: rgba(20, 143, 182, 0.3);
+        padding: 13px 60px 15px 13px;
+        transition: all 0.2s ease-out;
+    }
+    .accordion__item .accordion__title .accordion__arrow {
+        position: absolute;
+        top: 13px; right: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        color: #fff;
+        line-height: 30px;
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-right: 5px;
+        -webkit-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+    .accordion__item .accordion__rotate {
+        transform: rotate(-90deg);
+    }
+    .accordion__item .accordion__content {
+        padding: 30px;
+        margin-bottom: 2px;
+        font-size: 1.2rem;
+        font-weight: 300;
+        display: none;
+        color: $colorw;
+        background: rgba(20, 143, 182, 0.3);
+    }
+    .accordion__content {
+        ul {
+            margin-left: 1rem;
+        }
+        li {
+            list-style-type: disc;
+        }
+    }
+    .accordion__item .accordion__arrow-item {
+        font-weight: 700;
+    }
+
+}
+
+.docs {
+    color: $pryme-color;
+    padding: 3rem 0;
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    &__sub-title {
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin: 2.5rem 0 2rem;
+    }
+    &__cap {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin-left: 0.85rem;
+        margin-bottom: 1.5rem;
+    }
+    &__wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__list {
+        margin-left: 2rem;   
+        border-right: 1px solid $pryme-color;
+        &--2 {
+            border-right: none;
+        }
+    }
+    &__items {
+        list-style-type: square;
+        margin-bottom: 0.8rem;
+        max-width: 30rem;
+    }
+
+    &__link {
+        text-decoration: underline;
+        font-size: 1.125rem;
+        font-weight: 300;
+        line-height: 80%;
+        color: $pryme-color;
+    }
+    &__import {
+        width: 50%;
+    }
+    &__export {
+        width: 50%;
+    }
 }
