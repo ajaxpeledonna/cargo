@@ -7,7 +7,7 @@
   border: 0px;
 }
 
-*,
+*, 
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
