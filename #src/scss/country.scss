@@ -893,8 +893,28 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
         filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
     }
 }
-.main-bg {
+.route-price {
     background: linear-gradient(360deg, #003267 0%, #00709E 74.45%, #013368 100%);
+    position: relative;
+    z-index: 1;
+    &__decor {
+        width: 35%;
+        height: 34%;
+        border: 50px solid $colorw;
+        opacity: 0.05;
+        position: absolute;
+        z-index: -1;
+        &--right {
+            right: 0;
+            top: 10%;
+            border-right: none;
+        }
+        &--left {
+            left: 0;
+            bottom: 10%;
+            border-left: none;
+        }
+    }
 }
 .route {
     padding: 3.2rem 0;
@@ -1178,7 +1198,7 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 
 .questions {
     background: $pryme-color;
-    padding: 40px;
+    padding: 9rem 0;
     height: auto; 
     position: relative;
     &__title {
@@ -1202,7 +1222,7 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
         z-index: 2;
 	}
     .accordion {
-        max-width: 55rem;
+        max-width: 58rem;
         margin: 0 auto;
     }
     .accordion__item {
@@ -1212,17 +1232,31 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
     }
     .accordion__item .accordion__title {
         position: relative;
-        display: block;
+        display: flex;
         padding: 13px 60px 15px 0;
         margin-bottom: 2px;
         color: $colorw;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         font-weight: 300;
+        line-height: 130%;
         text-decoration: none;
         -webkit-transition: background-color 0.2s;
         transition: background-color 0.2s;
         cursor: pointer;
     }
+    // .accordion__item:last-child .accordion__title {
+    //     margin-left: 3em;
+    //     text-indent: -2.6em;
+    // }
+    .accordion__item .accordion__title-text {
+        span {
+            font-weight: 600;
+            font-family: $font-alt;
+            font-size: 1.5rem;
+            margin-right: 1.5rem;
+        }
+    }
+    
     
     .accordion__item .accordion__title:hover {
         transition: all 0.5s ease-out;
@@ -1252,13 +1286,20 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
         -webkit-transition: all 0.2s ease-out;
         transition: all 0.2s ease-out;
     }
-    .accordion__item .accordion__rotate {
-        transform: rotate(-90deg);
+
+    .accordion__item:last-child .accordion__title .accordion__arrow {
+        top: 1.5rem;
     }
+    
+    .accordion__item .accordion__rotate {
+        transform: rotate(-45deg);
+    }
+    
     .accordion__item .accordion__content {
         padding: 30px;
         margin-bottom: 2px;
-        font-size: 1.2rem;
+        font-size: 1rem;
+        line-height: 144%;
         font-weight: 300;
         display: none;
         color: $colorw;
@@ -1266,21 +1307,21 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
     }
     .accordion__content {
         ul {
-            margin-left: 1rem;
+            margin: 1rem 0 1rem 1.5rem;
         }
         li {
             list-style-type: disc;
         }
     }
     .accordion__item .accordion__arrow-item {
-        font-weight: 700;
+        font-weight: 300;
+        font-size: 3.5rem;
     }
-
 }
 
 .docs {
-    color: $pryme-color;
-    padding: 4rem 0;
+    color: $pryme-alt;
+    padding: 8rem 0 4rem;
     &__title {
         font-size: 2.5rem;
         font-weight: 700;
@@ -1296,7 +1337,7 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
         left: -13rem; 
 		font-family:$font-decor;
 		opacity: 0.1;
-		color: $pryme-color;
+		color: $main-color;
         z-index: 2;
 	}
     &__sub-title {
@@ -1310,23 +1351,37 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
         margin-left: 0.85rem;
         margin-bottom: 1.5rem;
     }
+    &__decor {
+        width: 35rem;
+        height: 35rem;
+        border: 50px solid $main-color;
+        opacity: 0.05;
+        position: absolute;
+        z-index: 0;
+        &--1 {
+            right: 0;
+            top: 25%;
+        }
+        &--2 {
+            right: 15%;
+            top: 15%;
+        }
+    }
     &__wrap {
+        position: relative;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        flex-direction: column;
         margin-top: 2rem;
     }
     &__list {
         margin-left: 2rem;   
-        border-right: 1px solid $pryme-color;
-        &--2 {
-            border-right: none;
-        }
     }
     &__items {
         list-style-type: square;
         margin-bottom: 0.8rem;
-        max-width: 30rem;
+        max-width: 41rem;
     }
 
     &__link {
@@ -1334,47 +1389,73 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
         font-size: 1.125rem;
         font-weight: 300;
         line-height: 80%;
-        color: $pryme-color;
+        color: $pryme-alt;
     }
     &__import {
-        width: 50%;
+        margin-bottom: 3rem;
     }
     &__export {
-        width: 50%;
         margin-bottom: 5rem;
+        
     }
     .slick-prev, .slick-next {
         top: 100%;
     }
+    .slick-prev{
+        left: 35%;
+    }
+    .slick-next {
+        right: 36%;
+    }
     .slick-prev::before{
-        color: $pryme-color;
+        color: $pryme-alt;
         font-size: 60px;
+        content: '<';
     }
     .slick-next::before{
-        color: $pryme-color;
+        color: $pryme-alt;
         font-size: 60px;
+        content: '>';
     }
-    .slick-dots li button {
-        background:$pryme-color;
+    .slick-dots {
+        bottom: -35px;
     }
-    .slick-dots li .slick-active button::before {
-        background: green;
+    .slick-dots li {
+        background: $pryme-alt;
+        border-radius: 50%;
+    }
+    .slick-dots li + .slick-active {
+        background: $main-color;
     }
 }
 
 .info {
     background: #E9F2FB;
-    padding: 3.2rem 0;
+    padding: 8rem 0 8rem;
+    color: $pryme-alt;
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
     &__wrap {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        flex-direction: column; 
+        width: 100%;
+    }
+    &__img-wrap {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 10% 0;
     }
     &__left {
-        width: 50%;
+        width: 100%;
     }
     &__right {
-        width: 50%;
+        width: 100%;
     }
     &__title {
         font-size: 2.5rem;
@@ -1383,7 +1464,7 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
         position: relative;
     }
     &__title::before {
-		content: "06";
+		content: "05";
 		font-size: 220px;
 		font-weight: 900;
 		position: absolute;
@@ -1409,9 +1490,95 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
         margin-bottom: 0.5rem;
     }
     &__link {
-        color: $color-gray;
+        color: $pryme-alt;;
         text-decoration: underline;
         font-weight: 300;
+    }
+    &__img {
+        filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
+    }
+}
+
+.service {
+    position: relative;
+    padding: 3.2rem 0 3.2rem;
+    &__plunk {
+        position: absolute;
+        left: 0;
+        top: 3.2rem;
+        width: 44%;
+        background: $pryme-color;
+        height: 3.2rem;
+        z-index: -1;
+    }
+    &__title {
+        color: $colorw;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding-top: 0.8rem;
+    }
+    &__row {
+        display: flex;
+        margin-top: 4rem;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        min-width: 12rem;
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        color: $pryme-alt;
+        border: 1px solid $pryme-alt;
+        font-weight: 400;
+        min-width: 11rem;
+        margin-bottom: 1.3rem;
+        min-height: 2.5rem;
+    }
+    &__btn:hover {
+        background: linear-gradient(180deg, #EB0202 0%, #9F0202 100%);
+		transition: 0.2s;
+        border: none;
+        color: $colorw;
+        font-weight: 500;
+	}
+	&__btn:active {
+        border: none;
+        background: linear-gradient(180deg, #EB0202 0%, #9F0202 100%);
+		box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.6);
+		transition: 0.2s;
+        color: $colorw;
+        font-weight: 500;
+	}
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        width: 75%;
+        justify-content: flex-start;
+    }
+    &__item {
+        position: relative;
+        margin: 0  0 2.5rem 2.5rem;
+    }
+    &__link-cap {
+        position: absolute;
+        left: 0;
+        background: $pryme-color;
+        bottom: -0.8rem;
+        height: 2.2rem;
+        width: 12.5rem;
+        color: $colorw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__img {
+        filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
     }
 }
 

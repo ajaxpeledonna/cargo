@@ -150,7 +150,7 @@ $(".slider").slick({
   dots: true,
   autoplay: true,
   autoplaySpeed: 1000,
-
+  slidesToShow: 5,
   // the magic
   responsive: [{
 
