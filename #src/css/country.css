@@ -1493,7 +1493,7 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
   width: 100%;
   height: auto;
   padding: 2.5rem 3.125rem 5rem;
-  margin-top: 6.25rem;
+  margin-top: 3.25rem;
 }
 
 .route .tab-content__row {
@@ -1613,47 +1613,60 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 }
 
 .pricing {
-  padding: 12.5rem 0 3.125rem;
+  padding: 10rem 0 3.125rem;
   color: #F0F8F7;
 }
 
 .pricing__text {
-  margin-top: 2rem;
+  margin: 2rem 0 3rem;
   max-width: 45.5rem;
 }
 
+.pricing__footnote {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.75rem;
+  margin: 0.5rem 0 5rem;
+}
+
 .pricing__table-wrap {
-  margin: 6rem 0 1.25rem;
+  margin: 2rem 0 1.25rem;
 }
 
 .pricing__table {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
-  margin-bottom: 5rem;
 }
 
 .pricing__table-th {
-  padding: 0rem 0.3125rem;
-  background: #E98C00;
-  width: 193px;
-  height: 32px;
+  padding: 0.75rem 1.5rem;
+  background: #2AABC1;
+  width: auto;
+  min-height: 2.25rem;
   font-size: 1rem;
   font-weight: 600;
 }
 
 .pricing__table-td {
-  padding: 0rem 1.25rem;
-  width: 12rem;
-  height: 32px;
+  padding: 0rem 1.5rem;
+  width: auto;
+  height: 2.25rem;
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   line-height: 110%;
+  color: #0B327D;
 }
 
 .pricing__table-td--last {
   font-size: 12px;
   font-weight: 700;
+}
+
+.pricing__table-td:first-child {
+  text-align: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
 .pricing tr {
@@ -1672,6 +1685,13 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
   font-size: 1.5rem;
   font-weight: 600;
   margin: 2rem 0 1.2rem;
+}
+
+.pricing__table-cap {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 1.25rem;
 }
 
 .pricing__list {
@@ -1966,15 +1986,18 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 
 .docs .slick-dots {
   bottom: -35px;
+  color: inherit;
 }
 
 .docs .slick-dots li {
   background: #016F9D;
   border-radius: 50%;
+  color: inherit;
 }
 
 .docs .slick-dots li + .slick-active {
   background: #0B327D;
+  color: inherit;
 }
 
 .info {
