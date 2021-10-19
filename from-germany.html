@@ -9,25 +9,26 @@
 	<meta name="description" content="международная перевозка грузов" />
     <meta name="robots" content="all"/>
 
-    <link rel="stylesheet" type="text/css" href="css/country.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/country.css">
 
 	<title>Global Expeditors</title>
 	<!-- <script src="js/jquery-3.6.0.min"></script> -->
     
 </head>
-
+ 
+ 
 <body>
     <div class="wrapper">
         <div class="side-nav">
             <ul class="side-nav__list">
-                <li class="side-nav__item"><a href="#" class="side-nav__link active">Описание</a></li>
-                <li class="side-nav__item"><a href="#" class="side-nav__link">Виды транспорта</a></li>
-                <li class="side-nav__item"><a href="#" class="side-nav__link">Особенности</a></li>
-                <li class="side-nav__item"><a href="#" class="side-nav__link">Вопрос/ответ</a></li>
-                <li class="side-nav__item"><a href="#" class="side-nav__link">Документы</a></li>
-                <li class="side-nav__item"><a href="#" class="side-nav__link">Полезные ссылки</a></li>                           
+                <li class="side-nav__item"><a href="#about" class="side-nav__link active">Описание</a></li>
+                <li class="side-nav__item"><a href="#imp-exp" class="side-nav__link">Виды транспорта</a></li>
+                <li class="side-nav__item"><a href="#route-price" class="side-nav__link">Особенности</a></li>
+                <li class="side-nav__item"><a href="#questions" class="side-nav__link">Вопрос/ответ</a></li>
+                <li class="side-nav__item"><a href="#docs" class="side-nav__link">Документы</a></li>
+                <li class="side-nav__item"><a href="#info" class="side-nav__link">Полезные ссылки</a></li>                           
             </ul>
         </div>
         <header class="header">
@@ -401,7 +402,7 @@
                 
         </header>
 
-        <section class="from-germany">
+        <section class="from-germany" id="from-germany">
             <div class="container">
                 <div class="from-germany__text-wrap">
                     <h2 class="from-germany__title">Перевозка грузов: Германия</h2>
@@ -447,66 +448,185 @@
                             </p>
                         </div>
                     </div>
-                    <div class="import__table-wrap">
-                        <h4 class="import__table-title">Структура импорта по данным за 2019 год</h4>
-                        <table class="import__table">
-                            <tr>
-                                <th class="import__table-th">Группа товаров</th>
-                                <th class="import__table-th">Общий импорт (млн. $)</th>
-                                <th class="import__table-th">Доля</th>
-                            </tr>
-                            <tr>
-                                <td class="import__table-td">Машины, оборудование и аппаратура</td>
-                                <td class="import__table-td">7830</td>
-                                <td class="import__table-td">31,2%</td>
-                            </tr>
-                            <tr>
-                                <td class="import__table-td">Продукция химической промышленности</td>
-                                <td class="import__table-td">5 510</td>
-                                <td class="import__table-td">22,0%</td>
-                            </tr>
-                            <tr>
-                                <td class="import__table-td">Транспорт</td>
-                                <td class="import__table-td">3 820</td>
-                                <td class="import__table-td">15,2%</td>
-                            </tr>
-                            <tr>
-                                <td class="import__table-td">Пластмассы, каучук и резина</td>
-                                <td class="import__table-td">1 930</td>
-                                <td class="import__table-td">7,7%</td>
-                            </tr>
-                            <tr>
-                                <td class="import__table-td">Металлы и изделия из них</td>
-                                <td class="import__table-td">1 690</td>
-                                <td class="import__table-td">6,7%</td>
-                            </tr>
-                            <tr>
-                                <td class="import__table-td">Инструменты и аппараты, часы</td>
-                                <td class="import__table-td">1 300</td>
-                                <td class="import__table-td">5,2%</td>
-                            </tr>
-                            <tr>
-                                <td class="import__table-td">Пищевые продукты, напитки, табак</td>
-                                <td class="import__table-td">986</td>
-                                <td class="import__table-td">3,9%</td>
-                            </tr>
-                            <tr>
-                                <td class="import__table-td">Другие статьи</td>
-                                <td class="import__table-td">2 034</td>
-                                <td class="import__table-td">8,1%</td>
-                            </tr>
-                            <tr>
-                                <td class="import__table-td import__table-td--last">Итого</td>
-                                <td class="import__table-td">25 100</td>
-                                <td class="import__table-td"></td>
-                            </tr>
-                        </table>
+                    <div class="table-slider">
+                        <div>
+                        <div class="import__table-wrap">
+                            <h4 class="import__table-title">Структура импорта по данным за 2019 год</h4>
+                            <table class="import__table">
+                                <tr>
+                                    <th class="import__table-th">Группа товаров</th>
+                                    <th class="import__table-th">Общий импорт (млн. $)</th>
+                                    <th class="import__table-th">Доля</th>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Машины, оборудование и&nbsp;аппаратура</td>
+                                    <td class="import__table-td">7830</td>
+                                    <td class="import__table-td">31,2%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Продукция химической промышленности</td>
+                                    <td class="import__table-td">5 510</td>
+                                    <td class="import__table-td">22,0%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Транспорт</td>
+                                    <td class="import__table-td">3 820</td>
+                                    <td class="import__table-td">15,2%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Пластмассы, каучук и резина</td>
+                                    <td class="import__table-td">1 930</td>
+                                    <td class="import__table-td">7,7%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Металлы и изделия из них</td>
+                                    <td class="import__table-td">1 690</td>
+                                    <td class="import__table-td">6,7%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Инструменты и аппараты, часы</td>
+                                    <td class="import__table-td">1 300</td>
+                                    <td class="import__table-td">5,2%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Пищевые продукты, напитки, табак</td>
+                                    <td class="import__table-td">986</td>
+                                    <td class="import__table-td">3,9%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Другие товарные группы</td>
+                                    <td class="import__table-td">2 034</td>
+                                    <td class="import__table-td">8,1%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td import__table-td--last">Итого</td>
+                                    <td class="import__table-td">25 100</td>
+                                    <td class="import__table-td"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        </div>
+                        <div>
+                        <div class="import__table-wrap">
+                            <h4 class="import__table-title">Экспорт из России в Германию, 2019</h4>
+                            <table class="import__table">
+                                <tr>
+                                    <th class="import__table-th">Группа товаров</th>
+                                    <th class="import__table-th">Общий экспорт (млн. $)</th>
+                                    <th class="import__table-th">Доля</th>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Минеральные продукты</td>
+                                    <td class="import__table-td">13 000</td>
+                                    <td class="import__table-td">46.4%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Металлы и изделия из них</td>
+                                    <td class="import__table-td">1 430</td>
+                                    <td class="import__table-td">5.1%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Драгоценности</td>
+                                    <td class="import__table-td">703</td>
+                                    <td class="import__table-td">2.5%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Машины, оборудование и&nbsp;аппаратура</td>
+                                    <td class="import__table-td">462</td>
+                                    <td class="import__table-td">1.6%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Продукция химической промышленности</td>
+                                    <td class="import__table-td">318</td>
+                                    <td class="import__table-td">1.1%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Древесина и изделия из нее</td>
+                                    <td class="import__table-td">307</td>
+                                    <td class="import__table-td">1.1%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Пластмассы, каучук и резина</td>
+                                    <td class="import__table-td">249</td>
+                                    <td class="import__table-td">0.9%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Другие товарные группы</td>
+                                    <td class="import__table-td">11 531</td>
+                                    <td class="import__table-td">41.3%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td import__table-td--last">Итого</td>
+                                    <td class="import__table-td">28 000</td>
+                                    <td class="import__table-td"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        </div>
+                        <div>
+                        <div class="import__table-wrap">
+                            <h4 class="import__table-title">Товарооборот между Германией и Россией, 2019</h4>
+                            <table class="import__table">
+                                <tr>
+                                    <th class="import__table-th">Группа товаров</th>
+                                    <th class="import__table-th">Общий оборот (млн. $)</th>
+                                    <th class="import__table-th">Доля</th>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Минеральные продукты</td>
+                                    <td class="import__table-td">13 100</td>
+                                    <td class="import__table-td">24.7%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Машины, оборудование и&nbsp;аппаратура</td>
+                                    <td class="import__table-td">8 290</td>
+                                    <td class="import__table-td">15.6%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Продукция химической промышленности</td>
+                                    <td class="import__table-td">5 830</td>
+                                    <td class="import__table-td">11.0%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Транспорт</td>
+                                    <td class="import__table-td">3 930</td>
+                                    <td class="import__table-td">7.4%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Металлы и изделия из них</td>
+                                    <td class="import__table-td">3 120</td>
+                                    <td class="import__table-td">5.9%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Пластмассы, каучук и резина</td>
+                                    <td class="import__table-td">2 180</td>
+                                    <td class="import__table-td">4.1%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Инструменты и аппараты, часы</td>
+                                    <td class="import__table-td">1 440</td>
+                                    <td class="import__table-td">2.7%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td">Другие товарные группы</td>
+                                    <td class="import__table-td">15 210</td>
+                                    <td class="import__table-td">28.6%</td>
+                                </tr>
+                                <tr>
+                                    <td class="import__table-td import__table-td--last">Итого</td>
+                                    <td class="import__table-td">53 000</td>
+                                    <td class="import__table-td"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <div class="about__row about__row--2">
                     <div class="about__text-wrap">
@@ -586,7 +706,7 @@
             </div>
         </section>
 
-        <section class="imp-exp">
+        <section class="imp-exp" id="imp-exp">
             <div class="container">
                 <div class="imp-exp__plunk"></div>
                 <h2 class="imp-exp__title">Импорт и экспорт</h2>
@@ -638,7 +758,7 @@
             </div>
         </section>
 
-        <section class="route-price">
+        <section class="route-price" id="route-price">
             <div class="route-price__decor route-price__decor--left"></div>
             <div class="route-price__decor route-price__decor--right"></div>
             <div class="route">
@@ -953,7 +1073,7 @@
                                                         <div class="tab-content__icon-wrap">
                                                                 <img class="tab-content__icon" src="img/m-plus1.svg" alt="#">
                                                         </div>
-                                                        <span class="tab-content__sm-text">Откуда угодно и куда угодно</span>
+                                                        <span class="tab-content__sm-text">Откуда угодно и&nbsp;куда угодно</span>
                                                     </div> 
                                                     <div class="tab-content__item tab-content__item--plus">
                                                         <div class="tab-content__icon-wrap">
@@ -984,7 +1104,7 @@
                                                     <div class="tab-content__icon-wrap">
                                                             <img class="tab-content__icon" src="img/m-plus6.svg" alt="#">
                                                     </div>
-                                                    <span class="tab-content__sm-text">Весь процесс в одних руках</span>
+                                                    <span class="tab-content__sm-text">Весь процесс в&nbsp;одних руках</span>
                                                 </div>
                                                 </div>
                                             </div>
@@ -1010,54 +1130,57 @@
                         только после получения от заказчика всей информации о грузе: его типе, весе и объеме.
                     </p>
                     <div class="pricing__table-wrap">
+                            <h4 class="pricing__table-cap">FTL (комплектные грузы), стоимость грузовика</h4>
                             <table class="pricing__table">
                                 <tr>
-                                    <th rowspan="2" class="pricing__table-th">Город</th>
-                                    <th rowspan="2" class="pricing__table-th">Минимальная цена</th>
-                                    <th colspan="4"  class="pricing__table-th">Вес</th>
-                                    <th rowspan="2" class="pricing__table-th">Примечание</th>
-                                    <th rowspan="2" class="pricing__table-th">Сроки доставки</th>
+                                    <th class="pricing__table-th">Направление</th>
+                                    <th class="pricing__table-th">Срок (дней)</th>
+                                    <th class="pricing__table-th">Цена &euro;</th>
+                                    
                                 </tr>
                                 <tr>
-                                    <th class="pricing__table-th pricing__sm-text">до 500 кг</th>
-                                    <th class="pricing__table-th pricing__sm-text">500 - 1000 кг</th>
-                                    <th class="pricing__table-th pricing__sm-text">1000-2000 кг</th>
-                                    <th class="pricing__table-th pricing__sm-text">свыше 2000 кг</th>
+                                    <td class="pricing__table-td">Берлин – Москва</td>
+                                    <td class="pricing__table-td">7-9</td>
+                                    <td class="pricing__table-td">2600 &euro;</td>
                                 </tr>
                                 <tr>
-                                    <td class="pricing__table-td">Берлин</td>
-                                    <td class="pricing__table-td">6200 &euro;</td>
-                                    <td class="pricing__table-td">180</td>
-                                    <td class="pricing__table-td">185</td>
-                                    <td class="pricing__table-td">198</td>
-                                    <td class="pricing__table-td">205</td>
-                                    <td class="pricing__table-td">ежедневно</td>
-                                    <td class="pricing__table-td">24 часа</td>
-                                
+                                    <td class="pricing__table-td">Штутгарт – Москва</td>
+                                    <td class="pricing__table-td">8-10</td>
+                                    <td class="pricing__table-td">2800 &euro;</td>
                                 </tr>
                                 <tr>
-                                    <td class="pricing__table-td"></td>
-                                    <td class="pricing__table-td"></td>
-                                    <td class="pricing__table-td"></td>
-                                    <td class="pricing__table-td"></td>
-                                    <td class="pricing__table-td"></td>
-                                    <td class="pricing__table-td"></td>
-                                    <td class="pricing__table-td"></td>
-                                    <td class="pricing__table-td"></td>
-                            
-                                </tr>
-                                <tr>
-                                    <td class="pricing__table-td"></td>
-                                    <td class="pricing__table-td"></td>
-                                    <td class="pricing__table-td"></td>
-                                    <td class="pricing__table-td"></td>
-                                    <td class="pricing__table-td"></td>
-                                    <td class="pricing__table-td"></td>
-                                    <td class="pricing__table-td"></td>
-                                    <td class="pricing__table-td"></td>
-                            
+                                    <td class="pricing__table-td">Дюссельдорф – Москва</td>
+                                    <td class="pricing__table-td">8-10</td>
+                                    <td class="pricing__table-td">2800 &euro;</td>
                                 </tr>
                             </table>
+                        </div>
+                        <div class="pricing__table-wrap">
+                            <h4 class="pricing__table-cap">LTL (сборные грузы), стоимость 1 м3, 300 кг</h4>
+                            <table class="pricing__table">
+                                <tr>
+                                    <th class="pricing__table-th">Направление</th>
+                                    <th class="pricing__table-th">Срок (дней)</th>
+                                    <th class="pricing__table-th">Цена &euro;</th>
+                                    
+                                </tr>
+                                <tr>
+                                    <td class="pricing__table-td">Берлин – Москва</td>
+                                    <td class="pricing__table-td">7-9</td>
+                                    <td class="pricing__table-td">260 &euro;</td>
+                                </tr>
+                                <tr>
+                                    <td class="pricing__table-td">Штутгарт – Москва</td>
+                                    <td class="pricing__table-td">8-10</td>
+                                    <td class="pricing__table-td">270&euro;</td>
+                                </tr>
+                                <tr>
+                                    <td class="pricing__table-td">Дюссельдорф – Москва</td>
+                                    <td class="pricing__table-td">8-10</td>
+                                    <td class="pricing__table-td">270 &euro;</td>
+                                </tr>
+                            </table>
+                            <p class="pricing__footnote">Приведенные цены носят индикативный характер и не являются публичной офертой</p>
                         </div>
                         <h3 class="pricing__sub-title">Из чего складывается стоимость</h3>
                         <ul class="pricing__list">
@@ -1068,7 +1191,7 @@
                             <li>Необходимость спецтехники для погрузки/разгрузки товара</li>
                             <li>Дополнительные услуги: страхование, таможенное сопровождение, пломбировка, упаковка и т.д.</li>
                         </ul>
-                        <h3 class="pricing__spec-title">Города отправки, данные аэропортов, особенности</h3>
+                        <h3 class="pricing__spec-title">Особенности</h3>
                         <p class="pricing__spec-text">
                             Маршрут между Германией и Россией – один из самых востребованных. 
                             Основную долю экспорта занимают минеральные продукты, продукция черной металлургии, 
@@ -1092,7 +1215,7 @@
             </div>
         </section>
 
-        <section class="docs">
+        <section class="docs" id="docs">
             <div class="container">
                 <h2 class="docs__title">Документы</h2>
                 <h4 class="docs__sub-title">Перечень документов необходимый для перевозки грузов:</h4>
@@ -1238,7 +1361,7 @@
             </div>
         </section>
 
-        <section class="questions">
+        <section class="questions" id="questions">
             <div class="container">
                 <h2 class="questions__title">Вопросы и ответы</h2>
                 <div class="accordion">
@@ -1401,7 +1524,7 @@
             </div> 
         </section>
 
-        <section class="info">
+        <section class="info" id="info">
             <div class="container">
                 <h2 class="info__title">Полезно знать</h2>
                 <div class="info__row">
@@ -1617,6 +1740,7 @@
                         </ul>
                     </div>
                 </div>
+                <a href="#from-germany" class="footer__up-arrow"></a>
             </div>
         </footer>
 
