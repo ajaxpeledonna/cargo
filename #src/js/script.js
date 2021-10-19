@@ -154,9 +154,9 @@ $(".slider").slick({
   // the magic
   responsive: [{
 
-      breakpoint: 1024,
+      breakpoint: 1440,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 4,
         infinite: true
       }
 
@@ -174,6 +174,18 @@ $(".slider").slick({
       settings: "unslick" // destroys slick
 
     }]
+});
+
+$(".table-slider").slick({
+
+  // normal options...
+  infinite: false,
+  dots: false,
+  autoplay: false,
+  autoplaySpeed: 1000,
+  slidesToShow: 1,
+  slideToScroll: 1
+  
 });
 
 

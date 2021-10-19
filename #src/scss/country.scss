@@ -7,14 +7,14 @@
 
 
 
-$nav-color: #ffffff;
-$nav-background-color: #F0F8F7;
-$nav-background-hover-color: #C6D9FF;
+$nav-color: #016F9D;
+$nav-background-color: red;
+$nav-background-hover-color: #016F9D;
 $nav-border-color: #fff;
 $nav-min-height: 2.5em;
 $nav-item-width: 15em;
 $nav-togglemenu-color: #C6D9FF;
-$nav-togglemenu-background-color: #C6D9FF;
+$nav-togglemenu-background-color: #016F9D;
 
 
 
@@ -208,7 +208,7 @@ span#toggleMenu-text {
 	padding: 0.5rem;
 	height: 29.125rem;
 	background: $colorw;
-	color: $pryme-color;
+	color: $pryme-alt;
 	overflow-y: scroll;
     /* width of ul */ }
 	}
@@ -387,7 +387,7 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 	&__soc-google-plus::before{
 		display: block;
 		content: ' ';
-		background-image: url('../img/post-gplus.svg');
+		background-image: url('../img/g-plus.svg');
 		background-size: 2rem 2rem;
 		height: 2rem;
 		width: 2rem;
@@ -464,12 +464,13 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
     min-height: 30rem;
     z-index: 3;
     background: $pryme-color;
+    @include nxl {
+        display: none;
+    }
     @media only screen and (max-width: 1800px)  {
         left: 1rem;
     }
-    @media only screen and (max-width: 1700px)  {
-        display: none;
-    }
+    
     &__list {
         font-size: 1.125rem;
         font-weight: 500;
@@ -503,6 +504,9 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
     }
     &__content-wrap {
         max-width: 32rem;
+        @include nlg {
+            max-width: 26rem;
+        }
     }
     &__text {
         font-size: 1rem;
@@ -521,6 +525,9 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
     }
     &__list-wrap {
         margin: 1.75rem 0 0 1.75rem;
+        @include nlg {
+            margin: 1.75rem 0 0;
+        }
     }
     &__logistic::before {
         display: flex;
@@ -554,6 +561,37 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
         font-size: 1.25rem;
         font-weight: 600;
         margin-bottom: 1.25rem;
+    }
+    &__table-wrap {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    .slick-slider {
+        width: 50%;
+    }
+    .slick-prev {
+        left: -2.5rem;
+        @include nlg {
+            left: -1.7rem;
+        }
+    }
+    .slick-prev:before {
+        display: block;
+		content: ' ';
+		background-image: url('../img/arrow-right.svg');
+		background-size: 1.4rem 2rem;
+		height: 2rem;
+		width: 1.4rem;
+        transform: rotate(180deg);
+    }
+    .slick-next:before {
+        display: block;
+		content: ' ';
+		background-image: url('../img/arrow-right.svg');
+		background-size: 1.4rem 2rem;
+		height: 2rem;
+		width: 1.4rem;
     }
     &__table {
         color: #000000;
@@ -596,11 +634,18 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 	position: relative;
 	background: url('../img/ship_bg.jpg') center top/cover no-repeat;
 	height: auto;
-	padding: 7.5rem 0;
+	padding: 10% 0;
 	margin-top: 8.25rem;
+    @include nlg {
+        padding: 0;
+        height: 37.5rem;
+    }
 	&__text-wrap {
 		padding: 2rem 0 7rem;
 		max-width: 42rem;
+        @include nlg {
+            padding: 2rem 0 4rem;
+        }
 	}
 	&__title {
 		font-size: 3.75rem;
@@ -695,6 +740,9 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 		opacity: 0.1;
 		color: $pryme-color;
     	-webkit-text-stroke: 3px $main-color;
+        @include nxl{
+            display: none;
+        }
 	}
 	&__text {
 		max-width: 30rem;
@@ -944,6 +992,9 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 		opacity: 0.1;
 		color: $colorw;
         z-index: 2;
+        @include nxl{
+            display: none;
+        }
 	}
 
 
@@ -1009,8 +1060,12 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
   padding: 1.618rem 1.618rem 1.618rem 0;
   color: $colorw;
   opacity: 0;
+  width: 100%;
   &__wrap:last-child {
       margin-left: 7.5rem;
+      @include nlg {
+          margin-left: 4rem;
+      }
   }
   &__title {
       font-size: 1.5rem;
@@ -1039,6 +1094,9 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
       height: auto;
       padding: 2.5rem 3.125rem 5rem;
       margin-top: 3.25rem;
+      @include nlg {
+          padding: 2rem 2rem 3rem;
+      }
   }
   &__row {
       display: flex;
@@ -1058,6 +1116,9 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
       filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
       text-align: center;
       line-height: 100%;
+      @include nlg{
+        width: 7rem;
+      }
       &--plus {
           background: $pryme-color;
       }
@@ -1120,6 +1181,9 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 .pricing {
     padding: 10rem 0 3.125rem;
     color: $colorw;
+    @include nlg {
+        padding: 7rem 0 3rem
+    }
     &__text {
         margin: 2rem 0 3rem;
         max-width: 45.5rem;
@@ -1235,6 +1299,9 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 		opacity: 0.1;
 		color: $colorw;
         z-index: 2;
+        @include nxl{
+            display: none;
+        }
 	}
     .accordion {
         max-width: 58rem;
@@ -1354,6 +1421,9 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 		opacity: 0.1;
 		color: $main-color;
         z-index: 2;
+        @include nxl{
+            display: none;
+        }
 	}
     &__sub-title {
         font-size: 1.25rem;
@@ -1434,16 +1504,17 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
     }
     .slick-dots {
         bottom: -35px;
-        color: inherit;
     }
     .slick-dots li {
         background: $pryme-alt;
         border-radius: 50%;
         color: inherit;
     }
+    .slick-dots li button::before {
+        content: '';
+    }
     .slick-dots li + .slick-active {
         background: $main-color;
-        color: inherit;
     }
 }
 
@@ -1493,6 +1564,9 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 		opacity: 0.1;
 		color: $pryme-color;
         z-index: 2;
+        @include nxl{
+            display: none;
+        }
 	}
     &__sub-title {
         font-size: 1.25rem;
@@ -1604,8 +1678,9 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 .footer {
     background: $pryme-color;
     padding: 2rem 0;
-    @include nlg { 
-        background: red; 
+    position: relative;
+    .container {
+        position: relative;
     }
     &__row {
         display: flex;
@@ -1672,9 +1747,30 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 	&__soc-google-plus::before{
 		display: block;
 		content: ' ';
-		background-image: url('../img/post-gplus.svg');
+		background-image: url('../img/g-plus.svg');
 		background-size: 2rem 2rem;
 		height: 2rem;
 		width: 2rem;
 	}
+    &__up-arrow {
+        width: 3.5rem;
+        height: 3.5rem;
+        background: $colorw;
+        box-shadow: 0px 0px 8px #0B327D;
+        border-radius: 50%;
+        position: absolute;
+        top: -3.5rem;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__up-arrow::before {
+        width: 1.8rem;
+        height: 2.5rem;
+        display: block;
+		content: ' ';
+		background-image: url('../img/arrow-up.svg');
+		background-size: 1.8rem 2.5rem;
+    }
 }
