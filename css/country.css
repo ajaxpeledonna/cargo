@@ -404,7 +404,7 @@ span#toggleMenu-text {
 }
 
 #nav > ul > li > ul > li > a {
-  background-color: red;
+  background-color: #F0F8F7;
 }
 
 #nav > ul > li > ul > li > a:hover, #nav > ul > li > ul > li > a:focus {
@@ -446,7 +446,7 @@ span#toggleMenu-text {
 }
 
 #nav > ul > li > ul > li > ul > li > a {
-  background-color: red;
+  background-color: #F0F8F7;
 }
 
 #nav > ul > li > ul > li > ul > li > a:hover, #nav > ul > li > ul > li > ul > li > a:focus {
@@ -480,7 +480,7 @@ span#toggleMenu-text {
 }
 
 #nav > ul > li > ul > li > ul > li > ul > li > a {
-  background-color: red;
+  background-color: #F0F8F7;
 }
 
 #nav > ul > li > ul > li > ul > li > ul > li > a:hover, #nav > ul > li > ul > li > ul > li > ul > li > a:focus {
@@ -2080,10 +2080,12 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
 
 .docs .slick-prev {
   left: 35%;
+  z-index: 9999;
 }
 
 .docs .slick-next {
   right: 36%;
+  z-index: 9999;
 }
 
 .docs .slick-prev::before {

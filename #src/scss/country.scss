@@ -8,7 +8,7 @@
 
 
 $nav-color: #016F9D;
-$nav-background-color: red;
+$nav-background-color: #333;
 $nav-background-hover-color: #016F9D;
 $nav-border-color: #fff;
 $nav-min-height: 2.5em;
@@ -29,7 +29,8 @@ $nav-togglemenu-background-color: #016F9D;
   padding: 0;
   border: 0;
   list-style: none;
-  box-sizing: border-box; }
+  box-sizing: border-box; 
+  }
 
 /*
  *	Accessible Multi-Level Dropdown Navigation Menu
@@ -71,7 +72,7 @@ $nav-togglemenu-background-color: #016F9D;
   text-decoration: none;
   height: 100%;
   display: block;
-  color: $colorw;
+  color: $pryme-alt;
   padding: 0 1em; }
 
 @media screen and (min-width: 40em) {
@@ -249,7 +250,8 @@ span#toggleMenu-text {
 #nav > ul > li > ul > li > ul > li > ul > li > a {
   background-color: $nav-background-color; }
   #nav > ul > li > ul > li > ul > li > ul > li > a:hover, #nav > ul > li > ul > li > ul > li > ul > li > a:focus {
-    background-color: $nav-border-color; }
+    background-color: $nav-border-color;
+    color: #000; }
 
 #nav > ul > li > ul > li > ul > li > ul > li:not(:last-child) > a {
   border-bottom: 1px solid $nav-border-color; }
@@ -1488,9 +1490,11 @@ html.no-js li:hover > a + ul, html.no-js li:focus > a + ul {
     }
     .slick-prev{
         left: 35%;
+        z-index: 9999;
     }
     .slick-next {
         right: 36%;
+        z-index: 9999;
     }
     .slick-prev::before{
         color: $pryme-alt;
