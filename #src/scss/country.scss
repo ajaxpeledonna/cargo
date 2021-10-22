@@ -1052,15 +1052,19 @@
     height: auto;
     padding: 3rem 0 7.25rem;
     margin-top: 8.25rem;
-    @include nlg {
+    @include nxl {
         padding: 0;
         height: 37.5rem;
     }
 	&__text-wrap {
 		padding: 2rem 0 7rem;
 		max-width: 47rem;
+        @include nxl {
+            padding: 1.5rem 0 3rem;
+            max-width: 42rem;
+        }
         @include nlg {
-            padding: 2rem 0 4rem;
+            padding: 2rem 0 4rem; 
             max-width: 40rem;
         }
 	}
@@ -1070,7 +1074,7 @@
 		font-weight: 700;
 		line-height: 110%;
 		margin-bottom: 1.875rem;
-        @include nlg {
+        @include nxl {
             font-size: 3rem;
         }
 	}
@@ -1080,6 +1084,10 @@
 		max-width: 26rem;
 		font-weight: 500;
 		line-height: 156%;
+        @include nxl {
+            font-size: 1.125rem;
+        }
+        
 	}
 	
 	&__from {
