@@ -380,11 +380,11 @@ p {
 
 .header .dropdown3 {
   position: absolute;
-  width: 180px;
+  width: 220px;
   background: #F0F8F7;
   text-align: left;
   display: none;
-  right: -82%;
+  right: -100%;
   top: 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
