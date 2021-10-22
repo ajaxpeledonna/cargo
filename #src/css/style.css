@@ -1279,7 +1279,7 @@ p {
   font-family: 'Staatliches', cursive;
   opacity: 0.1;
   color: transparent;
-  -webkit-text-stroke: 3px linear-gradient(180deg, #003267 -0.38%, #00709E 99.93%);
+  -webkit-text-stroke: 3px #016F9D;
 }
 
 .about__text {

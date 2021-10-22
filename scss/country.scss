@@ -837,6 +837,7 @@
 	}
 	&__contacts {
 		display: flex;
+        font-family: $font-alt;
 		li {
 			color: $colorw;
 			display: flex;
@@ -1005,6 +1006,9 @@
 		height: 2rem;
 		width: 1.4rem;
     }
+    .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+        opacity: 0;
+    }
     &__table {
         color: #000000;
         font-family: $font-alt;
@@ -1044,32 +1048,36 @@
 
 .from-germany {
 	position: relative;
-	background: url('../img/ship_bg.jpg') center top/cover no-repeat;
-	height: auto;
-	padding: 10% 0;
-	margin-top: 8.25rem;
+    background: url(../img/ship_bg.jpg) center/cover no-repeat;
+    height: auto;
+    padding: 3rem 0 7.25rem;
+    margin-top: 8.25rem;
     @include nlg {
         padding: 0;
         height: 37.5rem;
     }
 	&__text-wrap {
 		padding: 2rem 0 7rem;
-		max-width: 42rem;
+		max-width: 47rem;
         @include nlg {
             padding: 2rem 0 4rem;
+            max-width: 40rem;
         }
 	}
 	&__title {
-		font-size: 3.75rem;
+		font-size: 5rem;
 		color: $colorw;
 		font-weight: 700;
 		line-height: 110%;
 		margin-bottom: 1.875rem;
+        @include nlg {
+            font-size: 3rem;
+        }
 	}
 	&__text {
-		font-size: 1.25rem;
+		font-size: 1.5rem;
 		color: $colorw;
-		max-width: 22.20rem;
+		max-width: 26rem;
 		font-weight: 500;
 		line-height: 156%;
 	}
@@ -1081,7 +1089,7 @@
     }
 	&__btn {
 		padding: 0.8rem 1rem;
-		background: $accent-color;
+		background: linear-gradient(180deg, #EB0202 0%, #9F0202 100%);
 		font-size: 1.125rem;
 		color: $colorw;
 		font-weight: 500;
@@ -1100,7 +1108,7 @@
 		height: auto;
 		max-width: 37rem;
 		padding: 2rem 1.1rem 2rem 2rem;
-		background: $pryme-color;
+		background: $pryme-color-rev;
 		color: $colorw;
 		margin-top: 1.25rem;
 	}
@@ -1213,6 +1221,7 @@
 	&__video-text {
 		max-width: 36rem;
 		margin-left: 2rem;
+        color: $pryme-alt;
 	}
 	&__contact-card {
 		display: flex;
@@ -1492,8 +1501,8 @@
       margin-bottom: 2.5rem;
   }
   p {
-      font-size: 0.875rem;
-      max-width: 42.5rem;
+      font-size: 1.125rem;
+      max-width: 56rem;
       margin-top: 0.5rem;
   }
   span {
@@ -1575,12 +1584,17 @@
       transition: 0.3s;
   }
   .tabs-icon {
-    stroke: $colorw;
-    background: none;
+      path{
+        stroke: inherit;
+        background: none;
+        fill: $colorw;
+      }
+        
+        
     }
 }
 .tabs-icon {
-    stroke: $pryme-alt;
+    stroke: inherit;
     //background: $colorw;
 }
 .tab-switch:checked + label + .tab-content {
@@ -1591,7 +1605,7 @@
 }
 
 .pricing {
-    padding: 10rem 0 3.125rem;
+    padding: 12rem 0 3.125rem;
     color: $colorw;
     @include nlg {
         padding: 7rem 0 3rem
@@ -1688,7 +1702,7 @@
 }
 
 .questions {
-    background: $pryme-color;
+    background: $pryme-color-rev;
     padding: 9rem 0;
     height: auto; 
     position: relative;

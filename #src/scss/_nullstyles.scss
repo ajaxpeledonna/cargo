@@ -68,6 +68,7 @@ $colord: #2C2C2C;
 $colorw: #F0F8F7;
 $color-gray: #333333;
 $pryme-color: linear-gradient(180deg, #003267 -0.38%, #00709E 99.93%);
+$pryme-color-rev: linear-gradient(360deg, #003267 0%, #00709E 100%);
 $pryme-alt:#016F9D;
 $main-color: #0B327D;
 $accent-color: #EB0202;
@@ -201,7 +202,7 @@ h6 {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
-	// &.loaded {
+	// &.loaded { 
 	// }
 }
 //</ОБОЛОЧКА>===========================================================================================================
