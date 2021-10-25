@@ -299,6 +299,43 @@ p {
 .header .core-menu {
   text-align: center;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .core-menu__select {
+  width: 12rem;
+  padding: 0.3rem 0.3rem 0.3rem 0.5rem;
+  color: #016F9D;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.header .core-menu__calc-btn {
+  background: -webkit-gradient(linear, left top, left bottom, from(#EB0202), to(#9F0202));
+  background: linear-gradient(180deg, #EB0202 0%, #9F0202 100%);
+  color: #F0F8F7;
+  font-weight: 700;
+  padding: 0.6rem 1.5rem;
+}
+
+.header .core-menu__calc-btn:hover {
+  -webkit-filter: drop-shadow(0px 0px 10px #EC3737);
+          filter: drop-shadow(0px 0px 10px #EC3737);
+}
+
+.header .core-menu__calc-btn:active {
+  -webkit-box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.6);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .header .core-menu li {
@@ -318,10 +355,6 @@ p {
   -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.5));
           filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.5));
   color: #F0F8F7;
-}
-
-.header li span.toggle {
-  padding-left: 1em;
 }
 
 .header .dropdown {
@@ -1354,7 +1387,7 @@ p {
   margin-top: 8.25rem;
 }
 
-@media all and (max-width: 1240px) {
+@media all and (max-width: 1699px) {
   .from-germany {
     padding: 0;
     height: 37.5rem;
@@ -1364,6 +1397,13 @@ p {
 .from-germany__text-wrap {
   padding: 2rem 0 7rem;
   max-width: 47rem;
+}
+
+@media all and (max-width: 1699px) {
+  .from-germany__text-wrap {
+    padding: 1.5rem 0 3rem;
+    max-width: 42rem;
+  }
 }
 
 @media all and (max-width: 1240px) {
@@ -1381,7 +1421,7 @@ p {
   margin-bottom: 1.875rem;
 }
 
-@media all and (max-width: 1240px) {
+@media all and (max-width: 1699px) {
   .from-germany__title {
     font-size: 3rem;
   }
@@ -1393,6 +1433,12 @@ p {
   max-width: 26rem;
   font-weight: 500;
   line-height: 156%;
+}
+
+@media all and (max-width: 1699px) {
+  .from-germany__text {
+    font-size: 1.125rem;
+  }
 }
 
 .from-germany__from {
