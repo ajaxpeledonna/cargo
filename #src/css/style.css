@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;0,700;0,800;1,300&family=Staatliches&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 * {
   padding: 0px;
@@ -172,6 +172,11 @@ p {
   letter-spacing: 0.03rem;
 }
 
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -293,7 +298,7 @@ p {
 .header .main-menu {
   display: block;
   position: relative;
-  background: #016F9D;
+  background: #0A7990;
   border-top: 1px solid #F0F8F7;
 }
 
@@ -315,7 +320,7 @@ p {
 }
 
 .header .core-menu li a:hover {
-  background: #016F9D;
+  background: #0A7990;
   -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.5));
           filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.5));
   color: #F0F8F7;
@@ -341,7 +346,7 @@ p {
   width: 100%;
   margin: 0 auto;
   display: block;
-  color: #016F9D;
+  color: #0A7990;
   font-size: 0.75rem;
   border-left: 4px solid rgba(255, 0, 0, 0);
   border-bottom: 0.5px solid rgba(1, 111, 157, 0.5);
@@ -349,7 +354,7 @@ p {
 }
 
 .header .dropdown li a:hover {
-  background: #016F9D;
+  background: #0A7990;
   color: #F0F8F7;
   border-left: 4px solid #EB0202;
 }
@@ -1026,8 +1031,7 @@ p {
 }
 
 .header-top {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(-0.38%, #003267), color-stop(99.93%, #00709E));
-  background: linear-gradient(180deg, #003267 -0.38%, #00709E 99.93%);
+  background: linear-gradient(104.5deg, #095F71 0%, #0F778C 100%);
   height: auto;
 }
 
@@ -1210,8 +1214,7 @@ p {
   height: auto;
   max-width: 37rem;
   padding: 2rem 1.1rem 2rem 2rem;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(-0.38%, #003267), color-stop(99.93%, #00709E));
-  background: linear-gradient(180deg, #003267 -0.38%, #00709E 99.93%);
+  background: linear-gradient(104.5deg, #095F71 0%, #0F778C 100%);
   color: #F0F8F7;
   margin-top: 1.25rem;
 }
@@ -1263,7 +1266,7 @@ p {
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 120%;
-  color: linear-gradient(180deg, #003267 -0.38%, #00709E 99.93%);
+  color: linear-gradient(104.5deg, #095F71 0%, #0F778C 100%);
   display: block;
   z-index: 1;
 }
@@ -1279,7 +1282,7 @@ p {
   font-family: 'Staatliches', cursive;
   opacity: 0.1;
   color: transparent;
-  -webkit-text-stroke: 3px #016F9D;
+  -webkit-text-stroke: 3px #0A7990;
 }
 
 .about__text {
@@ -1299,7 +1302,7 @@ p {
   height: auto;
   padding: 30px 0;
   margin: 66px 0;
-  color: linear-gradient(180deg, #003267 -0.38%, #00709E 99.93%);
+  color: linear-gradient(104.5deg, #095F71 0%, #0F778C 100%);
 }
 
 .about__author-wrap {
@@ -1371,7 +1374,7 @@ p {
 
 .about__sub-title {
   font-size: 2rem;
-  color: linear-gradient(180deg, #003267 -0.38%, #00709E 99.93%);
+  color: linear-gradient(104.5deg, #095F71 0%, #0F778C 100%);
   font-weight: 700;
   width: 18rem;
   line-height: 120%;
@@ -1389,16 +1392,17 @@ p {
 .about__tel {
   font-size: 0.9rem;
   margin-top: 0.65rem;
-  color: linear-gradient(180deg, #003267 -0.38%, #00709E 99.93%);
+  color: linear-gradient(104.5deg, #095F71 0%, #0F778C 100%);
   font-weight: 300;
 }
 
 .about__mail {
   font-size: 0.9rem;
-  color: linear-gradient(180deg, #003267 -0.38%, #00709E 99.93%);
+  color: linear-gradient(104.5deg, #095F71 0%, #0F778C 100%);
   font-weight: 300;
 }
 
 .about__img-manager {
   margin-left: 6rem;
 }
+/*# sourceMappingURL=style.css.map */

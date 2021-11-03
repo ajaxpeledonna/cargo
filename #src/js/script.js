@@ -3,12 +3,13 @@ $(document).ready(function(){
     $(".core-menu li").hover(
     function(){
       //i used the parent ul to show submenu
-        $(this).children('ul').slideDown('slow');
+        $(this).children('ul').slideToggle('fast');
     }, 
       //when the cursor away 
-    function () {
-        $('ul', this).slideUp('slow');
-    });
+    // function () {
+    //     $('ul', this).slideUp('slow');
+    // }
+    );
   //this feature only show on 600px device width
     $(".hamburger-menu").click(function(){
       $(".burger-1, .burger-2, .burger-3").toggleClass("open");
@@ -78,12 +79,47 @@ $(".table-slider").slick({
 
   // normal options...
   infinite: false,
-  dots: false,
+  dots: true,
   autoplay: false,
   autoplaySpeed: 1000,
   slidesToShow: 1,
   slideToScroll: 1
   
+});
+
+$(".main-slider").slick({
+  infinite: true,
+  dots: false,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  speed: 0,
+  arrows: true,
+  fade: true,
+  pauseOnHover: false,
+  pauseOnFocus: false,
+  slidesToShow: 1,
+  slideToScroll: 1
+});
+
+$(".route-slider").slick({
+  infinite: true,
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  speed: 0,
+  arrows: true,
+  slidesToShow: 1,
+  slideToScroll: 1
+});
+
+$(".contact-slider").slick({
+  infinite: true,
+  dots: false,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  slidesToShow: 1,
+  slideToRight: true,
+  slideToScroll: 1
 });
 
 });

@@ -67,11 +67,14 @@ $font-decor: 'Roboto', sans-serif;
 $colord: #2C2C2C;
 $colorw: #F0F8F7;
 $color-gray: #333333;
-$pryme-color: linear-gradient(180deg, #003267 -0.38%, #00709E 99.93%);
+$pryme-color: linear-gradient(104.5deg, #095F71 0%, #0F778C 100%);
 $pryme-color-rev: linear-gradient(360deg, #003267 0%, #00709E 100%);
-$pryme-alt:#016F9D;
-$main-color: #0B327D;
+$pryme-alt:#0A7990;
+$text-color: #095F71;
+$main-color: #0B327D; 
 $accent-color: #EB0202;
+$accent-fresh: #F96B30;
+$accent-bg: linear-gradient(180deg, #F96B30 0%, #D51B1B 100%);
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
 $minwidth: 320px;
 $mw: 1200;
@@ -118,6 +121,7 @@ body {
 	color: #0f0f0f;
 	font-size: 16px;
 }
+
 body {
 	font-size: 100%;
 	line-height: 140%;
@@ -157,6 +161,7 @@ textarea {
 button {
 	cursor: pointer;
 }
+
 button::-moz-focus-inner {
 	padding: 0;
 	border: 0;
@@ -170,6 +175,7 @@ button::-moz-focus-inner {
 a {
 	cursor: pointer;
 }
+
 a,
 a:visited,
 a:focus,
@@ -241,6 +247,10 @@ p {
 	font-style: normal;
 	font-weight: 300;
     letter-spacing: 0.03rem;
+}
+.title {
+	font-family: $font-alt;
+	font-weight: 600;
 }
 //====================================================================================================
 
