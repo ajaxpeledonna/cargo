@@ -110,6 +110,7 @@ $(".main-slider").slick({
   slideToScroll: 1
 });
 
+
 $(".route-slider").slick({
   infinite: true,
   dots: true,

@@ -171,9 +171,35 @@ p {
   letter-spacing: 0.03rem;
 }
 
+@media all and (max-width: 767px) {
+  p {
+    line-height: 150%;
+  }
+}
+
 .title {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+}
+
+.desktop {
+  display: block;
+}
+
+@media all and (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media all and (max-width: 767px) {
+  .mobile {
+    display: block;
+  }
 }
 
 .header {
@@ -227,6 +253,12 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media all and (max-width: 767px) {
+  .header__socials {
+    display: none;
+  }
 }
 
 .header__social-link {
@@ -1096,6 +1128,12 @@ p {
   width: 100%;
 }
 
+@media all and (max-width: 767px) {
+  .header-top__panel {
+    display: none;
+  }
+}
+
 .header-top__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1202,6 +1240,12 @@ p {
   overflow: hidden;
 }
 
+@media all and (max-width: 767px) {
+  .from-germany {
+    background: #095F71;
+  }
+}
+
 .from-germany__text-wrap {
   padding: 7rem 0 7rem;
   max-width: 40rem;
@@ -1218,6 +1262,12 @@ p {
   .from-germany__text-wrap {
     padding: 2rem 0 2rem;
     max-width: 40rem;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .from-germany__text-wrap {
+    padding: 2rem 0 6rem;
   }
 }
 
@@ -1244,6 +1294,29 @@ p {
   background: url(../img/ship_bg2.jpg) center/cover no-repeat;
 }
 
+.from-germany__slide-mob {
+  position: relative;
+  width: 100%;
+  display: block;
+  z-index: 1;
+}
+
+.from-germany__slide-mob--1 {
+  background: url(../img/mobile/germany/img_truck.jpg) center/cover no-repeat;
+}
+
+.from-germany__slide-mob--2 {
+  background: url(../img/mobile/germany/img_airplane.jpg) center/cover no-repeat;
+}
+
+.from-germany__slide-mob--3 {
+  background: url(../img/mobile/germany/img_train.jpg) center/cover no-repeat;
+}
+
+.from-germany__slide-mob--4 {
+  background: url(../img/mobile/germany/img_ship.jpg) center/cover no-repeat;
+}
+
 .from-germany__mask {
   background: #0A7990;
   opacity: 0.4;
@@ -1261,13 +1334,18 @@ p {
   }
 }
 
+@media all and (max-width: 767px) {
+  .from-germany__mask {
+    width: 45%;
+  }
+}
+
 .from-germany__title {
   font-size: 3rem;
   color: #fff;
   font-weight: 700;
   line-height: 110%;
   margin-bottom: 1.875rem;
-  mix-blend-mode: lighten;
   text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
@@ -1277,19 +1355,34 @@ p {
   }
 }
 
+@media all and (max-width: 767px) {
+  .from-germany__title {
+    font-size: 1.625rem;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.8);
+  }
+}
+
 .from-germany__text {
   font-size: 1.125rem;
   color: #F0F8F7;
   max-width: 30rem;
   font-weight: 500;
   line-height: 156%;
-  mix-blend-mode: lighten;
   text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 @media all and (max-width: 1699px) {
   .from-germany__text {
     font-size: 1.125rem;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .from-germany__text {
+    font-size: 0.75rem;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.8);
+    max-width: 9rem;
+    line-height: 200%;
   }
 }
 
@@ -1310,6 +1403,13 @@ p {
           box-sizing: border-box;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+@media all and (max-width: 767px) {
+  .from-germany__btn {
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 .from-germany__btn:hover {
@@ -1344,9 +1444,47 @@ p {
   }
 }
 
+@media all and (max-width: 767px) {
+  .from-germany__info-block {
+    display: none;
+  }
+}
+
+.from-germany__info-block-mob {
+  display: none;
+}
+
+@media all and (max-width: 767px) {
+  .from-germany__info-block-mob {
+    display: block;
+    height: auto;
+    background: #095F71;
+    color: #F0F8F7;
+    z-index: 3;
+  }
+}
+
+.from-germany__mob-content {
+  display: none;
+}
+
+@media all and (max-width: 767px) {
+  .from-germany__mob-content {
+    display: block;
+    margin-bottom: 2rem;
+  }
+}
+
 .from-germany__info-title {
   font-size: 1.875rem;
   font-weight: 600;
+}
+
+@media all and (max-width: 767px) {
+  .from-germany__info-title {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+  }
 }
 
 .from-germany__info-text {
@@ -1354,10 +1492,23 @@ p {
   font-size: 1.125rem;
 }
 
+@media all and (max-width: 767px) {
+  .from-germany__info-text {
+    font-size: 0.875rem;
+    margin-top: 1rem;
+  }
+}
+
 .import {
   background: url("../img/earth_bg2.jpg") no-repeat center left/cover;
   padding: 7rem 0;
   color: #095F71;
+}
+
+@media all and (max-width: 767px) {
+  .import {
+    padding: 2rem 0;
+  }
 }
 
 .import__row {
@@ -1370,6 +1521,15 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media all and (max-width: 767px) {
+  .import__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .import__content-wrap {
@@ -1386,6 +1546,15 @@ p {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 1.2rem;
+}
+
+@media all and (max-width: 767px) {
+  .import__text {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 2rem;
+  }
 }
 
 .import__list {
@@ -1420,6 +1589,7 @@ p {
   content: ' ';
   background-image: url("../img/icon_truck.svg");
   background-size: 2.94rem 2.125rem;
+  background-repeat: no-repeat;
   height: 2.125rem;
   width: 2.94rem;
   margin: 0rem 1rem -0.3rem 0;
@@ -1432,9 +1602,16 @@ p {
   content: ' ';
   background-image: url("../img/icon_doc.svg");
   background-size: 2.175rem 2.625rem;
+  background-repeat: no-repeat;
   height: 2.625rem;
   width: 2.625rem;
   margin: 0rem 1.9rem -0.3rem 0;
+}
+
+@media all and (max-width: 767px) {
+  .import__customs::before {
+    width: 4.5rem;
+  }
 }
 
 .import__wed::before {
@@ -1444,15 +1621,31 @@ p {
   content: ' ';
   background-image: url("../img/icon_sign.svg");
   background-size: 2.625rem 2.625rem;
+  background-repeat: no-repeat;
   height: 2.625rem;
   width: 5.2rem;
   margin: 0rem 1.5rem -0.3rem 0;
+}
+
+@media all and (max-width: 767px) {
+  .import__wed::before {
+    width: 9rem;
+  }
 }
 
 .import__table-title {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1.25rem;
+}
+
+@media all and (max-width: 767px) {
+  .import__table-title {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    max-width: 14rem;
+  }
 }
 
 .import__table-wrap {
@@ -1463,6 +1656,12 @@ p {
 
 .import .slick-slider {
   width: 50%;
+}
+
+@media all and (max-width: 767px) {
+  .import .slick-slider {
+    width: 100%;
+  }
 }
 
 .import .slick-prev {
@@ -1502,6 +1701,12 @@ p {
 .import .slick-dots {
   bottom: -35px;
   right: -40%;
+}
+
+@media all and (max-width: 767px) {
+  .import .slick-dots {
+    right: 0;
+  }
 }
 
 .import .slick-dots li {
