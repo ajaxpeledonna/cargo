@@ -1202,13 +1202,6 @@ p {
   overflow: hidden;
 }
 
-@media all and (max-width: 1699px) {
-  .from-germany {
-    padding: 0;
-    height: 37.5rem;
-  }
-}
-
 .from-germany__text-wrap {
   padding: 7rem 0 7rem;
   max-width: 40rem;
@@ -1216,14 +1209,14 @@ p {
 
 @media all and (max-width: 1699px) {
   .from-germany__text-wrap {
-    padding: 1.5rem 0 3rem;
+    padding: 3.5rem 0 3rem;
     max-width: 42rem;
   }
 }
 
 @media all and (max-width: 1240px) {
   .from-germany__text-wrap {
-    padding: 2rem 0 4rem;
+    padding: 2rem 0 2rem;
     max-width: 40rem;
   }
 }
@@ -1260,6 +1253,12 @@ p {
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+@media all and (max-width: 1240px) {
+  .from-germany__mask {
+    width: 50%;
+  }
 }
 
 .from-germany__title {
@@ -1335,6 +1334,14 @@ p {
   color: #F0F8F7;
   margin: 1.25rem 0 7rem 6.25rem;
   z-index: 3;
+}
+
+@media all and (max-width: 1240px) {
+  .from-germany__info-block {
+    margin: 0;
+    padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+    max-width: 34rem;
+  }
 }
 
 .from-germany__info-title {
@@ -1608,6 +1615,14 @@ p {
   right: 0;
 }
 
+@media all and (max-width: 1240px) {
+  .about__img-wrap {
+    top: auto;
+    bottom: 3rem;
+    right: -10rem;
+  }
+}
+
 .about__decor-bg {
   position: absolute;
   width: 60%;
@@ -1661,6 +1676,12 @@ p {
   margin-left: 0.625rem;
   -webkit-filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
           filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
+}
+
+@media all and (max-width: 1240px) {
+  .about__img {
+    width: 75%;
+  }
 }
 
 .about__quote {
@@ -1959,6 +1980,7 @@ p {
   font-size: 3.125rem;
   margin-bottom: 3.75rem;
   position: relative;
+  line-height: 100%;
 }
 
 .route__title::before {
@@ -2044,6 +2066,10 @@ p {
           align-items: center;
 }
 
+.route__plus span {
+  max-width: 14rem;
+}
+
 .route__plus::before {
   margin: 0rem 1rem 0 0;
   display: -webkit-box;
@@ -2066,6 +2092,10 @@ p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.route__minus span {
+  max-width: 14rem;
 }
 
 .route__minus::before {
@@ -2188,11 +2218,29 @@ p {
   margin-bottom: 8rem;
 }
 
+@media all and (max-width: 1240px) {
+  .pricing__row {
+    margin-bottom: 4rem;
+  }
+}
+
+@media all and (max-width: 1240px) {
+  .pricing__row--2 {
+    margin-bottom: 2rem;
+  }
+}
+
 .pricing__text {
   font-size: 1.125rem;
   color: #0A7990;
   max-width: 36rem;
   line-height: 156%;
+}
+
+@media all and (max-width: 1240px) {
+  .pricing__text {
+    margin-left: 1rem;
+  }
 }
 
 .pricing__sub-title {
@@ -2232,6 +2280,12 @@ p {
   top: 0;
   left: -115%;
   z-index: 0;
+}
+
+@media all and (max-width: 1240px) {
+  .pricing__list-wrap::before {
+    height: 25rem;
+  }
 }
 
 .pricing__table-wrap {
@@ -2740,6 +2794,15 @@ p {
           align-items: flex-start;
 }
 
+@media all and (max-width: 1240px) {
+  .info__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .info__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2768,10 +2831,30 @@ p {
           flex-direction: column;
 }
 
+@media all and (max-width: 1240px) {
+  .info__img-wrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .info__left {
   width: 100%;
   max-width: 36.2rem;
   margin-left: 8rem;
+}
+
+@media all and (max-width: 1240px) {
+  .info__left {
+    margin-left: 1rem;
+    max-width: 55rem;
+  }
 }
 
 .info__right {
@@ -2849,6 +2932,13 @@ p {
   -webkit-filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
           filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
   margin-top: 25%;
+}
+
+@media all and (max-width: 1240px) {
+  .info__img {
+    margin-top: 4rem;
+    width: 48%;
+  }
 }
 
 .service {
@@ -2975,6 +3065,13 @@ p {
 .service__img {
   -webkit-filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
           filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
+}
+
+@media all and (max-width: 1240px) {
+  .service__img {
+    max-width: 260px;
+    max-height: 160px;
+  }
 }
 
 .service .vertical-tabs:before {
