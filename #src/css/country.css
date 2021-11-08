@@ -1747,6 +1747,10 @@ p {
   line-height: 156%;
 }
 
+.about__video {
+  width: 100%;
+}
+
 .about__decor-line {
   width: 5rem;
   height: 0.5rem;
