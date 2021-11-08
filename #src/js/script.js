@@ -41,7 +41,7 @@ $(function() {
 	
 });
 
-$('.tab-title>a').click(function(e){
+$('.tab-title>a').hover(function(e){
     e.preventDefault();
     var index = $(this).parent().index();
     $(this).parent().addClass('active')
