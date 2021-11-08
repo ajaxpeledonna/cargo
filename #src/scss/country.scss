@@ -2538,7 +2538,7 @@
     &__links {
         display: flex;
         flex-wrap: wrap;
-        width: 75%;
+        width: 100%;
         justify-content: flex-start;
     }
     &__item {
@@ -2560,6 +2560,74 @@
     &__img {
         filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
     }
+
+
+	.vertical-tabs:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: -1px;
+		z-index: 1;
+	}
+	.vertical-tabs:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.vertical-tabs {
+		position: relative;
+		margin-left: 12rem;
+		margin-top: 6rem;
+	}
+	.tabs {
+		position: relative;
+		float: left;
+		width: 12rem;
+		padding-left: 0;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		margin-left: -12rem;
+	}
+	.tabs li {
+		position: relative;
+		list-style: none;
+	}
+	.tabs li:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.tabs li a {
+		position: relative;
+		display: block;
+		width: 100%;
+		padding: 10px;
+		margin-bottom: 1.375rem;
+		text-decoration: none;
+		text-align: center;
+		background: #fff;
+		color: $text-color;
+		border: 1px solid $text-color;
+		box-sizing: border-box;
+	}
+	.tabs li:hover a {
+		
+		background: $accent-bg;
+		color: $colorw;
+		border: 1px solid $accent-fresh;
+	}
+	.tabs li.active a {
+		z-index: 2;
+	}
+	.tabs-content .content {
+		display: none;
+		margin-left: 5rem;
+	}
+	.tabs-content .content.active {
+		display: block;
+	}
 }
 
 
