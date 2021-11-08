@@ -933,19 +933,19 @@
     height: auto;
     margin-top: 9.25rem;
 	overflow: hidden;
-    @include nxl {
-        padding: 0;
-        height: 37.5rem;
-    }
+    // @include nxl {
+    //     padding: 0;
+    //     height: 37.5rem;
+    // }
 	&__text-wrap {
 		padding: 7rem 0 7rem;
 		max-width: 40rem;
         @include nxl {
-            padding: 1.5rem 0 3rem;
+            padding: 3.5rem 0 3rem;
             max-width: 42rem;
         }
         @include nlg {
-            padding: 2rem 0 4rem; 
+            padding: 2rem 0 2rem; 
             max-width: 40rem;
         }
 	}
@@ -977,6 +977,9 @@
 		top: 0;
 		left: 0;
 		z-index: -1;
+		@include nlg {
+			width: 50%;
+		}
 	}
 	&__title {
 		font-size: 3rem;
@@ -1034,6 +1037,11 @@
 		color: $colorw;
 		margin: 1.25rem 0 7rem 6.25rem;
 		z-index: 3;
+		@include nlg {
+			margin: 0;
+			padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+			max-width: 34rem;
+		}
 	}
 	&__info-title {
 		font-size: 1.875rem;
@@ -1237,6 +1245,11 @@
 		position: absolute;
 		top: 0;
 		right: 0;
+		@include nlg {
+			top: auto;
+			bottom: 3rem;
+			right: -10rem;
+		}
 	}
 	&__decor-bg {
 		position: absolute;
@@ -1282,6 +1295,9 @@
 	&__img {
 		margin-left: 0.625rem;
 		filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
+		@include nlg {
+			width: 75%;
+		}
 	}
 	&__quote {
 		background: linear-gradient(to right, #b5d7de 75%, #fff 25%);
@@ -1756,6 +1772,7 @@
 		font-size: 3.125rem;
 		margin-bottom: 3.75rem;
 		position: relative;
+		line-height: 100%;
 	}
 	&__title::before {
 		content: "02";
@@ -1820,9 +1837,9 @@
 		position: relative;
 		line-height: 110%;
 		align-items: center;
-		// span {
-		// 	max-width: 14rem;
-		// }
+		span {
+			max-width: 14rem;
+		}
 	}
 	&__plus::before {
 		margin: 0rem 1rem 0 0;
@@ -1839,9 +1856,9 @@
 		position: relative;
 		line-height: 110%;
 		align-items: flex-start;
-		// span {
-		// 	max-width: 14rem;
-		// }
+		span {
+			max-width: 14rem;
+		}
 	}
 	&__minus::before {
 		margin: 0 1rem 0rem 0;
@@ -1940,12 +1957,24 @@
 		align-items: flex-start;
 		z-index: 0;
 		margin-bottom: 8rem;
+		@include nlg {
+			margin-bottom: 4rem;
+		}
+		&--2 {
+			@include nlg {
+				margin-bottom: 2rem;
+			}
+		}
+		
 	}
 	&__text {
 		font-size: 1.125rem;
 		color: $pryme-alt;
 		max-width: 36rem;
 		line-height: 156%;
+		@include nlg {
+			margin-left: 1rem;
+		}
 	}
 	&__sub-title {
 		color: $colorw;
@@ -1980,6 +2009,9 @@
 		top: 0;
 		left: -115%;
 		z-index: 0;
+		@include nlg {
+			height: 25rem;
+		}
 	}
 	&__table-wrap {
 		max-width: 29rem;
@@ -2396,6 +2428,9 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+		@include nlg {
+			flex-direction: column;
+		}
     }
     &__wrap {
         display: flex;
@@ -2409,11 +2444,20 @@
         display: flex;
         flex-direction: column;
         //padding: 10% 0;
+		@include nlg {
+			flex-direction: row;
+			width: 100%;
+			justify-content: space-between;
+		}
     }
     &__left {
         width: 100%;
         max-width: 36.2rem;
 		margin-left: 8rem;
+		@include nlg {
+			margin-left: 1rem;
+			max-width: 55rem;
+		}
     }
     &__right {
         width: 100%;
@@ -2476,6 +2520,10 @@
     &__img {
         filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
         margin-top: 25%;
+		@include nlg {
+			margin-top: 4rem;
+			width: 48%;
+		}
     }
 }
 
@@ -2559,6 +2607,11 @@
     }
     &__img {
         filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
+		@include nlg {
+			max-width: 260px;
+			max-height: 160px;
+		}
+		
     }
 
 
