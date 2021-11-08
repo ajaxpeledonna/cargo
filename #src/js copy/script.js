@@ -41,6 +41,15 @@ $(function() {
 	
 });
 
+$('.tab-title>a').click(function(e){
+    e.preventDefault();
+    var index = $(this).parent().index();
+    $(this).parent().addClass('active')
+         .siblings().removeClass('active')
+         .parent('ul.tabs').siblings('.tabs-content').children('.content').removeClass('active')
+         .eq(index).addClass('active');
+  });
+
 
 $(".slider").slick({
 
