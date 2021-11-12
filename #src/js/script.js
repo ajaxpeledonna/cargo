@@ -41,7 +41,7 @@ $(function() {
 	
 });
 
-$('.tab-title>a').hover(function(e){
+$('.tab-title>a').click(function(e){
     e.preventDefault();
     var index = $(this).parent().index();
     $(this).parent().addClass('active')
@@ -50,6 +50,13 @@ $('.tab-title>a').hover(function(e){
          .eq(index).addClass('active');
   });
 
+$(window).scroll(function(e) {
+   if($(window).scrollTop()>=900) {
+     $('.calc-btn').fadeIn(200);
+   } else {
+     $('.calc-btn').fadeOut(200);
+   }
+});
 
 $(".slider").slick({
 
