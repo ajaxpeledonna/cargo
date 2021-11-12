@@ -19,7 +19,7 @@
 	background: $pryme-alt;
 	&__logo-link {
 		min-width: 10rem;
-		margin-right: 1rem;
+		margin-right: 0.5rem;
 	}
 	&__logo {
 		max-width: 9.625rem;
@@ -37,7 +37,7 @@
 	&__contacts {
 		display: flex;
 		flex-direction: column;
-		margin-left: 2rem;
+		margin-left: 1rem;
 		li {
 			color: $colorw;
 			display: flex;
@@ -138,6 +138,9 @@
 		color: $colorw;
 		line-height: 72px;
 		font-size: 1rem;
+		@include nlg {
+			font-size: 0.75rem;
+		}
 	}
 
 	
@@ -822,21 +825,18 @@
 }
 
 .calc-btn {
-	position: fixed;
-	top: 5.25rem;
-	left: 3rem;
-	font-size: 1.125rem;
+	font-size: 0.875rem;
 	background: $accent-bg;
 	color: $colorw;
 	display: none;
 	padding: 14px 15px;
 	text-align: center;
-	min-height: 3rem;
-	width: 15rem;
-	z-index: 1001;
+	min-height: 2.8rem;
 	cursor: pointer;
-	@include nxl {
-		left: 0;
+	@include nlg{
+		font-size: 0.6rem;
+		padding: 10px 5px;
+		min-height: 2.4rem;
 	}
 }
 .calc-btn:hover {

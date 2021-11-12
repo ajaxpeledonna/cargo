@@ -216,7 +216,7 @@ p {
 
 .header__logo-link {
   min-width: 10rem;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 .header__logo {
@@ -253,7 +253,7 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .header__contacts li {
@@ -351,6 +351,12 @@ p {
   color: #F0F8F7;
   line-height: 72px;
   font-size: 1rem;
+}
+
+@media all and (max-width: 1240px) {
+  .header .menu .header__nav-menu-cap {
+    font-size: 0.75rem;
+  }
 }
 
 .header nav ul li ul li {
@@ -1038,25 +1044,22 @@ p {
 }
 
 .calc-btn {
-  position: fixed;
-  top: 5.25rem;
-  left: 3rem;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#F96B30), to(#D51B1B));
   background: linear-gradient(180deg, #F96B30 0%, #D51B1B 100%);
   color: #F0F8F7;
   display: none;
   padding: 14px 15px;
   text-align: center;
-  min-height: 3rem;
-  width: 15rem;
-  z-index: 1001;
+  min-height: 2.8rem;
   cursor: pointer;
 }
 
-@media all and (max-width: 1699px) {
+@media all and (max-width: 1240px) {
   .calc-btn {
-    left: 0;
+    font-size: 0.6rem;
+    padding: 10px 5px;
+    min-height: 2.4rem;
   }
 }
 
