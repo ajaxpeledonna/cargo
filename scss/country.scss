@@ -57,7 +57,7 @@
 		background-size: 1.0625rem 0.8125rem;
 		height: 0.8125rem;
 		width: 1.0625rem;
-		margin: 0.22rem 0.4125rem 0 0;
+		margin: 0.4rem 0.4125rem 0 0;
 	}
 	&__phone:before {
 		display: block;
@@ -857,6 +857,14 @@
     @include nsm {
         background: $text-color;
     }
+	&__main-wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		height: 100%;
+	}
 	&__text-wrap {
 		padding: 7rem 0 7rem;
 		max-width: 40rem;
@@ -872,24 +880,24 @@
             padding: 2rem 0 6rem; 
         }
 	}
-	&__slide {
-		position: relative;
-		width: 100%;
-		display: block;
-		z-index: 1;
-		&--1 {   
-			background: url(../img/auto_bg.jpg) center/cover no-repeat;
-		}
-		&--2{
-			background: url(../img/airplane_bg.jpg) center/cover no-repeat;
-		}
-		&--3 {
-			background: url(../img/train_bg.jpg) center/cover no-repeat;
-		}
-		&--4 {
-			background: url(../img/ship_bg2.jpg) center/cover no-repeat;
-		}
-	}
+	// &__slide {
+	// 	position: relative;
+	// 	width: 100%;
+	// 	display: block;
+	// 	z-index: 1;
+	// 	&--1 {   
+	// 		background: url(../img/auto_bg.jpg) center/cover no-repeat;
+	// 	}
+	// 	&--2{
+	// 		background: url(../img/airplane_bg.jpg) center/cover no-repeat;
+	// 	}
+	// 	&--3 {
+	// 		background: url(../img/train_bg.jpg) center/cover no-repeat;
+	// 	}
+	// 	&--4 {
+	// 		background: url(../img/ship_bg2.jpg) center/cover no-repeat;
+	// 	}
+	// }
 	&__slide-mob {
 		position: relative;
 		width: 100%;
@@ -916,7 +924,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		z-index: -1;
+		z-index: 1;
 		@include nlg {
 			width: 50%;
 		}
@@ -932,7 +940,11 @@
 		margin-bottom: 1.875rem;
 		text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
         @include nxl {
-            font-size: 3rem;
+            font-size: 2.8rem;
+			margin-bottom: 1.5rem;
+        }
+		@include nlg {
+            font-size: 2rem;
         }
 		@include nsm {
             font-size: 1.625rem;
@@ -992,9 +1004,13 @@
 		color: $colorw;
 		margin: 1.25rem 0 7rem 6.25rem;
 		z-index: 3;
+		@include nxl {
+			padding: 2rem 1.5rem 2rem 2rem;
+			margin: 1rem 0 6rem 6.25rem;
+		}
 		@include nlg {
 			margin: 0;
-			padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+			padding: 1.5rem 0.5rem 1rem 1rem;
 			max-width: 34rem;
 		}
 		@include nsm {
@@ -1021,6 +1037,9 @@
 	&__info-title {
 		font-size: 1.875rem;
 		font-weight: 600;
+		@include nlg {
+			font-size: 1.5rem;
+		}
 		@include nsm {
 			font-size: 1.25rem;
 			margin-top: 1.5rem;
@@ -1029,10 +1048,19 @@
 	&__info-text {
 		margin: 1.75rem 0 2rem;
 		font-size: 1.125rem;
+		@include nlg {
+			font-size: 1rem;
+			margin-top: 1rem;
+		}
 		@include nsm {
 			font-size: 0.875rem;
 			margin-top: 1rem;
 		}
+	}
+	&__img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 }
 
@@ -1123,8 +1151,12 @@
    
     &__table-title {
         font-size: 1.25rem;
-        font-weight: 600;
+        font-weight: bold;
         margin-bottom: 1.25rem;
+		font-family: $font-alt;
+		@include nlg{
+            font-size: 1.1rem;
+        }
 		@include nsm {
             font-size: 1rem;
 			font-weight: 700;
@@ -2158,10 +2190,17 @@
 	color: $colorw;
 	padding: 5rem 0 3rem;
 	overflow: hidden;
+	&__main-wrap {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between; 
+	}
 	&__row {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+		flex-direction: column;
+		max-width: 50%;
 	}
 	&__left {
 		width: 50%;
@@ -2171,7 +2210,7 @@
 	}
 	&__title {
         font-size: 3.125rem; 
-        margin: 0 0 1.5rem;
+        margin: 0 0 2.5rem;
 		position: relative;
     }
 	&__title::before {
@@ -2192,12 +2231,16 @@
         }
 	}
     &__text {
-        margin-top: 2rem;
+        margin-bottom: 2rem;
         max-width: 36.25rem;
+		font-size: 1.125rem;
+    }
+	&__text:last-child {
+        margin-bottom: 0rem;
     }
     &__map {
-        margin-top: 3.2rem;
-        width: 100%;
+        width: 50%;
+		height: 412px;
     }
 }
 
@@ -2489,9 +2532,7 @@
     &__left {
         width: 100%;
         max-width: 36.2rem;
-		margin-left: 8rem;
 		@include nlg {
-			margin-left: 1rem;
 			max-width: 55rem;
 		}
     }
