@@ -876,6 +876,9 @@
             padding: 2rem 0 2rem; 
             max-width: 40rem;
         }
+		@include nmd {
+            padding: 1rem 0; 
+        }
 		@include nsm {
             padding: 2rem 0 6rem; 
         }
@@ -928,6 +931,9 @@
 		@include nlg {
 			width: 50%;
 		}
+		@include nmd {
+			width: 58%;
+		}
 		@include nsm {
 			width: 45%;
 		}
@@ -946,6 +952,10 @@
 		@include nlg {
             font-size: 2rem;
         }
+		@include nmd {
+            font-size: 1.5rem;
+			margin-bottom: 1rem;
+        }
 		@include nsm {
             font-size: 1.625rem;
 			text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.8);
@@ -960,6 +970,9 @@
 		text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
         @include nxl {
             font-size: 1.125rem;
+        }
+		@include nmd {
+            font-size: 1rem;
         }
 		@include nsm {
             font-size: 0.75rem;
@@ -983,6 +996,10 @@
 		font-weight: 500;
 		box-sizing: border-box;
 		transition: 0.2s;
+		@include nmd {
+			font-size: 1rem;
+			padding: 0.6rem 1rem;
+		}
 		@include nsm {
 			margin: 0 auto;
 			display: block;
@@ -1013,6 +1030,9 @@
 			padding: 1.5rem 0.5rem 1rem 1rem;
 			max-width: 34rem;
 		}
+		@include nmd {
+			margin: 0.5rem 0 1rem 0rem;
+		}
 		@include nsm {
 			display: none;
 		}
@@ -1040,6 +1060,9 @@
 		@include nlg {
 			font-size: 1.5rem;
 		}
+		@include nmd {
+			font-size: 1rem;
+		}
 		@include nsm {
 			font-size: 1.25rem;
 			margin-top: 1.5rem;
@@ -1051,6 +1074,10 @@
 		@include nlg {
 			font-size: 1rem;
 			margin-top: 1rem;
+		}
+		@include nmd {
+			font-size: 0.82rem;
+			margin: 1rem 0;
 		}
 		@include nsm {
 			font-size: 0.875rem;
@@ -1068,6 +1095,9 @@
     background: url('../img/earth_bg2.jpg') no-repeat center left/cover;
     padding: 7rem 0;
     color: $text-color;
+	@include nmd {
+    	padding: 3rem 0;
+    }
 	@include nsm {
     	padding: 2rem 0;
     }
@@ -1075,7 +1105,7 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-		@include nsm {
+		@include nmd {
             flex-direction: column;
         }
     }
@@ -1084,6 +1114,9 @@
         @include nlg {
             max-width: 26rem;
         }
+		@include nmd {
+    		max-width: 90%;
+    	}
     }
     &__text {
         font-size: 1rem;
@@ -1131,6 +1164,9 @@
 		height: 2.625rem;
 		width: 2.625rem;
 		margin: 0rem 1.9rem -0.3rem 0;
+		@include nmd {
+			margin: 0rem 1.25rem -0.3rem 0;
+		}
 		@include nsm {
             width: 4.5rem;
         }
@@ -1144,6 +1180,9 @@
 		height: 2.625rem;
 		width: 5.2rem;
 		margin: 0rem 1.5rem -0.3rem 0;
+		@include nmd {
+			margin: 0rem 0rem -0.3rem 0;
+		}
 		@include nsm {
             width: 9rem;
         }
@@ -1169,10 +1208,13 @@
         position: relative;
         top: 0;
         right: 0;
+		@include nmd {
+            margin-top: 2rem;
+        }
     }
     .slick-slider {
         width: 50%;
-		@include nsm {
+		@include nmd {
             width: 100%;
         }
     }
@@ -1205,7 +1247,7 @@
 	.slick-dots {
         bottom: -35px;
 		right: -40%;
-		@include nsm {
+		@include nmd{
             right: 0;
         }
     }
@@ -1273,7 +1315,7 @@
 
 .about {
 	position: relative;
-	padding: 50px 0 0;
+	padding: 3.2rem 0 0;
 	background: $pryme-alt;
 	&__row {
 		display: flex;
@@ -1284,6 +1326,9 @@
 			justify-content: center;
 			align-items: center;
 		}
+		@include nmd {
+           flex-direction: column;
+        }
 	}
 	&__text-wrap {
 		position: relative; 
@@ -1317,6 +1362,9 @@
 		display: block;
 		z-index: 1;
 		width: 50rem;
+		@include nmd {
+            font-size: 2rem;
+        }
 	}
 	&__title::before {
 		content: "01";
@@ -1347,6 +1395,9 @@
 		@include nlg {
 			width: 75%;
 		}
+		@include nmd {
+           display: none;
+        }
 	}
 	&__quote {
 		background: linear-gradient(to right, #b5d7de 75%, #fff 25%);
@@ -1404,6 +1455,9 @@
 	}
 	&__video-wrap {
 		width: 100%;
+		@include nmd {
+            height: 400px;
+        }
 	}
 	&__video-area {
 		background: #fff;
@@ -1415,6 +1469,11 @@
         color: $text-color;
 		font-size: 1.125rem;
 		line-height: 156%;
+		@include nmd {
+            max-width: 37rem;
+			margin-left: 0rem;
+			margin-top: 1rem;
+        }
 	}
 	&__video-text p {	
 		font-size: 1.125rem;
@@ -1434,6 +1493,9 @@
 		flex-direction: column;
 		align-items: flex-start;
 		margin-right: 6rem;
+		@include nmd {
+			margin-bottom: 1.5rem;
+		}
 	}
 	&__sub-title {
 		font-size: 2rem;
@@ -1442,6 +1504,9 @@
 		width: 18rem;
 		line-height: 120%;
 		margin-bottom: 1.5rem;
+		@include nmd {
+			font-size: 1.5rem;
+		}
 	}
 	&__manager-name {
 		font-size: 1.5rem;
@@ -1569,7 +1634,7 @@
     &__img {
         filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
     }
-}
+} 
 // .route-price {
 //     background: linear-gradient(360deg, #003267 0%, #00709E 74.45%, #013368 100%);
 //     position: relative;
@@ -1822,12 +1887,18 @@
 		justify-content: space-between;
 		align-items: flex-start;
 		position: relative;
+		@include nmd {
+			flex-direction: column;
+		}
 	}
 	&__title {
 		font-size: 3.125rem;
 		margin-bottom: 3.75rem;
 		position: relative;
 		line-height: 100%;
+		@include nmd {
+			font-size: 2rem;
+		}
 	}
 	&__title::before {
 		content: "02";
@@ -1850,11 +1921,19 @@
 		font-weight: 600;
 		font-family: $font-alt;
 		margin-bottom: 2rem;
+		@include nmd {
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+		}
 	}
 	&__text {
 		font-size: 1.125rem;
 		max-width: 37.5rem;
 		line-height: 156%;
+		@include nmd {
+			margin-bottom: 2rem;
+			line-height: 144%;
+		}
 	}
 	&__comparison {
 		font-size: 1.125rem;
@@ -1894,6 +1973,10 @@
 		align-items: center;
 		span {
 			max-width: 14rem;
+			@include nmd {
+				max-width: 28rem;
+			}
+			
 		}
 	}
 	&__benefit {
@@ -1909,6 +1992,10 @@
 		background-size: 5rem 5rem;
 		height: 5rem;
 		width: 5rem;
+		@include nmd {
+			top: 0;
+			left: 30rem;
+		}
 	}
 	&__minus {
 		margin-bottom: 1rem;
@@ -1918,6 +2005,9 @@
 		align-items: flex-start;
 		span {
 			max-width: 14rem;
+			@include nmd {
+				max-width: 28rem;
+			}
 		}
 	}
 	&__negative {
@@ -1934,6 +2024,10 @@
 		background-size: 5rem 5rem;
 		height: 5rem;
 		width: 5rem;
+		@include nmd {
+			top: 0;
+			left: 30rem;
+		}
 	}
 
 	.slick-prev {
@@ -1942,6 +2036,10 @@
 		right: 20%;
 		left: auto;
 		z-index: 999;
+		@include nmd {
+			right: auto;
+			bottom: -2.25rem;
+		}
 	}
 	.slick-next {
 		bottom: -1.25rem;
@@ -1949,6 +2047,11 @@
 		right: 15%;
 		left: auto;
 		z-index: 999;
+		@include nmd {
+			right: auto;
+			left: 3rem;
+			bottom: -2.25rem;
+		}
 	}
 
 	.slick-prev:before {
@@ -1972,6 +2075,10 @@
 	.slick-dots {
         bottom: -35px;
 		right: -45%;
+		@include nmd {
+			right: auto;
+			bottom: -2.5rem;
+		}
     }
     .slick-dots li {
         background: $pryme-alt;
@@ -1998,6 +2105,10 @@
 		font-size: 3.125rem;
 		margin-bottom: 6rem;
 		position: relative;
+		@include nmd {
+			font-size: 2rem;
+			margin-bottom: 4rem;
+		}
 	}
 	&__title::before {
 		content: "03";
@@ -2025,9 +2136,15 @@
 		@include nlg {
 			margin-bottom: 4rem;
 		}
+		@include nmd {
+			flex-direction: column;
+		}
 		&--2 {
 			@include nlg {
 				margin-bottom: 2rem;
+			}
+			@include nmd {
+				flex-direction: row;
 			}
 		}
 		
@@ -2039,6 +2156,9 @@
 		line-height: 156%;
 		@include nlg {
 			margin-left: 1rem;
+		}
+		@include nmd {
+			margin-top: 2rem;
 		}
 	}
 	&__sub-title {
@@ -2064,6 +2184,9 @@
 		width: 50%;
 		padding: 3rem 0;
 		z-index: 1;
+		@include nmd {
+			width: 44%;
+		}
 	}
 	&__list-wrap::before {
 		content: '';
@@ -2076,6 +2199,9 @@
 		z-index: 0;
 		@include nlg {
 			height: 25rem;
+		}
+		@include nmd {
+			height: 35rem;
 		}
 	}
 	&__table-wrap {
@@ -2188,12 +2314,18 @@
 .spec {
 	background: $pryme-alt;
 	color: $colorw;
-	padding: 5rem 0 3rem;
+	padding: 5rem 0;
 	overflow: hidden;
+	@include nmd {
+		padding: 2rem 0;
+	}
 	&__main-wrap {
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between; 
+		@include nmd {
+			flex-direction: column;
+		}
 	}
 	&__row {
 		display: flex;
@@ -2201,6 +2333,9 @@
 		align-items: flex-start;
 		flex-direction: column;
 		max-width: 50%;
+		@include nmd {
+			max-width: 100%;
+		}
 	}
 	&__left {
 		width: 50%;
@@ -2209,9 +2344,13 @@
 		width: 50%;
 	}
 	&__title {
-        font-size: 3.125rem; 
+        font-size: 2rem; 
         margin: 0 0 2.5rem;
 		position: relative;
+		@include nmd {
+			width: 100%;
+			margin: 0 0 1.5rem;
+		}
     }
 	&__title::before {
 		content: "04";
@@ -2234,13 +2373,22 @@
         margin-bottom: 2rem;
         max-width: 36.25rem;
 		font-size: 1.125rem;
+		@include nmd {
+			margin-bottom: 1rem;
+		}
     }
 	&__text:last-child {
         margin-bottom: 0rem;
+		@include nmd {
+			margin-bottom: 2rem;
+		}
     }
     &__map {
         width: 50%;
 		height: 412px;
+		@include nmd {
+			width: 100%;
+		}
     }
 }
 
@@ -2254,12 +2402,18 @@
     padding: 5rem 0 9rem;
     height: auto; 
     position: relative;
+	@include nmd {
+		padding: 2rem 0 6rem;
+	}
     &__title {
         font-size: 3.125rem;
         font-weight: 700;
         margin: 3.2rem 0;
         color: $colorw;
         position: relative;
+		@include nmd {
+			font-size: 2rem;
+		}
     }
     &__title::before {
 		content: "06";
@@ -2380,10 +2534,16 @@
     color: $pryme-alt;
     padding: 5rem 0 4rem;
 	overflow: hidden;
+	@include nmd {
+		padding: 3rem 0 2rem;
+	}
     &__title {
         font-size: 3.125rem;
         font-weight: 700;
         position: relative;
+		@include nmd {
+			font-size: 2rem;
+		}	
     }
     &__title::before {
 		content: "05";
@@ -2406,6 +2566,10 @@
         font-size: 1.75rem;
         font-weight: 600;
         margin: 4rem 0 2rem;
+		@include nmd {
+			font-size: 1.5rem;
+			margin: 3rem 0 1.5rem;
+		}
     }
     &__cap {
         font-size: 1.15rem;
@@ -2463,39 +2627,64 @@
 		z-index: 2;
     }
     .slick-prev, .slick-next {
-        top: 100%;
+        bottom: -2rem;
+		top: auto;
     }
     .slick-prev{
         left: 35%;
         z-index: 9999;
+		@include nmd {
+			left: 28.5%;
+		}
+		
     }
     .slick-next {
         right: 36%;
         z-index: 9999;
+		@include nmd {
+			right: 30%;
+		}
     }
-    .slick-prev::before{
-        color: $pryme-alt;
-        font-size: 60px;
-        content: '<';
+    .slick-prev:before {
+        display: block;
+		content: ' ';
+		background-image: url('../img/arrow-right.svg');
+		background-size: 1.4rem 2rem;
+		height: 2rem;
+		width: 1.4rem;
+        transform: rotate(180deg);
     }
-    .slick-next::before{
-        color: $pryme-alt;
-        font-size: 60px;
-        content: '>';
+    .slick-next:before {
+        display: block;
+		content: ' ';
+		background-image: url('../img/arrow-right.svg');
+		background-size: 1.4rem 2rem;
+		height: 2rem;
+		width: 1.4rem;
     }
-    .slick-dots {
+    .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+        opacity: 0;
+    }
+	.slick-dots {
         bottom: -35px;
+		right: auto;
+		@include nmd{
+            right: 0;
+        }
     }
     .slick-dots li {
-        background: $pryme-alt;
-        border-radius: 50%;
+        background: $colorw;
+		border: 1px solid $pryme-alt;
         color: inherit;
+		width: 10px;
+    	height: 10px;
     }
     .slick-dots li button::before {
         content: '';
     }
-    .slick-dots li + .slick-active {
-        background: $main-color;
+    .slick-dots .slick-active {
+        background: $pryme-alt;
+		transform: scale(1.5);
     }
 }
 
@@ -2503,6 +2692,9 @@
     background: #E9F2FB;
     padding: 4rem 0;
     color: $pryme-alt;
+	@include nmd {
+		 padding: 2rem 0;
+	}
     &__row {
         display: flex;
         justify-content: space-between;
@@ -2545,6 +2737,9 @@
         color: $pryme-alt;
         position: relative;
         margin-bottom: 1rem;
+		@include nmd {
+		 	font-size: 2rem;
+		}
     }
     &__title::before {
 		content: "07";
@@ -2615,6 +2810,9 @@
         background: $pryme-color;
         height: 3.2rem;
         z-index: -1;
+		@include nmd {
+			width: 57%;
+		}
     }
     &__title {
         color: $colorw;
@@ -2660,11 +2858,17 @@
         color: $colorw;
         font-weight: 500;
 	}
+	&__link {
+		z-index: 2;
+	}
     &__links {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
         justify-content: flex-start;
+		@include nmd {
+			display: flex !important;
+		}
     }
     &__item {
         position: relative;
@@ -2686,6 +2890,9 @@
         filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.3));
 		max-width: 260px;
 		max-height: 160px;	
+		@include nmd {
+			filter: none;
+		}
 		&--2 {
 			margin-right: 1rem;
 		}	
@@ -2710,6 +2917,9 @@
 		position: relative;
 		margin-left: 12rem;
 		margin-top: 6rem;
+		@include nmd {
+			display: none;
+		}
 	}
 	.tabs {
 		position: relative;
@@ -2761,6 +2971,38 @@
 	.tabs-content .content.active {
 		display: block;
 	}
+
+	.service-mob-slider {
+		display: none;
+		@include nmd {
+			margin-top: 5rem;
+			display: block;
+		}
+	}
+	.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+        opacity: 0;
+    }
+	.slick-dots {
+        bottom: -35px;
+		right: -40%;
+		@include nmd{
+            right: 0;
+        }
+    }
+    .slick-dots li {
+        background: $colorw;
+		border: 1px solid $pryme-alt;
+        color: inherit;
+		width: 10px;
+    	height: 10px;
+    }
+    .slick-dots li button::before {
+        content: '';
+    }
+    .slick-dots .slick-active {
+        background: $pryme-alt;
+		transform: scale(1.5);
+    }
 }
 
 

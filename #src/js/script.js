@@ -77,9 +77,9 @@ $(".slider").slick({
 
     }, {
 
-      breakpoint: 600,
+      breakpoint: 1024,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
         dots: true
       }
 
@@ -101,6 +101,15 @@ $(".table-slider").slick({
   slidesToShow: 1,
   slideToScroll: 1
   
+});
+
+$(".service-mob-slider").slick({
+  infinite: false,
+  dots: true,
+  arrows: false,
+  autoplay: false,
+  slidesToShow: 1,
+  slideToScroll: 1
 });
 
 $(".main-slider").slick({

@@ -615,7 +615,7 @@
         </header>
 
         <section class="from-germany" id="from-germany">
-            <div class="from-germany__mask"></div>
+            
             <div class="from-germany__main-wrap">
                 <div class="container">
                     <div class="from-germany__text-wrap">
@@ -642,9 +642,16 @@
                 <img class="from-germany__img" src="img/train_bg.jpg" alt="#">
                 <img class="from-germany__img" src="img/ship_bg.jpg" alt="#">
             </div>
-
             <div class="main-slider mobile">    
+                <img class="from-germany__img" src="img/mobile/germany/img_truck.jpg" alt="#">
+                <img class="from-germany__img" src="img/mobile/germany/img_airplane.jpg" alt="#">
+                <img class="from-germany__img" src="img/mobile/germany/img_train.jpg" alt="#">
+                <img class="from-germany__img" src="img/mobile/germany/img_ship.jpg" alt="#">
+            </div>
+
+            <!-- <div class="main-slider mobile">    
                 <div class="from-germany__slide-mob from-germany__slide-mob--1">
+
                     <div class="container">
                         <div class="from-germany__text-wrap">
                             <h1 class="from-germany__title">Перевозка грузов: Германия</h1>
@@ -709,7 +716,7 @@
                         <button class="from-germany__btn" type="button">Рассчитать стоимость</button>
                     </div>
                 </div>   
-            </div> 
+            </div>  -->
                         
         </section>
 
@@ -1025,58 +1032,209 @@
             </div>
         </section>
 
-        <section class="imp-exp" id="imp-exp">
+        <section class="service">
             <div class="container">
-                <div class="imp-exp__plunk"></div>
-                <h2 class="imp-exp__title">Импорт и экспорт</h2>
-                <div class="imp-exp__row">
-                    <div class="imp-exp__buttons">
-                        <button class="imp-exp__btn" type="button">В Германию</button>
-                        <button class="imp-exp__btn" type="button">Тарифы</button>
-                        <button class="imp-exp__btn" type="button">Из Германии</button>
-                    </div>
-                    <div class="imp-exp__links">
-                        <a href="#" class="imp-exp__link">
-                            <div class="imp-exp__item">
-                                <img class="imp-exp__img" src="img/ie1.jpg" alt="#">
-                                <span class="imp-exp__link-cap">Выбор продукции</span>
+                <div class="service__plunk"></div>
+                <h2 class="service__title">Импорт и экспорт</h2>
+                <div class="vertical-tabs">
+                    <ul class="tabs vertical" data-tab="">
+                        <li class="tab-title"><a class="service__btn" href="#panela1" aria-selected="true" tabindex="0">Виды товаров</a></li>
+                        <li class="tab-title active"><a class="service__btn" href="#panelb1" aria-selected="false" tabindex="-1">Виды транспорта</a></li>
+                        <li class="tab-title"><a class="service__btn" href="#panelc1" aria-selected="false" tabindex="-1">Виды грузоперевозок</a></li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div class="content" id="panela1" aria-hidden="false" >
+                            <div class="service__links">
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img service__img--2" src="img/ser6.jpg" alt="#">
+                                        <span class="service__link-cap">Генеральные</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img service__img--2" src="img/ser7.jpg" alt="#">
+                                        <span class="service__link-cap">Сыпучие</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img service__img--2" src="img/ser8.jpg" alt="#">
+                                        <span class="service__link-cap">Наливные</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img service__img--2" src="img/ser9.jpg" alt="#">
+                                        <span class="service__link-cap">Специальные</span>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                        <a href="#" class="imp-exp__link">
-                            <div class="imp-exp__item">
-                                <img class="imp-exp__img" src="img/ie2.jpg" alt="#">
-                                <span class="imp-exp__link-cap">Геонаправления</span>
+                        </div>
+                        <div class="content active" id="panelb1" aria-hidden="true" tabindex="-1">
+                            <div class="service__links">
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser1.jpg" alt="#">
+                                        <span class="service__link-cap">Авиа</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser2.jpg" alt="#">
+                                        <span class="service__link-cap">Авто</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser3.jpg" alt="#">
+                                        <span class="service__link-cap">Мультимодальные</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser4.jpg" alt="#">
+                                        <span class="service__link-cap">ЖД</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser5.jpg" alt="#">
+                                        <span class="service__link-cap">Морские</span>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                        <a href="#" class="imp-exp__link">
-                            <div class="imp-exp__item">
-                                <img class="imp-exp__img" src="img/ie3.jpg" alt="#">
-                                <span class="imp-exp__link-cap">Для кого</span>
-                            </div>
-                        </a>
-                        <a href="#" class="imp-exp__link">
-                            <div class="imp-exp__item">
-                                <img class="imp-exp__img" src="img/ie4.jpg" alt="#">
-                                <span class="imp-exp__link-cap">Виды грузов</span>
-                            </div>
-                        </a>
-                        <a href="#" class="imp-exp__link">
-                            <div class="imp-exp__item">
-                                <img class="imp-exp__img" src="img/ie5.jpg" alt="#">
-                                <span class="imp-exp__link-cap">Способ доставки</span>
-                            </div>
-                        </a>
-                        <a href="#" class="imp-exp__link">
-                            <div class="imp-exp__item">
-                                <img class="imp-exp__img" src="img/ie6.jpg" alt="#">
-                                <span class="imp-exp__link-cap">Сроки доставки</span>
-                            </div>
-                        </a>
+                        </div>
+                        <div class="content" id="panelc1" aria-hidden="true" tabindex="-1">
+                        <div class="service__links">
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser10.jpg" alt="#">
+                                        <span class="service__link-cap">Международные</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser11.jpg" alt="#">
+                                        <span class="service__link-cap">Локальные</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser12.jpg" alt="#">
+                                        <span class="service__link-cap">Типы транспортировки</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser13.jpg" alt="#">
+                                        <span class="service__link-cap">Отдельный транспорт</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser14.jpg" alt="#">
+                                        <span class="service__link-cap">Способы доставки</span>
+                                    </div>
+                                </a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="service-mob-slider">
+                <div class="service__links">
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser1.jpg" alt="#">
+                            <span class="service__link-cap">Авиа</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser2.jpg" alt="#">
+                            <span class="service__link-cap">Авто</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser3.jpg" alt="#">
+                            <span class="service__link-cap">Мультимодальные</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser4.jpg" alt="#">
+                            <span class="service__link-cap">ЖД</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser5.jpg" alt="#">
+                            <span class="service__link-cap">Морские</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="service__links">
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser10.jpg" alt="#">
+                            <span class="service__link-cap">Международные</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser11.jpg" alt="#">
+                            <span class="service__link-cap">Локальные</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser12.jpg" alt="#">
+                            <span class="service__link-cap">Типы транспортировки</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser13.jpg" alt="#">
+                            <span class="service__link-cap">Отдельный транспорт</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser14.jpg" alt="#">
+                            <span class="service__link-cap">Способы доставки</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="service__links">
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img service__img--2" src="img/ser6.jpg" alt="#">
+                            <span class="service__link-cap">Генеральные</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img service__img--2" src="img/ser7.jpg" alt="#">
+                            <span class="service__link-cap">Сыпучие</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img service__img--2" src="img/ser8.jpg" alt="#">
+                            <span class="service__link-cap">Наливные</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img service__img--2" src="img/ser9.jpg" alt="#">
+                            <span class="service__link-cap">Специальные</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </section>
-
+        
         <section class="route">
             <div class="container">
                 <h2 class="route__title title">Разработаем оптимальный маршрут</h2>
@@ -1948,25 +2106,46 @@
                 <h4 class="docs__sub-title">Образцы документов</h4>
                 <div class="regular slider">
                     <div>
-                        <img class="docs__img" src="img/doc1.jpg" alt="#">
+                        <a href="import-docs/01dogovor-kupli-prodagi.pdf" target="blank">
+                            <img class="docs__img" src="img/doc1.jpg" alt="#">
+                            <span>Документ 37</span>
+                        </a>
                     </div>
                     <div>
-                        <img class="docs__img" src="img/doc2.jpg" alt="#">
+                        <a href="#">
+                            <img class="docs__img" src="img/doc2.jpg" alt="#">
+                            <span>Документ 1</span>
+                        </a>
                     </div>
                     <div>
-                        <img class="docs__img" src="img/doc3.jpg" alt="#">
+                        <a href="#">
+                            <img class="docs__img" src="img/doc3.jpg" alt="#">
+                            <span>Документ 1</span>
+                        </a>
                     </div>
                     <div>
-                        <img class="docs__img" src="img/doc4.jpg" alt="#">
+                        <a href="#">
+                            <img class="docs__img" src="img/doc4.jpg" alt="#">
+                            <span>Документ 1</span>
+                        </a>
                     </div>
                     <div>
-                        <img class="docs__img" src="img/doc5.jpg" alt="#">
+                        <a href="#">
+                            <img class="docs__img" src="img/doc5.jpg" alt="#">
+                            <span>Документ 1</span>
+                        </a>
                     </div>
                     <div>
-                        <img class="docs__img" src="img/doc6.jpg" alt="#">
+                        <a href="#">
+                            <img class="docs__img" src="img/doc6.jpg" alt="#">
+                            <span>Документ 1</span>
+                        </a>
                     </div>
                     <div>
-                        <img class="docs__img" src="img/doc7.jpg" alt="#">
+                        <a href="#">
+                            <img class="docs__img" src="img/doc7.jpg" alt="#">
+                            <span>Документ 1</span>
+                        </a>
                     </div>
                 </div>
                
@@ -2248,108 +2427,200 @@
                 <div class="service__plunk"></div>
                 <h2 class="service__title">Окажем все необходимые услуги</h2>
                 <div class="vertical-tabs">
-                <ul class="tabs vertical" data-tab="">
-                    <li class="tab-title"><a class="service__btn" href="#panela1" aria-selected="true" tabindex="0">Виды товаров</a></li>
-                    <li class="tab-title active"><a class="service__btn" href="#panelb1" aria-selected="false" tabindex="-1">Виды транспорта</a></li>
-                    <li class="tab-title"><a class="service__btn" href="#panelc1" aria-selected="false" tabindex="-1">Виды грузоперевозок</a></li>
-                </ul>
-                <div class="tabs-content">
-                    <div class="content" id="panela1" aria-hidden="false" >
-                        <div class="service__links">
-                            <a href="#" class="service__link">
-                                <div class="service__item">
-                                    <img class="service__img service__img--2" src="img/ser6.jpg" alt="#">
-                                    <span class="service__link-cap">Генеральные</span>
-                                </div>
-                            </a>
-                            <a href="#" class="service__link">
-                                <div class="service__item">
-                                    <img class="service__img service__img--2" src="img/ser7.jpg" alt="#">
-                                    <span class="service__link-cap">Сыпучие</span>
-                                </div>
-                            </a>
-                            <a href="#" class="service__link">
-                                <div class="service__item">
-                                    <img class="service__img service__img--2" src="img/ser8.jpg" alt="#">
-                                    <span class="service__link-cap">Наливные</span>
-                                </div>
-                            </a>
-                            <a href="#" class="service__link">
-                                <div class="service__item">
-                                    <img class="service__img service__img--2" src="img/ser9.jpg" alt="#">
-                                    <span class="service__link-cap">Специальные</span>
-                                </div>
-                            </a>
+                    <ul class="tabs vertical" data-tab="">
+                        <li class="tab-title"><a class="service__btn" href="#panela1" aria-selected="true" tabindex="0">Виды товаров</a></li>
+                        <li class="tab-title active"><a class="service__btn" href="#panelb1" aria-selected="false" tabindex="-1">Виды транспорта</a></li>
+                        <li class="tab-title"><a class="service__btn" href="#panelc1" aria-selected="false" tabindex="-1">Виды грузоперевозок</a></li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div class="content" id="panela1" aria-hidden="false" >
+                            <div class="service__links">
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img service__img--2" src="img/ser6.jpg" alt="#">
+                                        <span class="service__link-cap">Генеральные</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img service__img--2" src="img/ser7.jpg" alt="#">
+                                        <span class="service__link-cap">Сыпучие</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img service__img--2" src="img/ser8.jpg" alt="#">
+                                        <span class="service__link-cap">Наливные</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img service__img--2" src="img/ser9.jpg" alt="#">
+                                        <span class="service__link-cap">Специальные</span>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="content active" id="panelb1" aria-hidden="true" tabindex="-1">
-                        <div class="service__links">
-                            <a href="#" class="service__link">
-                                <div class="service__item">
-                                    <img class="service__img" src="img/ser1.jpg" alt="#">
-                                    <span class="service__link-cap">Авиа</span>
-                                </div>
-                            </a>
-                            <a href="#" class="service__link">
-                                <div class="service__item">
-                                    <img class="service__img" src="img/ser2.jpg" alt="#">
-                                    <span class="service__link-cap">Авто</span>
-                                </div>
-                            </a>
-                            <a href="#" class="service__link">
-                                <div class="service__item">
-                                    <img class="service__img" src="img/ser3.jpg" alt="#">
-                                    <span class="service__link-cap">Мультимодальные</span>
-                                </div>
-                            </a>
-                            <a href="#" class="service__link">
-                                <div class="service__item">
-                                    <img class="service__img" src="img/ser4.jpg" alt="#">
-                                    <span class="service__link-cap">ЖД</span>
-                                </div>
-                            </a>
-                            <a href="#" class="service__link">
-                                <div class="service__item">
-                                    <img class="service__img" src="img/ser5.jpg" alt="#">
-                                    <span class="service__link-cap">Морские</span>
-                                </div>
-                            </a>
+                        <div class="content active" id="panelb1" aria-hidden="true" tabindex="-1">
+                            <div class="service__links">
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser1.jpg" alt="#">
+                                        <span class="service__link-cap">Авиа</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser2.jpg" alt="#">
+                                        <span class="service__link-cap">Авто</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser3.jpg" alt="#">
+                                        <span class="service__link-cap">Мультимодальные</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser4.jpg" alt="#">
+                                        <span class="service__link-cap">ЖД</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser5.jpg" alt="#">
+                                        <span class="service__link-cap">Морские</span>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="content" id="panelc1" aria-hidden="true" tabindex="-1">
-                    <div class="service__links">
-                            <a href="#" class="service__link">
-                                <div class="service__item">
-                                    <img class="service__img" src="img/ser10.jpg" alt="#">
-                                    <span class="service__link-cap">Международные</span>
-                                </div>
-                            </a>
-                            <a href="#" class="service__link">
-                                <div class="service__item">
-                                    <img class="service__img" src="img/ser11.jpg" alt="#">
-                                    <span class="service__link-cap">Локальные</span>
-                                </div>
-                            </a>
-                            <a href="#" class="service__link">
-                                <div class="service__item">
-                                    <img class="service__img" src="img/ser12.jpg" alt="#">
-                                    <span class="service__link-cap">Типы транспортировки</span>
-                                </div>
-                            </a>
-                            <a href="#" class="service__link">
-                                <div class="service__item">
-                                    <img class="service__img" src="img/ser13.jpg" alt="#">
-                                    <span class="service__link-cap">Отдельный транспорт</span>
-                                </div>
-                            </a>
-                            <a href="#" class="service__link">
-                                <div class="service__item">
-                                    <img class="service__img" src="img/ser14.jpg" alt="#">
-                                    <span class="service__link-cap">Способы доставки</span>
-                                </div>
-                            </a>
+                        <div class="content" id="panelc1" aria-hidden="true" tabindex="-1">
+                        <div class="service__links">
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser10.jpg" alt="#">
+                                        <span class="service__link-cap">Международные</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser11.jpg" alt="#">
+                                        <span class="service__link-cap">Локальные</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser12.jpg" alt="#">
+                                        <span class="service__link-cap">Типы транспортировки</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser13.jpg" alt="#">
+                                        <span class="service__link-cap">Отдельный транспорт</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="service__link">
+                                    <div class="service__item">
+                                        <img class="service__img" src="img/ser14.jpg" alt="#">
+                                        <span class="service__link-cap">Способы доставки</span>
+                                    </div>
+                                </a>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="service-mob-slider">
+                <div class="service__links">
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser1.jpg" alt="#">
+                            <span class="service__link-cap">Авиа</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser2.jpg" alt="#">
+                            <span class="service__link-cap">Авто</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser3.jpg" alt="#">
+                            <span class="service__link-cap">Мультимодальные</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser4.jpg" alt="#">
+                            <span class="service__link-cap">ЖД</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser5.jpg" alt="#">
+                            <span class="service__link-cap">Морские</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="service__links">
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser10.jpg" alt="#">
+                            <span class="service__link-cap">Международные</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser11.jpg" alt="#">
+                            <span class="service__link-cap">Локальные</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser12.jpg" alt="#">
+                            <span class="service__link-cap">Типы транспортировки</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser13.jpg" alt="#">
+                            <span class="service__link-cap">Отдельный транспорт</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img" src="img/ser14.jpg" alt="#">
+                            <span class="service__link-cap">Способы доставки</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="service__links">
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img service__img--2" src="img/ser6.jpg" alt="#">
+                            <span class="service__link-cap">Генеральные</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img service__img--2" src="img/ser7.jpg" alt="#">
+                            <span class="service__link-cap">Сыпучие</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img service__img--2" src="img/ser8.jpg" alt="#">
+                            <span class="service__link-cap">Наливные</span>
+                        </div>
+                    </a>
+                    <a href="#" class="service__link">
+                        <div class="service__item">
+                            <img class="service__img service__img--2" src="img/ser9.jpg" alt="#">
+                            <span class="service__link-cap">Специальные</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
