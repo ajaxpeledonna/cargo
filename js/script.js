@@ -63,6 +63,7 @@ $(".slider").slick({
   // normal options...
   infinite: true,
   dots: true,
+  variableWidth: true,
   autoplay: true,
   autoplaySpeed: 2000,
   slidesToShow: 5,
@@ -85,6 +86,14 @@ $(".slider").slick({
 
     }, {
 
+      breakpoint: 500,
+      settings: {
+        dots: false
+      }
+
+    },
+    {
+
       breakpoint: 300,
       settings: "unslick" // destroys slick
 
@@ -99,8 +108,15 @@ $(".table-slider").slick({
   autoplay: false,
   autoplaySpeed: 1000,
   slidesToShow: 1,
-  slideToScroll: 1
+  slideToScroll: 1,
   
+  responsive: [{
+      breakpoint: 768,
+      settings: {
+        arrows: false
+      }
+
+    }]
 });
 
 $(".service-mob-slider").slick({
@@ -135,7 +151,14 @@ $(".route-slider").slick({
   speed: 0,
   arrows: true,
   slidesToShow: 1,
-  slideToScroll: 1
+  slideToScroll: 1,
+  responsive: [{
+      breakpoint: 768,
+      settings: {
+        arrows: false
+      }
+
+    }]
 });
 
 $(".contact-slider").slick({
