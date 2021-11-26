@@ -17,6 +17,29 @@ $(document).ready(function(){
     });
 
 
+
+
+
+	$('.docs__content-toggle').click(function(){
+		$('.docs__wrap').toggleClass('hide');	
+		if ($('.docs__wrap').hasClass('hide')) {
+			$('.docs__content-toggle').html('Показать больше');
+		} else {
+			$('.docs__content-toggle').html('Скрыть');
+		}		
+		return false;
+	});	
+
+
+  $('.info__content-toggle').click(function(){
+		$('.info__wrap').toggleClass('hide');	
+		if ($('.info__wrap').hasClass('hide')) {
+			$('.info__content-toggle').html('Показать больше');
+		} else {
+			$('.info__content-toggle').html('Скрыть');
+		}		
+		return false;
+	});	
 	// Accordion  //
 
 $(function() {
