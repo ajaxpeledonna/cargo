@@ -49,6 +49,9 @@
 			font-family: $font-alt;
 			line-height: 170%;
 		}
+		@include nsm {
+			display: none;
+		}
 	}
 	&__email:before {
 		display: block;
@@ -2664,7 +2667,9 @@
 		}
     }
 	.accordion__item:nth-child(2n){
-		background: rgba(198, 217, 255, 0.35);
+		@include nsm {
+			background: rgba(198, 217, 255, 0.35);
+		}	
 	}
     .accordion__item .accordion__title {
         position: relative;
@@ -2787,11 +2792,14 @@
         font-size: 3.125rem;
         font-weight: 700;
         position: relative;
+		margin-bottom: 3.2rem;
 		@include nmd {
 			font-size: 2rem;
+			margin-bottom: 2rem;
 		}	
 		@include nsm {
 			font-size: 1.1rem;
+			margin-bottom: 0rem;
 		}
     }
     &__title::before {
@@ -2828,7 +2836,7 @@
 		}
 		@include nsm {
 			font-size: 0.9375rem;
-			margin: 2rem 0 1rem;
+			margin: 1.5rem 0 1rem;
 		}
     }
     &__cap {
@@ -2877,6 +2885,7 @@
     }
 	.docs__content-toggle {
 		display: none;
+		position: relative;
 		@include nsm {
 			display: block;
 			font-size: 0.75rem;
@@ -2886,16 +2895,46 @@
 			text-align: center;
 		}
 	}
-	.docs__wrap .hide {
+	&__btn-wrap {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 1rem;
+		margin-top: 1rem;
+	}
+	&__arrow {
+		font-size: 1.4rem;
+		transform: rotate(180deg);
+		margin: -5px 0 0 4px;
+		display: flex;
+		align-items: center;
+	}
+	// .docs__content-toggle::after {
+	// 	display: block;
+	// 	content: ' ';
+	// 	background-image: url('../img/mobile/germany/arrow-down.svg');
+	// 	background-size: 0.8rem 1rem;
+	// 	background-repeat: no-repeat;
+	// 	height: 1rem;
+	// 	width: 0.8rem;
+	// 	position: absolute;
+	// 	top: 0.25rem;
+	// 	right: 0;
+	// }
+	.docs__wrap .hide-docs {
 		overflow: hidden;
 		@include nsm {
 			height: 23rem;
+			visibility: visible;
+			transition: 2s;
 		}
     }
-	.hide {
+	.hide-docs {
 		height: auto;
 		@include nsm {
 			height: 23rem;
+			visibility: visible;
+			transition: 2s;
 		}	
 	}
     &__list {
@@ -3167,10 +3206,14 @@
         color: $pryme-alt;
 		@include nsm {
 		 	font-size: 0.85rem;
+			 margin-top: 0;
 		}
     }
     &__list {
         margin-left: 1.125rem;
+		@include nsm {
+			margin-bottom: 1.25rem;
+		}
     }
     &__items {
         list-style-type: square; 
@@ -3194,6 +3237,7 @@
     }
 	.info__content-toggle {
 		display: none;
+		position: relative;
 		@include nsm {
 			display: block;
 			font-size: 0.75rem;
@@ -3201,14 +3245,28 @@
 			text-decoration: underline;
 			color: $pryme-alt;
 			text-align: center;
-			width: 100%;
-			margin-top: 1rem;
 		}
+	}
+	&__btn-wrap {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 1rem;
+		margin-top: 1rem;
+		width: 100%;
+	}
+	&__arrow { 
+		font-size: 1.4rem;
+		transform: rotate(180deg);
+		margin: -5px 0 0 4px;
+		display: flex;
+		align-items: center;
 	}
 	.hide {
 		height: auto;
+		display: block;
 		@include nsm {
-			height: 36rem;
+			display: none;
 		}	
 	}
 }

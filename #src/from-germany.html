@@ -1999,7 +1999,7 @@
             <div class="container">
                 <h2 class="docs__title title">Документы</h2>
                 <h3 class="docs__sub-title">Перечень документов необходимый для перевозки грузов:</h3>
-                <div class="docs__wrap hide">
+                <div class="docs__wrap hide-docs">
                     <div class="docs__decor docs__decor--1"></div>
                     <div class="docs__decor docs__decor--2"></div>
                     <div class="docs__import">
@@ -2138,8 +2138,10 @@
                     </div>
                 </div>
 
-                <a class="docs__content-toggle" href="#">Показать больше </a>
-
+                <div class="docs__btn-wrap">
+                    <a class="docs__content-toggle" href="#">Показать больше </a> 
+                    <span class="docs__arrow">&#8963;</span>
+                </div>
                 <h4 class="docs__sub-title">Примеры заполнения документов</h4>
                 <div class="slider">
                         <a class='docs__slider-item-link' href="example-docs/1kuplya-prodajha.pdf" target="blank">
@@ -2355,7 +2357,7 @@
             <div class="container">
                 <h2 class="info__title title">Полезно знать</h2>
                 <div class="info__row">
-                    <div class="info__wrap hide">
+                    <div class="info__wrap">
                         <div class="info__left">
                             <h3 class="info__sub-cap info__sub-cap--2">Международные документы, регулирующие грузоперевозки</h3>
                             <h4 class="info__sub-title">Морские перевозки</h4>
@@ -2391,6 +2393,7 @@
                                     </a>
                                 </li>
                             </ul>
+                            <div class="hide">
                             <h4 class="info__sub-title">Автомобильные перевозки</h4>
                             <div class="info__decor-line"></div>
                             <ul class="info__list">
@@ -2447,9 +2450,14 @@
                                     </a>
                                 </li>
                             </ul>
+                            </div>
                         </div>
                     </div>
-                    <a class="info__content-toggle" href="#">Показать больше </a>
+                    <div class="info__btn-wrap">
+                        <a class="info__content-toggle" href="#">Показать больше </a> 
+                        <!-- <span class="info__arrow">&#8963;</span> -->
+                    </div>
+                    <!-- <a class="info__content-toggle" href="#">Показать больше </a> -->
                     <div class="info__img-wrap">
                         <img class="info__img" src="img/info1.jpg" alt="#">
                         <img class="info__img" src="img/info2.jpg" alt="#">
