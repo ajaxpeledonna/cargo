@@ -21,19 +21,20 @@ $('.info__content-toggle').on("click", function(e){
     e.preventDefault();
     $('.hide').slideToggle('slow');
     $(this).text( $(this).text() == 'Скрыть' ? "Показать больше" : "Скрыть");
-    if ($('.info__wrap').hasClass('hide')) {
-      $('.info__arrow').css('transform','rotate(180deg)');
-      $('.info__arrow').css('margin','-6px 0 0 4px');
-		} else {
+    $('.info__content-toggle').toggleClass('rotate', 1000);
+    if ($('.info__content-toggle').hasClass('rotate')) {
       $('.info__arrow').css('transform','rotate(0deg)');
-      $('.info__arrow').css('margin','0 0 -9px 4px');
+      $('.info__arrow').css('margin','0 0 -8px 4px');
+		} else {
+      $('.info__arrow').css('transform','rotate(180deg)');
+      $('.info__arrow').css('margin','-7px 0 0 4px');
 		} 
 });
 
 
 
 	$('.docs__content-toggle').on("click", function(){
-		$('.docs__wrap').toggleClass('hide-docs', 2000);	
+		$('.docs__wrap').toggleClass('hide-docs', 1000);	
 		if ($('.docs__wrap').hasClass('hide-docs')) {
 			$('.docs__content-toggle').html('Показать больше');
       $('.docs__arrow').css('transform','rotate(180deg)');
