@@ -3626,7 +3626,9 @@ p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 3rem;
-  height: auto;
+  max-height: 100rem;
+  -webkit-transition: max-height 1s;
+  transition: max-height 1s;
 }
 
 @media all and (max-width: 767px) {
@@ -3637,6 +3639,22 @@ p {
             flex-direction: column;
     overflow: hidden;
     margin-top: 1rem;
+    -webkit-transition: max-height 1s;
+    transition: max-height 1s;
+    max-height: 100rem;
+  }
+}
+
+.docs__wrap.hide-docs {
+  max-height: 100rem;
+}
+
+@media all and (max-width: 767px) {
+  .docs__wrap.hide-docs {
+    max-height: 23rem;
+    visibility: visible;
+    -webkit-transition: max-height 1s;
+    transition: max-height 1s;
   }
 }
 
@@ -3657,55 +3675,41 @@ p {
 }
 
 .docs__btn-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 1rem;
-  margin-top: 1rem;
-}
-
-.docs__arrow {
-  font-size: 1.4rem;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  margin: -5px 0 0 4px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.docs .docs__wrap .hide-docs {
-  overflow: hidden;
+  display: none;
 }
 
 @media all and (max-width: 767px) {
-  .docs .docs__wrap .hide-docs {
-    height: 23rem;
-    visibility: visible;
-    -webkit-transition: 2s;
-    transition: 2s;
+  .docs__btn-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 1rem;
+    margin-top: 1rem;
   }
 }
 
-.docs .hide-docs {
-  height: auto;
+.docs__arrow {
+  display: none;
 }
 
 @media all and (max-width: 767px) {
-  .docs .hide-docs {
-    height: 23rem;
-    visibility: visible;
-    -webkit-transition: 2s;
-    transition: 2s;
+  .docs__arrow {
+    font-size: 1.4rem;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    margin: -5px 0 0 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -4161,31 +4165,50 @@ p {
 }
 
 .info__btn-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 1rem;
-  margin-top: 1rem;
-  width: 100%;
+  display: none;
+}
+
+@media all and (max-width: 767px) {
+  .info__btn-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
 }
 
 .info__arrow {
-  font-size: 1.4rem;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  margin: -5px 0 0 4px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: none;
+}
+
+@media all and (max-width: 767px) {
+  .info__arrow {
+    font-size: 1.4rem;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    margin: -8px 0 0 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+}
+
+.info .info__arrow + .rotate {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .info .hide {
@@ -4336,17 +4359,15 @@ p {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
 @media all and (max-width: 767px) {
   .service__links {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 

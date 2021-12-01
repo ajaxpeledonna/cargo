@@ -34,7 +34,7 @@ $('.info__content-toggle').on("click", function(e){
 
 
 	$('.docs__content-toggle').on("click", function(){
-		$('.docs__wrap').toggleClass('hide-docs', 1000);	
+		$('.docs__wrap').toggleClass('hide-docs', 2000);	
 		if ($('.docs__wrap').hasClass('hide-docs')) {
 			$('.docs__content-toggle').html('Показать больше');
       $('.docs__arrow').css('transform','rotate(180deg)');
