@@ -82,6 +82,9 @@
 		padding: 0;
 		background-color: $pryme-alt;
 		color: $text-color;
+		@include nmd {
+			display: none;
+		}
 	}
 	
 
@@ -218,8 +221,9 @@
 		text-align: left;
 		right: -102%;
 		overflow-y: auto;
+		overflow-x: hidden;
 		-webkit-overflow-scrolling: touch;
-		max-height: 25rem;
+		max-height: 26rem;
 		top: 0;
 		box-sizing: content-box;
 		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
@@ -1126,7 +1130,7 @@
     	padding: 3rem 0;
     }
 	@include nsm {
-    	padding: 2rem 0;
+    	padding: 2rem 0 3rem;
     }
     &__row {
         display: flex;
@@ -1246,6 +1250,10 @@
     .slick-slider {
         width: 50%;
 		@include nmd {
+            width: 60%;
+			margin: auto;
+        }
+		@include nsm {
             width: 100%;
         }
     }
@@ -1395,13 +1403,13 @@
 		}
 	}
 	&__title {
-		font-size: 3.125rem;
+		font-size: 2.5rem;
 		font-weight: bold;
 		line-height: 120%;
 		color: $colorw;
 		display: block;
 		z-index: 1;
-		width: 50rem;
+		width: 45rem;
 		@include nmd {
             font-size: 2rem;
         }
@@ -1980,7 +1988,7 @@
 		}
 	}
 	&__title {
-		font-size: 3.125rem;
+		font-size: 2.5rem;
 		margin-bottom: 3.75rem;
 		position: relative;
 		line-height: 100%;
@@ -2043,6 +2051,7 @@
 	&__comparison {
 		font-size: 1.125rem;
 		font-weight: 600;
+		position: relative;
 		@include nsm {
 			font-size: 0.8125rem;
 		}
@@ -2231,7 +2240,7 @@
 	}
 	&__title {
 		color: $pryme-alt;
-		font-size: 3.125rem;
+		font-size: 2.5rem;
 		margin-bottom: 6rem;
 		position: relative;
 		@include nmd {
@@ -2374,7 +2383,7 @@
 			height: 35rem;
 		}
 		@include nsm {
-			height: 25rem;
+			height: 26rem;
 			left: -1rem;
 			width: 110%;
 		}
@@ -2533,7 +2542,7 @@
 		width: 50%;
 	}
 	&__title {
-        font-size: 2rem; 
+        font-size: 2.5rem; 
         margin: 0 0 2.5rem;
 		position: relative;
 		@include nmd {
@@ -2617,7 +2626,7 @@
 		padding: 2rem 0 2rem;
 	}
     &__title {
-        font-size: 3.125rem;
+        font-size: 2.5rem;
         font-weight: 700;
         margin: 3.2rem 0;
         color: $colorw;
@@ -2789,7 +2798,7 @@
 		padding: 2rem 0 4rem;
 	}
     &__title {
-        font-size: 3.125rem;
+        font-size: 2.5rem;
         font-weight: 700;
         position: relative;
 		margin-bottom: 3.2rem;
@@ -2836,7 +2845,7 @@
 		}
 		@include nsm {
 			font-size: 0.9375rem;
-			margin: 1.5rem 0 1rem;
+			margin: 1.5rem 0 2rem;
 		}
     }
     &__cap {
@@ -2921,7 +2930,8 @@
 		@include nsm {
 			font-size: 1.4rem;
 			transform: rotate(180deg);
-			margin: -5px 0 0 4px;
+			transition: 0.5s;
+			margin: -8px 0 0 4px;
 			display: flex;
 			align-items: center;
 		}
@@ -3150,7 +3160,7 @@
         width: 100%;
     }
     &__title {
-        font-size: 3.75rem;
+        font-size: 2.5rem;
         font-weight: 700;
         color: $pryme-alt;
         position: relative;
@@ -3380,10 +3390,10 @@
         justify-content: flex-start;
 		@include nmd {
 			display: flex !important;
-			justify-content: space-around;
+			
 		}
 		@include nsm {
-			justify-content: space-around;
+			
 		}
     }
     &__item {
