@@ -514,14 +514,15 @@ p {
   }
   .header .mobile-menu li a {
     display: block;
+    text-align: right;
     position: relative;
-    padding: 15px 20px;
+    padding: 15px 30px 15px 20px;
     color: #F0F8F7;
     background: #0A7990;
   }
   .header .mobile-menu li a .navtrigger {
     position: absolute;
-    right: 0;
+    right: -45%;
     top: 0;
     bottom: 0;
     width: 100%;

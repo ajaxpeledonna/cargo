@@ -2791,6 +2791,7 @@
     color: $pryme-alt;
     padding: 5rem 0 4rem;
 	overflow: hidden;
+	z-index: 0;
 	@include nmd {
 		padding: 3rem 0;
 	}
@@ -3587,6 +3588,17 @@
         font-weight: 300;
         font-size: 0.875rem;
     }
+	&__socials-wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+    	height: 100px;
+	}
+	&__copyright {
+		font-size: 0.75rem;
+		color: $colorw;
+	}
     &__socials {
 		display: flex;
 	}
@@ -3596,6 +3608,9 @@
 		@include nsm {
 			margin-left: 0;
 			margin-right: 0.5625rem;
+		}
+		&:first-child {
+			margin-left: 0rem;
 		}
 	}
 	&__social-link:hover {
