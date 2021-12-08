@@ -206,14 +206,40 @@ p {
   position: relative;
   margin-top: 5.2rem;
   background: url("../img/home/img_banner_ship.jpg") center top/cover no-repeat;
-  height: 70vh;
+  height: 696px;
   padding-top: 150px;
+}
+
+@media (min-width: 2000px) {
+  .welcome {
+    height: 900px;
+  }
+}
+
+@media (min-width: 1240px) and (max-width: 1700px) {
+  .welcome {
+    height: 600px;
+    padding-top: 120px;
+  }
+}
+
+@media all and (max-width: 1240px) {
+  .welcome {
+    height: 550px;
+    padding-top: 100px;
+  }
 }
 
 .welcome__text-wrap {
   background: rgba(10, 121, 145, 0.7);
   padding: 67px 104px;
   max-width: 680px;
+}
+
+@media all and (max-width: 1240px) {
+  .welcome__text-wrap {
+    padding: 47px 74px;
+  }
 }
 
 .welcome__title {

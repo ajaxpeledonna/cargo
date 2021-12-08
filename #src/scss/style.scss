@@ -10,12 +10,26 @@
 	position: relative;
 	margin-top: 5.2rem;
 	background: url('../img/home/img_banner_ship.jpg') center top/cover no-repeat;
-	height: 70vh;
+	height: 696px;
 	padding-top: 150px;
+	@media (min-width: 2000px) { 
+		height: 900px;
+	}
+	@media (min-width: 1240px) and (max-width: 1700px) {
+		height: 600px;
+		padding-top: 120px;
+	}
+	@include nlg {
+		height: 550px;
+		padding-top: 100px;
+	}
 	&__text-wrap {
 		background: rgba(10, 121, 145, 0.7);
 		padding: 67px 104px;
 		max-width: 680px;
+		@include nlg {
+			padding: 47px 74px;
+		}
 	}
 	&__title {
 		font-family: $font-alt;
