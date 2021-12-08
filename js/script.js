@@ -98,7 +98,7 @@ $(window).scroll(function(e) {
    }
 });
 
-$(".slider").slick({
+$(".docs-slider").slick({
 
   // normal options...
   infinite: true,
