@@ -36,6 +36,69 @@
 		left: 0;
 		height: 100%;
 	}
+	&__socials {
+		position: absolute;
+		top: 35%;
+		right: 2%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		@include nlg {
+			top: 3%;
+		}
+	}
+	&__social-link {
+		margin-bottom: 0.625rem;
+		transition: 0.3s;
+		@include nsm {
+			margin-left: 0;
+			margin-bottom: 0.625rem;
+		}
+	}
+	&__social-link:hover {
+		transform: scale(1.08);
+		transition: 0.3s;
+	}
+	&__soc-facebook::before{
+		display: block;
+		content: ' ';
+		background-image: url('../img/facebook.svg');
+		background-size: 2rem 2rem;
+		height: 2rem;
+		width: 2rem;
+	}
+	&__soc-twitter::before{
+		display: block;
+		content: ' ';
+		background-image: url('../img/twitter.svg');
+		background-size: 2rem 2rem;
+		height: 2rem;
+		width: 2rem;
+	}
+	&__soc-youtube::before{
+		display: block;
+		content: ' ';
+		background-image: url('../img/youtube.svg');
+		background-size: 2rem 2rem;
+		height: 2rem;
+		width: 2rem;
+	}
+	&__soc-inst::before{
+		display: block;
+		content: ' ';
+		background-image: url('../img/instagram.svg');
+		background-size: 2rem 2rem;
+		height: 2rem;
+		width: 2rem;
+	}
+	&__soc-google-plus::before{
+		display: block;
+		content: ' ';
+		background-image: url('../img/g-plus.svg');
+		background-size: 2rem 2rem;
+		height: 2rem;
+		width: 2rem;
+	}
 }
 
 .about-us {
@@ -72,8 +135,9 @@
 			width: 55%;
 		}
 		@include nlg {
-			width: 50%;
+			width: 60%;
 			bottom: -1.75rem;
+			right: -15%;
 		}
 	}
 	&__row {
