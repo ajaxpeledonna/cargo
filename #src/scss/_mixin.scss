@@ -10,7 +10,7 @@
 }
 
 @mixin nmd {
-	@media all and (max-width: 1025px) {
+	@media all and (max-width: 1023px) {
 		@content;
 	}
 }
