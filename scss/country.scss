@@ -4,33 +4,872 @@
 @import "_fonts";
 // Файл обнуленных стилей
 @import "_nullstyles";
-// Шрифты
+
 @import "_header";
+@import "_footer";
 
 
-.calc-btn {
-	font-size: 0.875rem;
-	background: $accent-bg;
-	color: $colorw;
-	display: none;
-	padding: 14px 15px;
-	text-align: center;
-	min-height: 2.8rem;
-	cursor: pointer;
-	@include nlg{
-		font-size: 0.6rem;
-		padding: 10px 5px;
-		min-height: 2.4rem;
-	}
-}
-.calc-btn:hover {
-	filter: drop-shadow(0px 0px 10px #EC3737);
-	transition: 0.2s;
-}
-.calc-btn:active {
-	box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.6);
-	transition: 0.2s;
-}
+
+
+
+// .header {
+// 	position: fixed;
+// 	top: 0;
+// 	width: 100%;
+// 	color: $colorw;
+// 	font-size: 1rem;
+// 	z-index: 999;
+// 	background: $pryme-alt;
+// 	filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.5));
+// 	&__logo-link {
+// 		min-width: 10rem;
+// 		margin-right: 0.5rem;
+// 	}
+// 	&__logo {
+// 		max-width: 9.625rem;
+// 	}
+// 	&__wrap {
+// 		display: flex;
+// 		align-items: center;
+// 	}
+// 	&__row {
+// 		display: flex;
+// 		min-height: 5.25rem;
+// 		align-items: center;
+// 		justify-content: space-between;
+// 	}
+// 	&__contacts {
+// 		display: flex;
+// 		flex-direction: column;
+// 		margin-left: 1rem;
+// 		li {
+// 			color: $colorw;
+// 			display: flex;
+// 			margin-right: 3rem;
+// 		}
+// 		a {
+// 			color: $colorw;
+// 			font-family: $font-alt;
+// 			line-height: 170%;
+// 		}
+// 		@include nsm {
+// 			display: none;
+// 		}
+// 	}
+// 	&__email:before {
+// 		display: block;
+// 		content: ' ';
+// 		background-image: url('../img/mail.svg');
+// 		background-size: 1.0625rem 0.8125rem;
+// 		height: 0.8125rem;
+// 		width: 1.0625rem;
+// 		margin: 0.4rem 0.4125rem 0 0;
+// 	}
+// 	&__phone:before {
+// 		display: block;
+// 		content: ' ';
+// 		background-image: url('../img/telephone.svg');
+// 		background-size: 1rem 1rem;
+// 		height: 1rem;
+// 		width: 1rem;
+// 		margin: 0.2rem 0.4125rem 0 0;
+// 	}
+
+
+// 	p { text-align: center; }
+// 		.toggle, [class^=drop] {
+// 		display: none;
+// 	}
+// 	nav {
+// 		margin: 0;
+// 		padding: 0;
+// 		background-color: $pryme-alt;
+// 		color: $text-color;
+// 		@include nmd {
+// 			display: none;
+// 		}
+// 	}
+	
+
+// 	// nav:after {
+// 	// 	content: "";
+// 	// 	display: table;
+// 	// 	clear: both;
+// 	// }
+
+// 	nav ul {
+// 		float: right;
+// 		padding: 0;
+// 		margin: 0;
+// 		list-style: none;
+// 		position: relative;
+// 	}
+
+// 	nav ul li {
+// 		margin: 0px 5px 0 0;
+// 		display: inline-block;
+// 		background-color: $pryme-alt;
+// 		box-sizing: border-box;
+// 		border-left: 4px solid $pryme-alt;
+// 		color: $text-color;
+// 	}
+// 	nav ul li:hover {
+// 		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+// 		border-left: 4px solid $accent-fresh;
+// 		color: $colorw;
+// 	}
+	
+// 	// nav ul li a {
+// 	// 	color: $text-color;
+// 	// }
+// 	// nav ul:hover li a {
+// 	// 	color: $colorw;
+// 	// }
+// 	// nav ul li a:hover {
+// 	// 	color: $colorw;
+// 	// }
+
+// 	nav a {
+// 		display: block;
+// 		padding: 0 20px;
+// 		font-size: 0.75rem;
+// 		line-height: 2.5rem;
+// 		color: $text-color;
+// 		text-decoration: none;
+// 		box-sizing: border-box;
+// 		@include nlg {
+// 			padding: 0 10px;
+// 		}
+// 	}
+	
+	 
+	
+// 	.menu .header__nav-menu-cap {
+// 		color: $colorw;
+// 		line-height: 72px;
+// 		font-size: 1rem;
+// 		@include nlg {
+// 			font-size: 0.75rem;
+// 		}
+// 	}
+
+	
+// 	nav ul li ul li { 
+// 		border-left: 4px solid $colorw;
+// 		box-sizing: border-box;
+// 		background: $colorw;
+// 	}
+// 	nav ul li ul li:hover { 
+// 		border-left: 4px solid $accent-fresh;
+// 		background: $pryme-alt;
+// 	}
+// 	nav ul li ul li > a{ 
+// 		border-bottom: 0.5px solid rgba(10, 121, 144, 0.1);
+// 		margin: 0 10px 0 10px;
+// 		padding: 0;
+// 	}
+// 	nav ul li ul li:last-child > a{ 
+// 		border-bottom: none;
+// 	}
+// 	nav ul li ul li:hover > a{ 
+// 		color: $colorw;
+// 	}
+
+// 	nav ul ul {
+// 		display: none;
+// 		position: absolute;
+// 		top: 72px;
+// 	}
+// 	// .nav-list {
+// 	// 	height: 30rem;
+// 	// 	width: 190px;
+// 	// 	overflow: scroll;
+// 	// 	display: block;
+// 	// }
+
+// 	nav ul li:hover > ul { 
+// 		display: inherit;
+// 	 }
+
+// 	nav ul ul li {
+// 		width: 195px;
+// 		float: none;
+// 		display: list-item;
+// 		position: relative;
+// 	}
+
+// 	nav ul ul ul li {
+// 		position: relative;
+// 		top: -72px;
+// 		left: 191px;
+// 	}
+
+// 	nav ul li ul li > a:after { 
+// 		content: ' >'; 
+// 		position: absolute;
+// 		right: 10px;
+// 		top: -1px;
+// 	}
+
+// 	.dropdown li a {
+// 		display: flex;
+// 		align-items: center;
+// 	}
+
+// 	li > a:only-child:after { content: ''; }
+
+// 	.dropdown{
+// 		width: 195px;
+// 		background: $colorw;
+// 		text-align: left;
+// 		right: -102%;
+// 		overflow-y: auto;
+// 		overflow-x: hidden;
+// 		-webkit-overflow-scrolling: touch;
+// 		max-height: 26rem;
+// 		top: 0;
+// 		box-sizing: content-box;
+// 		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+// 		li{
+// 			top: 0;
+//     		left: 0;
+// 		}
+
+// 	}
+	
+// 	::-webkit-scrollbar {
+// 		-webkit-appearance: none;
+// 		width: 5px;
+// 	}
+
+// 	::-webkit-scrollbar-thumb {
+// 		border-radius: 5px;
+// 		background-color: rgba(0, 0, 0, .5);
+// 		box-shadow: 0 0 1px rgba(4, 247, 226, 0.5);
+// 	}
+
+
+// 	/* Media Queries
+// 	--------------------------------------------- */
+
+// 	@media all and (max-width : 768px) {
+
+
+// 	nav { margin: 0; }
+
+// 	.toggle + a,
+// 	.menu { display: none; }
+
+// 	.toggle {
+// 	display: block;
+// 	background-color: #254441;
+// 	padding: 0 20px;
+// 	color: #FFF;
+// 	font-size: 20px;
+// 	line-height: 60px;
+// 	text-decoration: none;
+// 	border: none;
+// 	}
+
+// 	.toggle:hover { background-color: #000000; }
+
+// 	[id^=drop]:checked + ul { display: block; }
+
+// 	nav ul li {
+// 	display: block;
+// 	width: 100%;
+// 	}
+
+// 	nav ul ul .toggle,
+// 	nav ul ul a { padding: 0 40px; }
+
+// 	nav ul ul ul a { padding: 0 80px; }
+
+// 	nav a:hover,
+// 	nav ul ul ul a { background-color: #000000; }
+
+// 	nav ul li ul li .toggle,
+// 	nav ul ul a { background-color: #212121; }
+
+// 	nav ul ul {
+// 	float: none;
+// 	position: static;
+// 	color: #ffffff;
+// 	}
+
+// 	nav ul ul li:hover > ul,
+// 	nav ul li:hover > ul { display: none; }
+
+// 	nav ul ul li {
+// 	display: block;
+// 	width: 100%;
+// 	}
+
+// 	nav ul ul ul li { position: static;
+
+// 	}
+// 	}
+
+// 	@media all and (max-width : 330px) {
+
+// 	nav ul li {
+// 	display: block;
+// 	width: 94%;
+// 	}
+
+// 	}
+// }
+
+// .header .germany::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/germany.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .turkey::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/turkey.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .hungary::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/hungary.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .slovenia::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/slovenia.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .switzerland::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/switzerland.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .netherlands::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/netherlands.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .belgium::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/belgium.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .sweden::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/sweden.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .norway::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/norway.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .bulgaria::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/bulgaria.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .serbia::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/serbia.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .slovakia::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/slovakia.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .romania::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/romania.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .denmark::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/denmark.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .belarus::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/belarus.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .uk::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/uk.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .austria::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/austria.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .italy::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/italy.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .france::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/france.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .czech::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/czech.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .poland::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/poland.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .finland::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/finland.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .spain::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/spain.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .lithuania::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/lithuania.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .estonia::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/estonia.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .latvia::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/latvia.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .greece::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/greece.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .portugal::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/portugal.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .croatia::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/croatia.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .ireland::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/ireland.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .scotland::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/scotland.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .china::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/china.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .kazakhstan::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/kazakhstan.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .india::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/india.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .japan::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/japan.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .korea::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/korea.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .egypt::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/egypt.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .georgia::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/georgia.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .armenia::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/armenia.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .azerbaijan::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/azerbaijan.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .vietnam::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/vietnam.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .thailand::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/thailand.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+//   opacity: 0.8;
+// }
+
+// .header .usa::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/usa.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .mexico::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/mexico.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .argentina::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/argentina.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .chile::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/chile.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .peru::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/peru.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .uruguay::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/uruguay.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .brazil::before {
+//   display: block;
+//   content: ' ';
+//   background-image: url("../img/brazil.png");
+//   background-size: 2.2rem 1.45rem;
+//   height: 1.45rem;
+//   width: 2.2rem;
+//   margin-right: 1rem;
+// }
+
+// .header .flag::before {
+// 	display: block;
+// 	content: ' ';
+// 	background-size: 2.2rem 1.45rem;
+// 	height: 1.45rem;
+// 	width: 2.2rem;
+// 	margin-right: 1rem;
+// 	&--brazil{
+// 		background-image: url("../img/brazil.png");
+// 	}
+// }
+
+// .calc-btn {
+// 	font-size: 0.875rem;
+// 	background: $accent-bg;
+// 	color: $colorw;
+// 	display: none;
+// 	padding: 14px 15px;
+// 	text-align: center;
+// 	min-height: 2.8rem;
+// 	cursor: pointer;
+// 	@include nlg{
+// 		font-size: 0.6rem;
+// 		padding: 10px 5px;
+// 		min-height: 2.4rem;
+// 	}
+// }
+// .calc-btn:hover {
+// 	filter: drop-shadow(0px 0px 10px #EC3737);
+// 	transition: 0.2s;
+// }
+// .calc-btn:active {
+// 	box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.6);
+// 	transition: 0.2s;
+// }
 
 .from-germany {
 	position: relative;
@@ -2732,141 +3571,141 @@
 }
 
 
-.footer {
-    background: $pryme-color;
-    padding: 2rem 0;
-    position: relative;
-    .container {
-        position: relative;
-    }
-    &__row {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-		@include nsm {
-			flex-direction: column;
-		}
-    }
-    &__logo {
-        max-width: 9.375rem;
-    }
-    &__contact-wrap {
-        margin: 0 5rem 0 3.2rem;
-		@include nsm {
-			margin: 1rem 0;
-		}
-    }
-    &__cont-item {
-        line-height: 200%;
-    }
-    &__link {
-        color: $colorw;
-        font-weight: 300;
-        font-size: 0.875rem;
-    }
-	&__socials-wrap {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
-    	height: 100px;
-	}
-	&__copyright {
-		font-size: 0.75rem;
-		color: $colorw;
-	}
-    &__socials {
-		display: flex;
-	}
-	&__social-link {
-		margin-left: 0.5625rem;
-		transition: 0.3s;
-		@include nsm {
-			margin-left: 0;
-			margin-right: 0.5625rem;
-		}
-		&:first-child {
-			margin-left: 0rem;
-		}
-	}
-	&__social-link:hover {
-		transform: scale(1.08);
-		transition: 0.3s;
-	}
-	&__soc-facebook::before{
-		display: block;
-		content: ' ';
-		background-image: url('../img/facebook.svg');
-		background-size: 2rem 2rem;
-		height: 2rem;
-		width: 2rem;
-	}
-	&__soc-twitter::before{
-		display: block;
-		content: ' ';
-		background-image: url('../img/twitter.svg');
-		background-size: 2rem 2rem;
-		height: 2rem;
-		width: 2rem;
-	}
-	&__soc-youtube::before{
-		display: block;
-		content: ' ';
-		background-image: url('../img/youtube.svg');
-		background-size: 2rem 2rem;
-		height: 2rem;
-		width: 2rem;
-	}
-	&__soc-inst::before{
-		display: block;
-		content: ' ';
-		background-image: url('../img/instagram.svg');
-		background-size: 2rem 2rem;
-		height: 2rem;
-		width: 2rem;
-	}
-	&__soc-google-plus::before{
-		display: block;
-		content: ' ';
-		background-image: url('../img/g-plus.svg');
-		background-size: 2rem 2rem;
-		height: 2rem;
-		width: 2rem;
-	}
-    &__up-arrow {
-        width: 3.5rem;
-        height: 3.5rem;
-        background: $colorw;
-        box-shadow: 0px 0px 8px #0B327D;
-        border-radius: 50%;
-        position: absolute;
-        top: -3.5rem;
-        right: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.3s;
-		@include nsm {
-			width: 3rem;
-        	height: 3rem;
-			right: 0.65rem;
-		}
-    }
-    &__up-arrow::before {
-        width: 1.8rem;
-        height: 2.5rem;
-        display: block;
-		content: ' ';
-		background-image: url('../img/arrow-up.svg');
-		background-size: 1.8rem 2.5rem;
-		@include nsm {
-			width: 1.3rem;
-        	height: 2rem;
-			background-size: 1.3rem 2rem;
-		}
-    }
-    &__up-arrow:hover{
-       transform: scale(1.1);
-       transition: 0.3s;
-    }
-}
+// .footer {
+//     background: $pryme-color;
+//     padding: 2rem 0;
+//     position: relative;
+//     .container {
+//         position: relative;
+//     }
+//     &__row {
+//         display: flex;
+//         align-items: flex-start;
+//         justify-content: flex-start;
+// 		@include nsm {
+// 			flex-direction: column;
+// 		}
+//     }
+//     &__logo {
+//         max-width: 9.375rem;
+//     }
+//     &__contact-wrap {
+//         margin: 0 5rem 0 3.2rem;
+// 		@include nsm {
+// 			margin: 1rem 0;
+// 		}
+//     }
+//     &__cont-item {
+//         line-height: 200%;
+//     }
+//     &__link {
+//         color: $colorw;
+//         font-weight: 300;
+//         font-size: 0.875rem;
+//     }
+// 	&__socials-wrap {
+// 		display: flex;
+// 		flex-direction: column;
+// 		align-items: center;
+// 		justify-content: space-between;
+//     	height: 100px;
+// 	}
+// 	&__copyright {
+// 		font-size: 0.75rem;
+// 		color: $colorw;
+// 	}
+//     &__socials {
+// 		display: flex;
+// 	}
+// 	&__social-link {
+// 		margin-left: 0.5625rem;
+// 		transition: 0.3s;
+// 		@include nsm {
+// 			margin-left: 0;
+// 			margin-right: 0.5625rem;
+// 		}
+// 		&:first-child {
+// 			margin-left: 0rem;
+// 		}
+// 	}
+// 	&__social-link:hover {
+// 		transform: scale(1.08);
+// 		transition: 0.3s;
+// 	}
+// 	&__soc-facebook::before{
+// 		display: block;
+// 		content: ' ';
+// 		background-image: url('../img/facebook.svg');
+// 		background-size: 2rem 2rem;
+// 		height: 2rem;
+// 		width: 2rem;
+// 	}
+// 	&__soc-twitter::before{
+// 		display: block;
+// 		content: ' ';
+// 		background-image: url('../img/twitter.svg');
+// 		background-size: 2rem 2rem;
+// 		height: 2rem;
+// 		width: 2rem;
+// 	}
+// 	&__soc-youtube::before{
+// 		display: block;
+// 		content: ' ';
+// 		background-image: url('../img/youtube.svg');
+// 		background-size: 2rem 2rem;
+// 		height: 2rem;
+// 		width: 2rem;
+// 	}
+// 	&__soc-inst::before{
+// 		display: block;
+// 		content: ' ';
+// 		background-image: url('../img/instagram.svg');
+// 		background-size: 2rem 2rem;
+// 		height: 2rem;
+// 		width: 2rem;
+// 	}
+// 	&__soc-google-plus::before{
+// 		display: block;
+// 		content: ' ';
+// 		background-image: url('../img/g-plus.svg');
+// 		background-size: 2rem 2rem;
+// 		height: 2rem;
+// 		width: 2rem;
+// 	}
+//     &__up-arrow {
+//         width: 3.5rem;
+//         height: 3.5rem;
+//         background: $colorw;
+//         box-shadow: 0px 0px 8px #0B327D;
+//         border-radius: 50%;
+//         position: absolute;
+//         top: -3.5rem;
+//         right: 0;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         transition: 0.3s;
+// 		@include nsm {
+// 			width: 3rem;
+//         	height: 3rem;
+// 			right: 0.65rem;
+// 		}
+//     }
+//     &__up-arrow::before {
+//         width: 1.8rem;
+//         height: 2.5rem;
+//         display: block;
+// 		content: ' ';
+// 		background-image: url('../img/arrow-up.svg');
+// 		background-size: 1.8rem 2.5rem;
+// 		@include nsm {
+// 			width: 1.3rem;
+//         	height: 2rem;
+// 			background-size: 1.3rem 2rem;
+// 		}
+//     }
+//     &__up-arrow:hover{
+//        transform: scale(1.1);
+//        transition: 0.3s;
+//     }
+// }

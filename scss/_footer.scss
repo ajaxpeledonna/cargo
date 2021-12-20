@@ -1,0 +1,138 @@
+.footer {
+    background: $pryme-color;
+    padding: 2rem 0;
+    position: relative;
+    .container {
+        position: relative;
+    }
+    &__row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+		@include nsm {
+			flex-direction: column;
+		}
+    }
+    &__logo {
+        max-width: 9.375rem;
+    }
+    &__contact-wrap {
+        margin: 0 5rem 0 3.2rem;
+		@include nsm {
+			margin: 1rem 0;
+		}
+    }
+    &__cont-item {
+        line-height: 200%;
+    }
+    &__link {
+        color: $colorw;
+        font-weight: 300;
+        font-size: 0.875rem;
+    }
+	&__socials-wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+    	height: 100px;
+	}
+	&__copyright {
+		font-size: 0.75rem;
+		color: $colorw;
+	}
+    &__socials {
+		display: flex;
+	}
+	&__social-link {
+		margin-left: 0.5625rem;
+		transition: 0.3s;
+		@include nsm {
+			margin-left: 0;
+			margin-right: 0.5625rem;
+		}
+		&:first-child {
+			margin-left: 0rem;
+		}
+	}
+	&__social-link:hover {
+		transform: scale(1.08);
+		transition: 0.3s;
+	}
+	&__soc-facebook::before{
+		display: block;
+		content: ' ';
+		background-image: url('../img/facebook.svg');
+		background-size: 2rem 2rem;
+		height: 2rem;
+		width: 2rem;
+	}
+	&__soc-twitter::before{
+		display: block;
+		content: ' ';
+		background-image: url('../img/twitter.svg');
+		background-size: 2rem 2rem;
+		height: 2rem;
+		width: 2rem;
+	}
+	&__soc-youtube::before{
+		display: block;
+		content: ' ';
+		background-image: url('../img/youtube.svg');
+		background-size: 2rem 2rem;
+		height: 2rem;
+		width: 2rem;
+	}
+	&__soc-inst::before{
+		display: block;
+		content: ' ';
+		background-image: url('../img/instagram.svg');
+		background-size: 2rem 2rem;
+		height: 2rem;
+		width: 2rem;
+	}
+	&__soc-google-plus::before{
+		display: block;
+		content: ' ';
+		background-image: url('../img/g-plus.svg');
+		background-size: 2rem 2rem;
+		height: 2rem;
+		width: 2rem;
+	}
+    &__up-arrow {
+        width: 3.5rem;
+        height: 3.5rem;
+        background: $colorw;
+        box-shadow: 0px 0px 8px #0B327D;
+        border-radius: 50%;
+        position: absolute;
+        top: -3.5rem;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+		@include nsm {
+			width: 3rem;
+        	height: 3rem;
+			right: 0.65rem;
+		}
+    }
+    &__up-arrow::before {
+        width: 1.8rem;
+        height: 2.5rem;
+        display: block;
+		content: ' ';
+		background-image: url('../img/arrow-up.svg');
+		background-size: 1.8rem 2.5rem;
+		@include nsm {
+			width: 1.3rem;
+        	height: 2rem;
+			background-size: 1.3rem 2rem;
+		}
+    }
+    &__up-arrow:hover{
+       transform: scale(1.1);
+       transition: 0.3s;
+    }
+}

@@ -21,123 +21,105 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="container">
-                <div class="header__row">
-                    <div class="header__wrap">
-                    <a href="#" class="header__logo-link">
-                        <img class="header__logo" src="img/logotype.png" alt="Global Expeditors">
-                    </a>
-                    <nav>
-                        <label for="drop" class="toggle">Menu</label>
-                        <input type="checkbox" class="drop" />
-                        <ul class="menu">
-                            <li> 
-                                <!-- First Tier Drop Down -->
-                                <label for="drop-2" class="toggle">Логистика</label>
-                                <a class="header__nav-menu-cap" href="#">Логистика</a>
-                                <input type="checkbox" class="drop-2"/>
-                            <ul>
-                                <li> 
-                                
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop-3" class="toggle">Страны</label>
-                                    <a href="#">Страны</a>
-                                    <input type="checkbox" class="drop-3"/>
-                                    <ul>
+                <div class="menu-row">
+                    <div class="menu-box">
+                        <a href="#" class="header__logo-link">
+                            <img class="header__logo" src="img/logotype.png" alt="Global Expeditors">
+                        </a>
+                        <nav id="mainmenu">
+                            <div class="mob-wrapper">
+                                <ul class="menu">
+                            <li><a href="#">Логистика</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Страны</a>
+                                    <ul class="submenu">
                                         <li>
-                                            <label for="drop-4" class="toggle">Европа</label>
                                             <a href="#">Европа</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
-                                                <li><a class="germany" href='from-germany.html'>Германия</a></li>
-                                                <li><a class="turkey" href='#'>Турция</a></li>
-                                                <li><a class="hungary" href='#'>Венгрия</a></li>
-                                                <li><a class="slovenia" href='#'>Словения</a></li>
-                                                <li><a class="switzerland" href='#'>Швейцария</a></li>
-                                                <li><a class="netherlands" href='#'>Нидерланды</a></li>
-                                                <li><a class="belgium" href='#'>Бельгия</a></li>
-                                                <li><a class="sweden" href='#'>Швеция</a></li>
-                                                <li><a class="norway" href='#'>Норвегия</a></li>
-                                                <li><a class="bulgaria" href='#'>Болгария</a></li>
-                                                <li><a class="serbia" href='#'>Сербия</a></li>
-                                                <li><a class="slovakia" href='#'>Словакия</a></li>
-                                                <li><a class="romania" href='#'>Румыния</a></li>
-                                                <li><a class="denmark" href='#'>Дания</a></li>
-                                                <li><a class="belarus" href='#'>Беларусь</a></li>
-                                                <li><a class="uk" href='#'>Великобритания</a></li>
-                                                <li><a class="austria" href='#'>Австрия</a></li>
-                                                <li><a class="italy" href='#'>Италия</a></li>
-                                                <li><a class="france" href='#'>Франция</a></li>
-                                                <li><a class="czech" href='#'>Чехия</a></li>
-                                                <li><a class="poland" href='#'>Польша</a></li>
-                                                <li><a class="finland" href='#'>Финляндия</a></li>
-                                                <li><a class="spain" href='#'>Испания</a></li>
-                                                <li><a class="lithuania" href='#'>Литва</a></li>
-                                                <li><a class="estonia" href='#'>Эстония</a></li>
-                                                <li><a class="latvia" href='#'>Латвия</a></li>
-                                                <li><a class="greece" href='#'>Греция</a></li>
-                                                <li><a class="portugal" href='#'>Португалия</a></li>
-                                                <li><a class="ireland" href='#'>Ирландия</a></li>
-                                                <li><a class="croatia" href='#'>Хорватия</a></li>
-                                                <li><a class="scotland" href='#'>Шотландия</a></li>
+                                            <ul class="submenu height-limit">
+                                                <li><a class="flag flag--germany" href='from-germany.html'>Германия</a></li>
+                                                <li><a class="flag flag--turkey" href='#'>Турция</a></li>
+                                                <li><a class="flag flag--hungary" href='#'>Венгрия</a></li>
+                                                <li><a class="flag flag--slovenia" href='#'>Словения</a></li>
+                                                <li><a class="flag flag--switzerland" href='#'>Швейцария</a></li>
+                                                <li><a class="flag flag--netherlands" href='#'>Нидерланды</a></li>
+                                                <li><a class="flag flag--belgium" href='#'>Бельгия</a></li>
+                                                <li><a class="flag flag--sweden" href='#'>Швеция</a></li>
+                                                <li><a class="flag flag--norway" href='#'>Норвегия</a></li>
+                                                <li><a class="flag flag--bulgaria" href='#'>Болгария</a></li>
+                                                <li><a class="flag flag--serbia" href='#'>Сербия</a></li>
+                                                <li><a class="flag flag--slovakia" href='#'>Словакия</a></li>
+                                                <li><a class="flag flag--romania" href='#'>Румыния</a></li>
+                                                <li><a class="flag flag--denmark" href='#'>Дания</a></li>
+                                                <li><a class="flag flag--belarus" href='#'>Беларусь</a></li>
+                                                <li><a class="flag flag--uk" href='#'>Великобритания</a></li>
+                                                <li><a class="flag flag--austria" href='#'>Австрия</a></li>
+                                                <li><a class="flag flag--italy" href='#'>Италия</a></li>
+                                                <li><a class="flag flag--france" href='#'>Франция</a></li>
+                                                <li><a class="flag flag--czech" href='#'>Чехия</a></li>
+                                                <li><a class="flag flag--poland" href='#'>Польша</a></li>
+                                                <li><a class="flag flag--finland" href='#'>Финляндия</a></li>
+                                                <li><a class="flag flag--spain" href='#'>Испания</a></li>
+                                                <li><a class="flag flag--lithuania" href='#'>Литва</a></li>
+                                                <li><a class="flag flag--estonia" href='#'>Эстония</a></li>
+                                                <li><a class="flag flag--latvia" href='#'>Латвия</a></li>
+                                                <li><a class="flag flag--greece" href='#'>Греция</a></li>
+                                                <li><a class="flag flag--portugal" href='#'>Португалия</a></li>
+                                                <li><a class="flag flag--ireland" href='#'>Ирландия</a></li>
+                                                <li><a class="flag flag--croatia" href='#'>Хорватия</a></li>
+                                                <li><a class="flag flag--scotland" href='#'>Шотландия</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <label for="drop-4" class="toggle">Азия</label>
                                             <a href="#">Азия</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
-                                                <li><a class="china" href="#">Китай</a></li>
-                                                <li><a class="kazakhstan" href="#">Казахстан</a></li>
-                                                <li><a class="india" href="#">Индия</a></li>
-                                                <li><a class="japan" href="#">Япония</a></li>
-                                                <li><a class="korea" href="#">Корея</a></li>
-                                                <li><a class="egypt" href="#">Египет</a></li>
-                                                <li><a class="vietnam" href="#">Вьетнам</a></li>
-                                                <li><a class="thailand" href="#">Тайланд</a></li>
-                                                <li><a class="georgia" href="#">Грузия</a></li>
-                                                <li><a class="armenia" href="#">Армения</a></li>
-                                                <li><a class="azerbaijan" href="#">Азербайджан</a></li>
+                                            <ul class="submenu height-limit">
+                                                <li><a class="flag flag--china" href="#">Китай</a></li>
+                                                <li><a class="flag flag--kazakhstan" href="#">Казахстан</a></li>
+                                                <li><a class="flag flag--india" href="#">Индия</a></li>
+                                                <li><a class="flag flag--japan" href="#">Япония</a></li>
+                                                <li><a class="flag flag--korea" href="#">Корея</a></li>
+                                                <li><a class="flag flag--egypt" href="#">Египет</a></li>
+                                                <li><a class="flag flag--vietnam" href="#">Вьетнам</a></li>
+                                                <li><a class="flag flag--thailand" href="#">Тайланд</a></li>
+                                                <li><a class="flag flag--georgia" href="#">Грузия</a></li>
+                                                <li><a class="flag flag--armenia" href="#">Армения</a></li>
+                                                <li><a class="flag flag--azerbaijan" href="#">Азербайджан</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <label for="drop-4" class="toggle">Америка</label>
                                             <a href="#">Америка</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
-                                                <li><a class="usa" href="#">США</a></li>
-                                                <li><a class="mexico" href="#">Мексика</a></li>
-                                                <li><a class="argentina" href="#">Аргентина</a></li>
-                                                <li><a class="chile" href="#">Чили</a></li>
-                                                <li><a class="peru" href="#">Перу</a></li>
-                                                <li><a class="uruguay" href="#">Уругвай</a></li>
-                                                <li><a class="flag--brazil" href="#">Бразилия</a></li>
+                                            <ul class="submenu">
+                                                <li><a class="flag flag--usa" href="#">США</a></li>
+                                                <li><a class="flag flag--mexico" href="#">Мексика</a></li>
+                                                <li><a class="flag flag--argentina" href="#">Аргентина</a></li>
+                                                <li><a class="flag flag--chile" href="#">Чили</a></li>
+                                                <li><a class="flag flag--peru" href="#">Перу</a></li>
+                                                <li><a class="flag flag--uruguay" href="#">Уругвай</a></li>
+                                                <li><a class="flag flag--brazil" href="#">Бразилия</a></li>
                                             </ul>
                                         </li>
                                     </ul>
-                                </li>
-                                <li> 
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop" class="toggle">Виды грузоперевозок</label>
+                                    </li>
+                                    <li> 
+                                   
                                     <a href="#">Виды грузоперевозок</a>
-                                    <input type="checkbox" class="drop"/>
-                                    <ul>
+                                  
+                                    <ul class="submenu">
                                         <li><a href='#'>Международные</a></li>
                                         <li><a href='#'>Локальные</a></li>
                                         <li>
-                                            <label for="drop-4" class="toggle">Сроки доставки</label>
+                                          
                                             <a href="#">Сроки доставки</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
+                                            
+                                            <ul class="submenu">
                                                 <li><a href="#">Срочные</a></li>
                                                 <li><a href="#">Стандартные</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <label for="drop-4" class="toggle">Виды грузов</label>
+                                          
                                             <a href="#">Виды грузов</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
+                                      
+                                            <ul class="submenu">
                                                 <li><a href="#">Генеральные</a></li>
                                                 <li><a href="#">Сыпучие</a></li>
                                                 <li><a href="#">Наливные</a></li>
@@ -149,11 +131,10 @@
                                     </ul>
                                 </li>
                                 <li> 
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop" class="toggle">Виды транспорта</label>
+                                 
                                     <a href="#">Виды транспорта</a>
-                                    <input type="checkbox" class="drop"/>
-                                    <ul>
+                              
+                                    <ul class="submenu">
                                         <li><a href='#'>Авто</a></li>
                                         <li><a href='#'>Железнодорожные</a></li> 
                                         <li><a href='#'>Морские</a></li>
@@ -162,16 +143,14 @@
                                     </ul>
                                 </li>
                                 <li> 
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop" class="toggle">Виды грузов</label>
                                     <a href="#">Виды грузов</a>
-                                    <input type="checkbox" class="drop"/>
-                                    <ul>
+                                    
+                                    <ul class="submenu">
                                         <li>
-                                            <label for="drop-4" class="toggle">Сырье</label>
+                                        
                                             <a href="#">Сырье</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
+                                          
+                                            <ul class="submenu height-limit">
                                                 <li><a href="#">Драгметалл</a></li>
                                                 <li><a href="#">Газ</a></li>
                                                 <li><a href="#">Алмазы</a></li>
@@ -185,20 +164,18 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <label for="drop-4" class="toggle">Оборудование</label>
+                                    
                                             <a href="#">Оборудование</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
+                                           
+                                            <ul class="submenu">
                                                 <li><a href="#">Запчасти</a></li>
                                                 <li><a href="#">Сельхоз техника</a></li>
                                                 <li><a href="#">Кабель</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <label for="drop-4" class="toggle">Товары</label>
                                             <a href="#">Товары</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
+                                            <ul class="submenu height-limit">
                                                 <li><a href="#">Мебель</a></li>
                                                 <li><a href="#">Алкоголь</a></li>
                                                 <li><a href="#">Одежда</a></li>
@@ -220,10 +197,10 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <label for="drop-4" class="toggle">Прочее</label>
+                                            
                                             <a href="#">Прочее</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
+                                            
+                                            <ul class="submenu">
                                                 <li><a href="#">Калий хлористый</a></li>
                                                 <li><a href="#">Сено</a></li>
                                                 <li><a href="#">Семена</a></li>
@@ -233,194 +210,129 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">Тарифы</a></li>
-                            </ul>
+                                </ul>
                             </li>
-                            <li> 
-                            <!-- First Tier Drop Down -->
-                            <label for="drop-1" class="toggle">ВЭД</label>
-                            <a class="header__nav-menu-cap" href="#">ВЭД</a>
-                            <input type="checkbox" class="drop-1"/>
-                            <ul>
-                                <li> 
-                                
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop-3" class="toggle">Инкотермс</label>
-                                    <a href="#">Инкотермс</a>
-                                    <input type="checkbox" class="drop-3"/>
-                                    <ul>
-                                        <li>
-                                            <label for="drop-4" class="toggle">Группы и термины</label>
-                                            <a href="#">Группы и термины</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
-                                                <li><a href='#'>По годам</a></li>
-                                                <li><a href='#'>Виды транспорта</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <label for="drop-4" class="toggle">Страны</label>
-                                            <a href="#">Страны</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
-                                                <li><a href="#">Китай</a></li>
-                                                <li><a href="#">Казахстан</a></li>
-                                                <li><a href="#">Россия</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <label for="drop-4" class="toggle">Консалтинг</label>
-                                            <a href="#">Консалтинг</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
-                                                <li><a href="#">Проблемы</a></li>
-                                                <li><a href="#">Законы</a></li>
-                                                <li><a href="#">Экспорт</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <label for="drop-4" class="toggle">Услуги</label>
-                                            <a href="#">Услуги</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
-                                                <li><a href="#">Страхование грузов</a></li>
-                                                <li><a href="#">Договора</a></li>
-                                                <li><a href="#">Онлайн</a></li>
-                                                <li><a href="#">Доставка</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <label for="drop-4" class="toggle">Справочник</label>
-                                            <a href="#">Справочник</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
-                                                <li><a href="#">Классификация</a></li>
-                                                <li><a href="#">Правила</a></li>
-                                                <li><a href="#">Условия</a></li>
-                                                <li><a href="#">Базис</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Тарифы</a></li>
-                                    </ul>
-                                </li>
-                                <li> 
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop" class="toggle">Международная торговля</label>
-                                    <a href="#">Международная торговля</a>
-                                    <input type="checkbox" class="drop"/>
-                                    <ul>
-                                        <li>
-                                            <label for="drop-4" class="toggle">Виды ВЭД</label>
-                                            <a href="#">Виды ВЭД</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
-                                                <li><a href="#">Экспорт</a></li>
-                                                <li><a href="#">Импорт</a></li>
-                                                <li><a href="#">ВТД</a></li>
-                                                <li><a href="#">Валютные операции</a></li>
-                                                <li><a href="#">Строительство</a></li>
-                                                <li><a href="#">Совместные предприятия</a></li>
-                                                <li><a href="#">Биржи</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <label for="drop-4" class="toggle">Внешнеторговые операции</label>
-                                            <a href="#">Внешнеторговые операции</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
-                                                <li><a href="#">Выбор субъекта</a></li>
-                                                <li><a href="#">Виды операций</a></li>
-                                                <li><a href="#">Сферы ВЭД</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <label for="drop-4" class="toggle">Аутсорсинг ВЭД</label>
-                                            <a href="#">Аутсорсинг ВЭД</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
-                                                <li><a href="#">Участникам ВЭД</a></li>
-                                                <li><a href="#">Формы ВЭД</a></li>
-                                                <li><a href="#">Страны</a></li>
-                                                <li><a href="#">Стоимость</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <label for="drop-4" class="toggle">Услуги ВЭД</label>
-                                            <a href="#">Услуги ВЭД</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
-                                                <li><a href="#">Консалтинг</a></li>
-                                                <li><a href="#">Бухгалтерия</a></li>
-                                                <li><a href="#">Лицензирование</a></li>
-                                                <li><a href="#">Посредники</a></li>
-                                                <li><a href="#">Транспортные услуги</a></li>
-                                                <li><a href="#">Логистика</a></li>
-                                                <li><a href="#">Страхование</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Справочник ТН ВЭД</a></li>
-                                    </ul>
-                                </li>
-                                <li> 
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop" class="toggle">Экспорт из России</label>
-                                    <a href="#">Экспорт из России</a>
-                                    <input type="checkbox" class="drop"/>
-                                    <ul>
-                                        <li><a href='#'>Страны</a></li>
-                                        <li><a href='#'>Товары</a></li> 
-                                        <li><a href='#'>Услуги</a></li>
-                                    </ul>
-                                </li>
-                                <li> 
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop" class="toggle">Импорт в Россию</label>
-                                    <a href="#">Импорт в Россию</a>
-                                    <input type="checkbox" class="drop"/>
-                                    <ul>
-                                        <li><a href='#'>Страны</a></li>
-                                        <li><a href='#'>Товары</a></li> 
-                                        <li><a href='#'>Услуги</a></li>
-                                    </ul>
-                                </li> 
-                            </ul>
-                        </li>
-                        <li> 
-                            <!-- First Tier Drop Down -->
-                            <label for="drop-1" class="toggle">Таможенное оформление</label>
-                            <a class="header__nav-menu-cap" href="#">Таможенное оформление</a>
-                            <input type="checkbox" class="drop-1"/>
-                            <ul>
-                                <li> 
-                                
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop-3" class="toggle">Виды оформления</label>
-                                    <a href="#">Виды оформления</a>
-                                    <input type="checkbox" class="drop-3"/>
-                                    <ul>
-                                        <li>
-                                            <label for="drop-4" class="toggle">За рубежом</label>
-                                            <a href="#">За рубежом</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
+                            <li><a href="#">ВЭД</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Инкотермс</a>
+                                        <ul class="submenu">
+                                            <li><a href="#">Группы и термины</a>
+                                                <ul class="submenu">
+                                                    <li><a href="#">По годам</a></li>
+                                                    <li><a href="#">Виды транспорта</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Страны</a>
+                                                <ul class="submenu">
+                                                    <li><a href="#">Китай</a></li>
+                                                    <li><a href="#">Казахстан</a></li>
+                                                    <li><a href="#">Россия</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Консалтинг</a>
+                                                <ul class="submenu">
+                                                    <li><a href="#">Проблемы</a></li>
+                                                    <li><a href="#">Законы</a></li>
+                                                    <li><a href="#">Экспорт</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Услуги</a>
+                                                <ul class="submenu">
+                                                    <li><a href="#">Страхование грузов</a></li>
+                                                    <li><a href="#">Договора</a></li>
+                                                    <li><a href="#">Онлайн</a></li>
+                                                    <li><a href="#">Доставка</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Справочник</a>
+                                                <ul class="submenu">
+                                                    <li><a href="#">Классификация</a></li>
+                                                    <li><a href="#">Правила</a></li>
+                                                    <li><a href="#">Условия</a></li>
+                                                    <li><a href="#">Базис</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Тарифы</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Международная торговля</a>
+                                        <ul class="submenu">
+                                            <li><a href="#">Виды ВЭД</a>
+                                                <ul class="submenu">
+                                                    <li><a href="#">Экспорт</a></li>
+                                                    <li><a href="#">Импорт</a></li>
+                                                    <li><a href="#">ВТД</a></li>
+                                                    <li><a href="#">Валютные операции</a></li>
+                                                    <li><a href="#">Строительство</a></li>
+                                                    <li><a href="#">Совместные предприятия</a></li>
+                                                    <li><a href="#">Биржи</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Внешнеторговые операции</a>
+                                                <ul class="submenu">
+                                                    <li><a href="#">Выбор субъекта</a></li>
+                                                    <li><a href="#">Виды операций</a></li>
+                                                    <li><a href="#">Сферы ВЭД</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Аутсорсинг ВЭД</a>
+                                                <ul class="submenu">
+                                                    <li><a href="#">Участникам ВЭД</a></li>
+                                                    <li><a href="#">Формы ВЭД</a></li>
+                                                    <li><a href="#">Страны</a></li>
+                                                    <li><a href="#">Стоимость</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Услуги ВЭД</a>
+                                                <ul class="submenu">
+                                                    <li><a href="#">Консалтинг</a></li>
+                                                    <li><a href="#">Бухгалтерия</a></li>
+                                                    <li><a href="#">Лицензирование</a></li>
+                                                    <li><a href="#">Посредники</a></li>
+                                                    <li><a href="#">Транспортные услуги</a></li>
+                                                    <li><a href="#">Логистика</a></li>
+                                                    <li><a href="#">Страхование</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Справочник ТН ВЭД</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="#">Экспорт из России</a>
+                                        <ul class="submenu">
+                                            <li><a href='#'>Страны</a></li>
+                                            <li><a href='#'>Товары</a></li> 
+                                            <li><a href='#'>Услуги</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><a href="#">Импорт в Россию</a>
+                                        <ul class="submenu">
+                                            <li><a href='#'>Страны</a></li>
+                                            <li><a href='#'>Товары</a></li> 
+                                            <li><a href='#'>Услуги</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Таможенное оформление</a>
+                            <ul class="submenu">
+                                <li><a href="#">Виды оформления</a>
+                                    <ul class="submenu">
+                                        <li><a href='#'>За рубежом</a>
+                                            <ul class="submenu">
                                                 <li><a href='#'>Вывоз с территории страны</a></li>
                                                 <li><a href='#'>Ввоз на таможенную территорию</a></li>
                                                 <li><a href='#'>По странам</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Россия</a></li>
+                                        <li><a href='#'>Россия</a></li> 
                                     </ul>
                                 </li>
-                                <li> 
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop" class="toggle">Ауторсинг</label>
-                                    <a href="#">Ауторсинг</a>
-                                    <input type="checkbox" class="drop"/>
-                                    <ul>
-                                        <li>
-                                            <label for="drop-4" class="toggle">Таможенный брокер</label>
-                                            <a href="#">Таможенный брокер</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
+                                <li><a href="#">Ауторсинг</a>
+                                    <ul class="submenu">
+                                        <li><a href='#'>Таможенный брокер</a>
+                                            <ul class="submenu">
                                                 <li><a href="#">Услуги</a></li>
                                                 <li><a href="#">Ответственность</a></li>
                                                 <li><a href="#">Обязанности</a></li>
@@ -429,11 +341,8 @@
                                                 <li><a href="#">Стоимость</a></li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <label for="drop-4" class="toggle">Таможенный представитель</label>
-                                            <a href="#">Таможенный представитель</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
+                                        <li><a href='#'>Таможенный представитель</a>
+                                            <ul class="submenu">
                                                 <li><a href="#">Услуги</a></li>
                                                 <li><a href="#">Ответственность</a></li>
                                                 <li><a href="#">Обязанности</a></li>
@@ -441,11 +350,8 @@
                                                 <li><a href="#">Стоимость</a></li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <label for="drop-4" class="toggle">Таможенный Перевозчик</label>
-                                            <a href="#">Таможенный Перевозчик</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
+                                        <li><a href='#'>Таможенный Перевозчик</a>
+                                            <ul class="submenu">
                                                 <li><a href="#">Обязанности</a></li>
                                                 <li><a href="#">Проведение таможенных операций</a></li>
                                                 <li><a href="#">Права перевозчика</a></li>
@@ -455,11 +361,8 @@
                                                 <li><a href="#">По городам</a></li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <label for="drop-4" class="toggle">Таможенные Органы</label>
-                                            <a href="#">Таможенные Органы</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
+                                        <li><a href='#'>Таможенные Органы</a>
+                                            <ul class="submenu">
                                                 <li><a href="#">Федеральная таможенная служба</a></li>
                                                 <li><a href="#">Региональная таможенная служба</a></li>
                                                 <li><a href="#">Таможни</a></li>
@@ -467,17 +370,10 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li> 
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop" class="toggle">Места оформления</label>
-                                    <a href="#">Места оформления</a>
-                                    <input type="checkbox" class="drop"/>
-                                    <ul>
-                                        <li>
-                                            <label for="drop-4" class="toggle">Таможенный склад</label>
-                                            <a href="#">Таможенный склад</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
+                                <li><a href="#">Места оформления</a>
+                                    <ul class="submenu">
+                                        <li><a href='#'>Таможенный склад</a>
+                                            <ul class="submenu">
                                                 <li><a href="#">Владелец</a></li>
                                                 <li><a href="#">Виды складов</a></li>
                                                 <li><a href="#">Услуги</a></li>
@@ -486,11 +382,8 @@
                                                 <li><a href="#">По городам</a></li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <label for="drop-4" class="toggle">СВХ</label>
-                                            <a href="#">СВХ</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
+                                        <li><a href='#'>СВХ</a>
+                                            <ul class="submenu">
                                                 <li><a href="#">Владелец</a></li>
                                                 <li><a href="#">По месту размещения</a></li>
                                                 <li><a href="#">За рубежом</a></li>
@@ -501,27 +394,17 @@
                                         </li>
                                         <li><a href="#">Посты</a></li>
                                     </ul>
-                                </li> 
-                                <li> 
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop" class="toggle">Тарифы</label>
-                                    <a href="#">Тарифы</a>
-                                    <input type="checkbox" class="drop"/>
-                                    <ul>
-                                        <li>
-                                            <label for="drop-4" class="toggle">За рубежом</label>
-                                            <a href="#">За рубежом</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
+                                </li>
+                                <li><a href="#">Тарифы</a>
+                                    <ul class="submenu">
+                                        <li><a href='#'>За рубежом</a>
+                                            <ul class="submenu">
                                                 <li><a href="#">За рубежом</a></li>
                                                 <li><a href="#">Россия</a></li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <label for="drop-4" class="toggle">В России</label>
-                                            <a href="#">В России</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
+                                        <li><a href='#'>В России</a>
+                                            <ul class="submenu">
                                                 <li><a href="#">Для физ лиц</a></li>
                                                 <li><a href="#">Для юр лиц</a></li>
                                             </ul>
@@ -529,89 +412,98 @@
                                         <li><a href="#">Аутсорсинг</a></li>
                                     </ul>
                                 </li>
-                                 
                             </ul>
-                        </li>
-                        <li> 
-                            <!-- First Tier Drop Down -->
-                            <label for="drop-1" class="toggle">О нас</label>
-                            <a class="header__nav-menu-cap" href="#">О нас</a>
-                            <input type="checkbox" class="drop-1"/>
-                            <ul>
-                                <li><a href="#">Наша команда</a></li>
-                                <li><a href="#">СМИ о нас</a></li>
-                                <li> 
-                                    <!-- Second Tier Drop Down -->
-                                    <label for="drop" class="toggle">Направления деятельности</label>
-                                    <a href="#">Направления деятельности</a>
-                                    <input type="checkbox" class="drop"/>
-                                    <ul>
-                                        <li>
-                                            <label for="drop-4" class="toggle">Способы перевозки</label>
-                                            <a href="#">Способы перевозки</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
-                                                <li><a href="#">Железнодорожные</a></li>
-                                                <li><a href="#">Речные</a></li>
-                                                <li><a href="#">Морские</a></li>
-                                                <li><a href="#">Авиационные</a></li>
-                                                <li><a href="#">Цистерны</a></li>
-                                                <li><a href="#">Рефрежираторы</a></li>
-                                                <li><a href="#">Самосвалы</a></li>
-                                                <li><a href="#">Ниливные</a></li>
-                                                <li><a href="#">Контейнеры</a></li>
-                                                <li><a href="#">Автомобильные</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <label for="drop-4" class="toggle">Виды грузов</label>
-                                            <a href="#">Виды грузов</a>
-                                            <input type="checkbox" class="drop-4"/>
-                                            <ul class="dropdown">
-                                                <li><a href="#">Жидкие</a></li>
-                                                <li><a href="#">Дальные</a></li>
-                                                <li><a href="#">Смешанные</a></li>
-                                                <li><a href="#">Смерзающиеся</a></li>
-                                                <li><a href="#">Хрупкие</a></li>
-                                                <li><a href="#">Стандартные</a></li>
-                                                <li><a href="#">Пищевые</a></li>
-                                                <li><a href="#">Лесные</a></li>
-                                                <li><a href="#">Химические</a></li>
-                                                <li><a href="#">Радиоактивные</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Отзывы</a></li>
-                                <li><a href="#">Контакты</a></li>
-                                <li><a href="#">Интернет-магазин</a></li>
-                                <li><a href="#">Страхование</a></li>
-                                <li><a href="#">Отслеживание грузов</a></li>
-                                <li><a href="#">Мобильное приложение</a></li>
-                                <li><a href="#">Акции</a></li>
-                                <li><a href="#">FAQ (частые вопросы)</a></li>
-                                        
-                                  
-                                 
-                            </ul>
-                        </li>
-                        
+                            </li>
+                            <li><a href="#">О нас</a>
+                                <ul class="submenu sub-left ">
+                                    <li><a href="#">Наша команда</a></li>
+                                    <li><a href="#">СМИ о нас</a></li>
+                                    <li><a href='#'>Направления деятельности</a>
+                                        <ul class="submenu sub-left">
+                                            <li><a href="#">Способы перевозки</a>
+                                                <ul class="submenu sub-left height-limit">
+                                                    <li><a href="#">Железнодорожные</a></li>
+                                                    <li><a href="#">Речные</a></li>
+                                                    <li><a href="#">Морские</a></li>
+                                                    <li><a href="#">Авиационные</a></li>
+                                                    <li><a href="#">Цистерны</a></li>
+                                                    <li><a href="#">Рефрежираторы</a></li>
+                                                    <li><a href="#">Самосвалы</a></li>
+                                                    <li><a href="#">Ниливные</a></li>
+                                                    <li><a href="#">Контейнеры</a></li>
+                                                    <li><a href="#">Автомобильные</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Виды грузов</a>
+                                                <ul class="submenu sub-left height-limit">
+                                                    <li><a href="#">Жидкие</a></li>
+                                                    <li><a href="#">Дальные</a></li>
+                                                    <li><a href="#">Смешанные</a></li>
+                                                    <li><a href="#">Смерзающиеся</a></li>
+                                                    <li><a href="#">Хрупкие</a></li>
+                                                    <li><a href="#">Стандартные</a></li>
+                                                    <li><a href="#">Пищевые</a></li>
+                                                    <li><a href="#">Лесные</a></li>
+                                                    <li><a href="#">Химические</a></li>
+                                                    <li><a href="#">Радиоактивные</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Отзывы</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                    <li><a href="#">Интернет-магазин</a></li>
+                                    <li><a href="#">Страхование</a></li>
+                                    <li><a href="#">Отслеживание грузов</a></li>
+                                    <li><a href="#">Мобильное приложение</a></li>
+                                    <li><a href="#">Акции</a></li>
+                                    <li><a href="#">FAQ (частые вопросы)</a></li>
+                                </ul>
+                            </li>
                             
                         </ul>
-                    </nav>
-                    </div>
+                        <ul class="header__socials">
+                                <li class="header__social-link">
+                                    <a href="#" class="header__social-link--facebook">
+                                        <img src="img/facebook.svg" alt="">
+                                    </a>
+                                </li> 
+                                <li class="header__social-link">
+                                    <a href="#"  class="header__social-link--youtube">
+                                        <img src="img/youtube.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="header__social-link">
+                                    <a href="#" class="header__social-link--inst">
+                                        <img src="img/instagram.svg" alt="">
+                                    </a>
+                                </li> 
+                                <li class="header__social-link">
+                                    <a href="#" class="header__social-link--twitter">
+                                        <img src="img/twitter.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="header__social-link">
+                                    <a href="#" class="header__social-link--google">
+                                        <img src="img/g-plus.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                            </div>
+                        
+                        </nav>
                         <div class="calc-btn">Рассчитать стоимость</div>
-                        <ul class="header__contacts">
-                            <li class="header__email">
+                        <div class="header__contacts">
+                            <div class="header__email">
                                 <a href="#">info@abxterminal.ru</a>
-                            </li> 
-                            <li  class="header__phone">
+                            </div> 
+                            <div  class="header__phone">
                                 <a href="tel:+78002227537">8&nbsp;800&nbsp;222&nbsp;75&nbsp;37</a>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
+                    </div>
                     
                 </div>
-            </div>
         </header>
 
         <section class="from-germany" id="from-germany">
@@ -2778,6 +2670,7 @@
     <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
   
     <!-- <script src="js/jquery-3.6.0.js"></script> -->
+    <script src="js/header.js"></script>
     <script src="js/script.js"></script>
 </body>
 
