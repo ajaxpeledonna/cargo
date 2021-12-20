@@ -1,0 +1,481 @@
+// Миксины
+@import "_mixin";
+// Шрифты
+@import "_fonts";
+// Файл обнуленных стилей
+@import "_nullstyles";
+@import "_header";
+
+.welcome {
+	position: relative;
+	margin-top: 5.2rem;
+	background: url('../img/home/img_banner_ship.jpg') center top/cover no-repeat;
+	height: 696px;
+	padding-top: 150px;
+	@media (min-width: 2000px) { 
+		height: 900px;
+	}
+	@media (min-width: 1240px) and (max-width: 1700px) {
+		height: 600px;
+		padding-top: 120px;
+	}
+	@include nlg {
+		height: 550px;
+		padding-top: 100px;
+	}
+	@include nmd {
+		height: 418px;
+	}
+	@include nsm {
+		height: auto;
+		background: none;
+		padding-top: 0;
+	}
+	&__img-mobile {
+		display: none;
+		@include nsm {
+			display: block;
+			width: 100%;
+		}
+
+	}
+	&__text-wrap {
+		background: rgba(10, 121, 145, 0.9);
+		padding: 67px 104px;
+		max-width: 680px;
+		@include nlg {
+			padding: 47px 74px;
+		}
+		@include nmd {
+			display: none;
+		}
+	}
+	&__title {
+		font-family: $font-alt;
+		font-size: 3rem;
+		font-weight: 800;
+		line-height: 100%;
+		color: $colorw;
+		margin-bottom: 2rem;
+	}
+	&__text {
+		font-size: 1.125rem;
+		font-weight: 500;
+		color: $colorw;
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+	}
+	&__socials {
+		position: absolute;
+		top: 35%;
+		right: 2%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		@include nlg {
+			top: 3%;
+		}
+		@include nmd {
+			display: none;
+		}
+	}
+	&__social-link {
+		margin-bottom: 0.625rem;
+		transition: 0.3s;
+		@include nsm {
+			margin-left: 0;
+			margin-bottom: 0.625rem;
+		}
+	}
+	&__social-link:hover {
+		transform: scale(1.08);
+		transition: 0.3s;
+	}
+	&__soc-facebook::before{
+		display: block;
+		content: ' ';
+		background-image: url('../img/facebook.svg');
+		background-size: 2rem 2rem;
+		height: 2rem;
+		width: 2rem;
+	}
+	&__soc-twitter::before{
+		display: block;
+		content: ' ';
+		background-image: url('../img/twitter.svg');
+		background-size: 2rem 2rem;
+		height: 2rem;
+		width: 2rem;
+	}
+	&__soc-youtube::before{
+		display: block;
+		content: ' ';
+		background-image: url('../img/youtube.svg');
+		background-size: 2rem 2rem;
+		height: 2rem;
+		width: 2rem;
+	}
+	&__soc-inst::before{
+		display: block;
+		content: ' ';
+		background-image: url('../img/instagram.svg');
+		background-size: 2rem 2rem;
+		height: 2rem;
+		width: 2rem;
+	}
+	&__soc-google-plus::before{
+		display: block;
+		content: ' ';
+		background-image: url('../img/g-plus.svg');
+		background-size: 2rem 2rem;
+		height: 2rem;
+		width: 2rem;
+	}
+}
+
+.about-us {
+	position: relative;
+	padding: 11rem 0 7rem;
+	background: $pryme-alt;
+	height: auto;
+	@include nmd {
+		padding: 15rem 0 3rem;
+	}
+	@include nsm {
+		padding: 15rem 0 3rem;
+		z-index: 0;
+	}
+	&__title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		font-family: $font-alt;
+		color: $colorw;
+		margin-bottom: 2rem;
+		@include nmd {
+			font-size: 2rem;
+		}
+		@include nsm {
+			font-size: 1.2rem;
+			margin-bottom: 1rem;
+		}
+	}
+	&__text {
+		color: #ffffff;
+		font-size: 1.125rem;
+		line-height: 140%;
+		max-width: 30rem;
+		@media (min-width: 2000px) { 
+			max-width: 50rem;
+		}
+		@include nsm {
+			font-size: 0.875rem;
+			z-index: 2;
+			line-height: 190%;
+		}
+	}
+	&__img {
+		position: absolute;
+		right: 0;
+		bottom: -3.75rem;
+		@media (min-width: 2000px) { 
+			right: 8%;
+			bottom: -8.75rem;
+			width: 30%;
+		}
+		@include nxl {
+			width: 55%;
+		}
+		@include nlg {
+			width: 60%;
+			bottom: -1.75rem;
+			right: -15%;
+		}
+		@include nmd {
+			width: 70%;
+			bottom: 2rem;
+			right: -35%;
+		}
+		@include nsm {
+			z-index: -1;
+			width: 100%;
+			bottom: -1.5rem;
+			right: -30%;
+			opacity: 0.6;
+			display: none;
+		}
+		
+	}
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-column-gap: 20px;
+		margin-bottom: 7rem;
+		margin-top: -17.5rem;
+		@include nmd {
+			grid-template-columns: 1fr 1fr;
+			margin-bottom: 4rem;
+			grid-gap: 20px;
+		}
+		@include nsm {
+			grid-template-columns: 1fr 1fr;
+			margin-bottom: 2.5rem;
+			grid-gap: 10px;
+			margin-top: -18.5rem;
+		}
+	}
+	&__box {
+		background: $colorw;
+		padding: 1.2rem 3rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		transition: 0.3s;
+		@include nlg {
+			padding: 1.2rem 1rem;
+		}
+		@include nsm{
+			padding: 0.5rem;
+		}
+		&:hover {
+			transform: scale(1.03);
+			transition: 0.3s;
+		}
+	}
+	&__sub-title {
+		font-size: 1.125rem;
+		font-weight: bold;
+		color: $text-color;
+		text-align: center;
+		@include nsm{
+			font-size: 0.8rem;
+			line-height: 120%;
+		}
+	}
+	&__link {
+		color: $accent-fresh;
+		font-size: 1rem;
+		display: flex;
+		align-items: center;
+		@include nsm{
+			font-size: 0.7rem;
+			line-height: 120%;
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+		&::after {
+			display: block;
+			content: ' ';
+			background-image: url('../img/home/chevron-right.svg');
+			background-size: 1.0625rem 0.8125rem;
+			height: 0.8125rem;
+			width: 1.0625rem;
+			margin-left: 0.5rem;
+		}
+	}
+	&__icon {
+		margin: 1rem 0 1.5rem;
+		@include nsm{
+			margin: 0.2rem 0;
+		}
+	}
+}
+
+.our-service {
+	background: linear-gradient(to bottom, #F0F8F7 70%, #0A7990 30%);
+	height:auto;
+	padding: 7.5rem 0 6rem;
+	@include nmd {
+		background: linear-gradient(to bottom, #F0F8F7 80%, #0A7990 20%);
+		padding: 3rem 0;
+	}
+	@include nmd {
+		background: linear-gradient(to bottom, #F0F8F7 80%, #0A7990 20%);
+		padding: 2rem 0;
+	}
+	&__title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		font-family: $font-alt;
+		color: $pryme-alt;
+		margin-bottom: 3.2rem;
+		@include nmd {
+			font-size: 2rem;
+		}
+		@include nsm{
+			font-size: 1.2rem;
+			margin-bottom: 2rem;
+		}
+	}
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-rows: minmax(197px, auto);
+		grid-gap: 20px;
+		@include nmd {
+			grid-template-columns: repeat(2, 1fr);
+			grid-auto-rows: minmax(114px, auto);
+			grid-gap: 1rem;
+		}
+	}
+	&__box {
+		background: $colorw;
+		padding: 1.2rem 3rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-around;
+		box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+		transition: 0.3s;
+		@include nmd {
+			padding: 1.2rem 2rem;
+		}
+		@include nsm {
+			padding: 0.4rem;
+		}
+		&:hover {
+			transform: scale(1.03);
+			transition: 0.3s;
+		}
+	}
+	&__sub-title {
+		font-size: 1.425rem;
+		font-weight: bold;
+		color: $text-color;
+		@include nmd {
+			font-size: 1rem;
+		}
+		@include nsm {
+			font-size: 0.8rem;
+			line-height: 120%;
+		}
+	}
+	&__link {
+		color: $accent-fresh;
+		font-size: 1.125rem;
+		display: flex;
+		align-items: center;
+		@include nmd {
+			font-size: 0.8rem;
+		}
+		@include nsm {
+			font-size: 0.7rem;
+			line-height: 120%;
+		}
+	}
+}
+
+.geography {
+	padding: 3.2rem 0 5rem;
+	background: $colorw;
+	@include nmd {
+		padding: 3rem 0 3rem;
+	}
+	@include nsm {
+		background: url('../img/home/mobile/map_bg.png') center top/cover no-repeat;
+	}
+	&__title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		font-family: $font-alt;
+		color: $pryme-alt;
+		margin-bottom: 2.5rem;
+		@include nmd {
+			font-size: 2rem;
+		}
+		@include nsm {
+			font-size: 1.2rem;
+		}
+	}
+	&__sub-title {
+		font-size: 1.125rem;
+		font-weight: 800;
+		color: $accent-fresh;
+		margin-bottom: 0.6rem;
+		@include nsm {
+			font-size: 1rem;
+			margin-bottom: 0.4rem;
+		}
+	}
+	&__row {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding: 0 6rem;
+		@include nlg {
+			padding: 0;
+		}
+		@include nsm {
+			flex-direction: column;
+		}
+	}
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin-right: 6rem;
+		&:last-child {
+			margin-right: 0;
+		}
+		@include nlg {
+			margin-right: 0;
+		}
+		@include nmd {
+			margin-right: 1rem;
+		}
+		@include nmd {
+			margin-right: 0;
+			margin-bottom: 2rem;
+		}
+	}
+	&__list-wrap {
+		display: flex;
+		align-items: flex-start;
+		border-top: 1px solid $accent-fresh;
+	}
+	&__list {
+		padding-top: 0.6rem;
+		margin-right: 1.25rem;
+		@include nmd {
+			margin-right: 1rem;
+		}
+	}
+	&__link {
+		font-size: 0.75rem;
+		font-weight: 700;
+		color: $text-color;
+		text-decoration: underline;
+		transition: 0.3s;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+	}
+	&__item::before {
+		display: block;
+		content: ' ';
+		background-image: url('../img/home/rhombus.svg');
+		background-size: 5px 5px;
+		height: 5px;
+		width: 5px;
+		margin-right: 0.2rem;
+	}
+	&__img {
+		margin: 4.5rem 6rem 0;
+		@include nlg {
+			padding: 0;
+			margin: 4.5rem 0 0;
+		}
+		@include nmd {
+			width: 100%;
+			margin: 2.5rem 0 0;
+		}
+		@include nsm {
+			display: none;
+		}
+	}
+}
