@@ -1,9 +1,3 @@
-// Миксины
-@import "_mixin";
-// Шрифты
-@import "_fonts";
-// Файл обнуленных стилей
-@import "_nullstyles";
 
 
 .header {
@@ -789,13 +783,10 @@
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-            justify-content: center;
+      justify-content: center;
+      margin-top: 2rem;
 	}
 }
 
 }
 
-.demo {
-    background: #EC3737;
-    height: 2000px;
-}
