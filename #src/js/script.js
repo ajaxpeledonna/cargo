@@ -90,13 +90,16 @@ $('.tab-title>a').click(function(e){
          .eq(index).addClass('active');
   });
 
-$(window).scroll(function(e) {
+
+if ($(window).width() > 1220) {
+  $(window).scroll(function(e) {
    if($(window).scrollTop()>=900) {
      $('.calc-btn').fadeIn(200);
    } else {
      $('.calc-btn').fadeOut(200);
    }
 });
+}
 
 $(".docs-slider").slick({
 

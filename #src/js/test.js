@@ -3,16 +3,15 @@ $(document).ready(function(){
   $('ul.submenu').parents('li').addClass('megamenu');
   
   //Menu ICon Append prepend for responsive
-  $(window).on('resize', function(){
-    if ($(window).width() < 1024) {
+  if ($(window).width() < 1180) {
       if(!$('#menu_trigger').length){
-        $('#mainmenu').prepend('<a href="#" id="menu_trigger" class="menulines-button"><span class="menulines"></span></a>');
+        $('#mainmenu').prepend('<div id="menu_trigger" class="menulines-button hamburger-menu"><div class="bar"></div></div>');
       }
       if(!$('.navtrigger').length){
-        $('.megamenu > a').append('<span class="navtrigger"></span>');
+        $('.megamenu > a').append('<span class="navtrigger"></span>')
       }
       if(!$('.mobile-menu').length){
-        $('.menu').wrap('<div class="mobile-menu"></div>');
+        $('.mob-wrapper').wrap('<div class="mobile-menu"></div>')
       }
       if(!$('.submenu > .backmenu-row').length){
         $('.submenu').each(function(){
@@ -28,7 +27,6 @@ $(document).ready(function(){
       $('.back-trigger').remove();
       $('.back-trigger').remove();
     }
-  }).resize();
   
   
   // Mobile menu on click open
@@ -36,9 +34,11 @@ $(document).ready(function(){
     if($('.megamenu').hasClass("sub-open")){
       $('.megamenu ').removeClass('sub-open');
       $('.mobile-menu').delay(350).slideToggle();
+      $('#menu_trigger .bar').toggleClass('animate');
       $(this).toggleClass('menuopen');
     } else {
       $(this).toggleClass('menuopen');
+      $('#menu_trigger .bar').toggleClass('animate');
       $(this).next('.mobile-menu').slideToggle();
     }
     return false;
@@ -48,13 +48,26 @@ $(document).ready(function(){
   $(document).on('click', '.navtrigger', function(){
     $(this).parents('li').addClass('sub-open');
     return false;
-  });
+  })
   
   // Back to menu in mobile
-  $(document).on('click', '.back-trigger', function(){
+  $(document).on('click', '.backmenu-row', function(){
     $(this).closest('li').removeClass('sub-open');
     return false;
-  });
+  })
   
-  
+
+  if ($(window).width() > 767) {
+  $(window).scroll(function(e) {
+   if($(window).scrollTop()>=900) {
+     $('.calc-btn').fadeIn(200);
+   } else {
+     $('.calc-btn').fadeOut(200);
+   }
 });
+}
+
+
+  
+})
+

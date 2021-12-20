@@ -4,7 +4,7 @@
 @import "_fonts";
 // Файл обнуленных стилей
 @import "_nullstyles";
-
+@import "_header";
 
 .welcome {
 	position: relative;
@@ -40,7 +40,7 @@
 
 	}
 	&__text-wrap {
-		background: rgba(10, 121, 145, 0.7);
+		background: rgba(10, 121, 145, 0.9);
 		padding: 67px 104px;
 		max-width: 680px;
 		@include nlg {

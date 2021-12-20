@@ -207,6 +207,91 @@ p {
   width: 100%;
   position: fixed;
   background: #0A7990;
+  z-index: 9999;
+}
+
+.header__socials {
+  display: none;
+}
+
+@media all and (max-width: 1023px) {
+  .header__socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.header__social-link {
+  margin-bottom: 0.625rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media all and (max-width: 767px) {
+  .header__social-link {
+    margin-left: 0;
+    margin-bottom: 0.625rem;
+  }
+}
+
+.header__social-link:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__soc-facebook::before {
+  display: block;
+  content: ' ';
+  background-image: url("../img/facebook.svg");
+  background-size: 2rem 2rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.header__soc-twitter::before {
+  display: block;
+  content: ' ';
+  background-image: url("../img/twitter.svg");
+  background-size: 2rem 2rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.header__soc-youtube::before {
+  display: block;
+  content: ' ';
+  background-image: url("../img/youtube.svg");
+  background-size: 2rem 2rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.header__soc-inst::before {
+  display: block;
+  content: ' ';
+  background-image: url("../img/instagram.svg");
+  background-size: 2rem 2rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.header__soc-google-plus::before {
+  display: block;
+  content: ' ';
+  background-image: url("../img/g-plus.svg");
+  background-size: 2rem 2rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 @media all and (max-width: 767px) {
@@ -307,7 +392,7 @@ p {
 }
 
 .header .height-limit {
-  max-height: 23rem;
+  max-height: 28rem;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -339,18 +424,10 @@ p {
   color: #F0F8F7;
   padding: 10px 29px 10px 25px;
   display: inline-block;
-  border-left: 4px solid #0A7990;
+  border-left: 4px solid transparent;
   line-height: 56px;
   -webkit-transition: 350ms all;
   transition: 350ms all;
-}
-
-.header ul li a:hover {
-  color: #ffe400;
-  border-left: 4px solid #F96B30;
-  color: #F0F8F7;
-  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .header .menu-box {
@@ -378,6 +455,18 @@ p {
 
 .header .menu li {
   margin-right: 25px;
+  border-left: 4px solid transparent;
+}
+
+.header .menu li:hover {
+  border-left: 4px solid #F96B30;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.header .submenu {
+  -webkit-box-shadow: 2px 2px 10px #0B327D;
+          box-shadow: 2px 2px 10px #0B327D;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -442,10 +531,8 @@ p {
   .header .menu li .submenu li a {
     color: #0A7990;
     padding: 10px 20px;
-    background: #F0F8F7;
     line-height: 34px;
     display: block;
-    border-left: 4px solid #F0F8F7;
     border-bottom: 0.5px solid rgba(10, 121, 144, 0.1);
   }
   .header .menu li .submenu li a:before {
@@ -453,8 +540,14 @@ p {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
   }
-  .header .menu li .submenu li a:hover {
+  .header .menu li .submenu li:hover {
     background: #0A7990;
+    border-left: 4px solid #F96B30;
+  }
+  .header .menu li .submenu li:hover > a {
+    color: #F0F8F7;
+  }
+  .header .menu li .submenu .menu a:hover {
     color: #F0F8F7;
     border-left: 4px solid #F96B30;
   }
@@ -510,7 +603,7 @@ p {
   .header .mobile-menu li {
     margin: 0;
     border-bottom: 1px solid white;
-    font-size: 16px;
+    font-size: 1rem;
   }
   .header .mobile-menu li a {
     display: block;
@@ -552,14 +645,14 @@ p {
     z-index: 1;
   }
   .header .mobile-menu li .submenu li {
-    font-size: 14px;
+    font-size: 1rem;
   }
   .header .mobile-menu li .submenu .backmenu-row {
     position: relative;
     padding: 20px;
     padding-left: 50px;
     background: #0A7990;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
   .header .mobile-menu li .submenu .backmenu-row .back-trigger {
     padding: 0;
