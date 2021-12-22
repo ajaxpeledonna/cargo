@@ -67,6 +67,7 @@ $font-decor: 'Roboto', sans-serif;
 $colord: #2C2C2C;
 $colorw: #F0F8F7;
 $color-gray: #333333;
+$read: #454040;
 $pryme-color: linear-gradient(104.5deg, #095F71 0%, #0F778C 100%);
 $pryme-color-rev: linear-gradient(360deg, #003267 0%, #00709E 100%);
 $pryme-alt:#0A7990;
@@ -87,7 +88,7 @@ $transition: 350ms all;
 $black: #000;
 $white: #FFF;
 $red: #4285f4;
-$read: #4e4e4e;
+
 $red-dark: #4285f4;
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
 $minwidth: 320px;
@@ -279,6 +280,12 @@ p {
 	display: none;
 	@include nsm {
 		display: block;
+	}
+}
+.hide-sm {
+	display: block;
+	@include nsm {
+		display: none;
 	}
 }
 //====================================================================================================

@@ -14,12 +14,18 @@
     .mini-container {
         max-width: 48.75rem;
         margin-left: 6.25rem;
+        @include nmd {
+            margin-left: 0rem;
+        }
     }
     .container {
         position: relative;
     }
     &__head-wrap {
         padding-top: 10rem;
+        @include nsm {
+            padding-top: 7rem;
+        }
     }
     &__title {
         font-size: 2.5rem;
@@ -29,6 +35,14 @@
         line-height: 85%;
         margin-bottom: 1.875rem;
         font-family: $font-alt;
+        @include nlg {
+            max-width: 39.5rem;
+        }
+        @include nsm {
+            font-size: 1.125rem;
+            line-height: 120%;
+            margin-bottom: 1rem;
+        }
     }
     &__sub-title {
         font-size: 1.75rem;
@@ -36,15 +50,37 @@
         font-family: $font-alt;
         color: $read;
         margin-bottom: 1.875rem;
+        margin-top: 2.5rem;
+        &--alt-size {
+            font-size: 1.625rem;
+        }
+        @include nsm {
+            font-size: 1.125rem;
+            line-height: 120%;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
     }
     &__text {
         color: $read;
         font-size: 1.125rem;
         font-weight: 500;
         line-height: 156%;
-        &--1 {
+        margin-bottom: 1.5rem;
+        @include nsm {
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+        }
+        &--first-block {
             max-width: 36.25rem;
             margin-bottom: 3.75rem;
+            @include nlg {
+                max-width: 28.25rem;
+            }
+            @include nsm {
+                margin-bottom: 1rem;
+                line-height: 192%;
+            }
         }
         &--semi-bold {
             font-weight: 600;
@@ -52,6 +88,10 @@
     }
     &__list {
         margin-left: 1.25rem;
+        margin-bottom: 2rem;
+        @include nsm {
+            margin-bottom: 1rem;
+        }
     }
     &__item {
         color: $read;
@@ -59,11 +99,87 @@
         line-height: 167%;
         list-style-type: disc;
         margin-top: 1rem;
+        @include nsm {
+            font-size: 0.875rem;
+            line-height: 192%;
+            margin-top: 0.5rem;
+        }
     }
     &__img {
         position: absolute;
         top: 6rem;
         right: 0;
         z-index: -1;
+        @include nmd {
+            top: 14rem;
+            width: 50%;
+        }
+        @include nsm {
+            width: auto; 
+        }
     }
+    &__img-area {
+        background: linear-gradient(to right, $text-color 60%, #fff 40%);
+        padding: 1.875rem 0;
+        margin: 1.875rem 0;
+        @include nsm {
+            background: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    &__img-area-alt {
+        position: relative;
+        padding: 1.875rem 0;
+        margin: 1.875rem 0;
+        @include nsm {
+            padding: 0;
+            margin: 0 0 2rem;
+        }
+    }
+    &__img-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &--top {
+            align-items: flex-start;
+        }
+    }
+    &__images {
+        &--big {
+            @include nlg {
+                width: 57%;
+            }
+            @include nsm{
+                width: 100%;
+            }
+        }
+        &--small {
+            @include nlg {
+                width: 40%;
+            }
+            @include nsm{
+                display: none;
+            }
+        }
+        @include nlg {
+            width: 48.5%;
+        }
+        @include nsm {
+            width: 100%;
+        }
+    }
+    &__decor {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: $text-color;
+        height: 284px;
+        width: 60%;
+        z-index: -1;
+        @include nsm {
+            display: none;
+        }
+    }
+
 }   
