@@ -18,6 +18,10 @@
     &__top {
         background: url('../img/case/first_bg.jpg') center top/cover no-repeat;
         min-height: 320px;
+        @include nsm {
+            background: url('../img/case/mob_bg.jpg') center top/cover no-repeat;
+            min-height: 9.75rem;
+        }
     }
     &__title {
         padding: 5rem 0;
@@ -28,11 +32,21 @@
         font-family: $font-alt;
         max-width: 35.125rem;
         text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.8);
+        @include nsm {
+            font-size: 1.1rem;
+            max-width: 19rem;
+            padding: 1rem 0;
+        }
     }
     &__bottom {
-        background: $text-color;
+        background: $pryme-alt;
         padding: 8rem 0;
-        position: relative;
+        @include nlg {
+            padding: 8rem 0 3rem;
+        }
+        @include nsm {
+            padding: 4rem 0 0rem;
+        }
     }
     &__sub-title {
         font-family: $font-alt;
@@ -40,11 +54,296 @@
         font-weight: bold;
         font-size: 1.75rem;
         color: #FFFFFF;
+        margin-bottom: 1.2rem;
+        @include nsm {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
     }
     &__text {
-        font-weight: 500;
+        font-weight: 400;
         font-size: 1.125rem;
         line-height: 156%;
         color: $colorw;
+        @include nsm {
+            font-size: 0.75rem;
+            line-height: 185%;
+        }
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include nmd {
+            flex-direction: column;
+        }
+    }
+    &__text-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 36.25rem;
+        position: relative;
+        @include nlg {
+            max-width: 48%;
+        }
+        @include nmd {
+            max-width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+    &__delivery {
+        position: absolute;
+        left: 0;
+        top: -13.5rem;
+        width: 100%;
+        background: $colorw;
+        padding: 3.2rem 6rem;
+        box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+        @include nlg {
+            width: 125%;
+        }
+        @include nmd {
+            width: 78%;
+        }
+        @include nsm {
+            width: 13.75rem;
+            left: auto;
+            right: 0;
+            top: -5.5rem;
+            padding: 0.75rem 1rem;
+        }
+    }
+    &__cap {
+        font-family: $font-alt;
+        font-weight: bold;
+        font-size: 1.75rem;
+        line-height:120%;
+        color: $text-color;
+         @include nsm {
+            font-size: 0.8125rem;
+        }
+    }
+    &__img {
+        box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+        @include nlg {
+            width: 50%;
+        }
+        @include nmd {
+            width: 100%;
+        }
+        @include nsm {
+            margin-bottom: -1.5rem;
+        }
+    }
+}
+
+.solution {
+    background: $colorw;
+    padding: 5.5rem 0;
+    @include nsm {
+        padding: 3.5rem 0;
+    }
+    &__main-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include nmd {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+    }
+    &__img-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        @include nmd {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+    &__text-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        max-width: 36.25rem;
+        @include nlg {
+            max-width: 25.25rem;
+        }
+        @include nmd {
+            max-width: 36.25rem;
+        }
+    }
+    &__title {
+        font-family: $font-alt;
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: $text-color;
+        margin-bottom: 1.2rem;
+        @include nsm {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 1.125rem;
+        line-height: 156%;
+        color: $text-color;
+        margin-bottom: 9rem;
+        @include nmd {
+            margin-bottom: 3rem;
+        }
+        @include nsm {
+            font-size: 0.75rem;
+            line-height: 185%;
+        }
+    }
+    &__list-title {
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 156%;
+        color: $text-color;
+        margin-bottom: 0.5rem;
+        @include nsm {
+            font-size: 0.75rem;
+            line-height: 185%;
+        }
+    }
+    &__list {
+        margin-left: 1.25rem;
+    }
+    &__item {
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 156%;
+        color: $text-color;
+        margin-bottom: 0.5rem;
+        list-style-type: '\2014';
+        padding-left: 0.4rem;
+        @include nsm {
+            font-size: 0.75rem;
+            line-height: 185%;
+        }
+    }
+    &__img {
+        margin-bottom: 1rem;
+        &:last-child {
+            margin-bottom: 0;
+            margin-right: 0;
+        }
+        @include nmd {
+            max-height: 235px;
+            margin-bottom: 0;
+            margin-right: 1rem;
+            margin-top: 2rem;
+        }
+        @include nsm {
+            width: 100%;
+        }
+    }
+}
+
+.crm {
+    background: $pryme-alt;
+    padding: 3.2rem 0;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include nmd {
+            flex-direction: column;
+        }
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 1.125rem;
+        line-height: 156%;
+        color: $colorw;
+        max-width: 37rem;
+        @include nlg {
+            max-width: 21rem;
+        }
+        @include nmd {
+            max-width: 36rem;
+            margin-bottom: 2rem;
+        }
+        @include nsm{
+            font-size: 0.75rem;
+            line-height: 185%;
+        }
+    }
+    &__img-wrap {
+        padding: 2rem 1.75rem;
+        background: #fff;
+    }
+    &__img {
+        @include nsm{
+            width: 100%;
+        }
+    }
+}
+
+.result {
+    background: $colorw;
+    padding: 3.2rem 0;
+    @include nsm {
+        padding: 1.5rem 0 3rem;
+    }
+    &__main-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include nsm{
+            flex-direction: column-reverse;
+        }
+    }
+    &__text-wrap {
+        max-width: 36rem;
+        @include nlg {
+            max-width: 25rem;
+        }
+        @include nmd {
+            max-width: 21rem;
+        }
+    }
+    &__title {
+        font-family: $font-alt;
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: $text-color;
+        margin-bottom: 1.2rem;
+        @include nsm{
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 1.125rem;
+        line-height: 156%;
+        color: $text-color;
+        @include nsm{
+            font-size: 0.75rem;
+            line-height: 185%;
+            margin-bottom: 1rem;
+        }
+    }
+    &__img {
+        @include nmd {
+            width: 50%;
+        }
+        @include nsm{
+            width: 100%;
+        }
+    }
+    &__quote {
+		background: linear-gradient(to right, #b5d7de 75%, $colorw 25%);
+	}
+    .contact-slider {
+        margin: 3.2rem 0 0;
     }
 }
