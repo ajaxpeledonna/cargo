@@ -1,0 +1,279 @@
+
+// Миксины
+@import "_mixin";
+// Шрифты
+@import "_fonts";
+// Файл обнуленных стилей
+@import "_nullstyles";
+
+@import "_header";
+@import "_footer";
+
+
+main {
+    padding-top: 5.25rem;
+}
+
+.bg-wrapper {
+    background-image: linear-gradient(0deg, #FFFFFF 2.69%, rgba(255, 255, 255, 0) 100%),  url('../img/incoterms/img_containers.jpg');;
+    backdrop-filter: blur(10px);
+    // background-size: cover;
+    background-position: top 200px right;
+    background-repeat: no-repeat;
+    @include nlg {
+        background-position: inherit;
+        background-repeat: no-repeat;
+        background-position-y: 145px;
+        background-image: linear-gradient(0deg, #FFFFFF 66.69%, rgba(255, 255, 255, 0) 100%),  url('../img/incoterms/img_containers.jpg');;
+    }
+    @include nsm {
+        background-image: linear-gradient(0deg, #FFFFFF 69.69%, rgba(255, 255, 255, 0) 100%),  url('../img/incoterms/img_container-mob.jpg');;
+        background-position-y: 0px;
+        background-size: contain;
+    }
+}
+
+.incoterms {
+    padding: 4.375rem 0;
+    @include nsm {
+        padding: 2rem 0;
+    }
+    &__wrap {
+        max-width: 44.2rem;
+        padding-left: 100px;
+        @include nsm {
+            padding-left: 0;
+        }
+    }
+    &__title {
+        font-size: 3rem;
+        font-weight: 800;
+        font-family: $font-alt;
+        color: $text-color;
+        margin-bottom: 2rem;
+        @include nsm {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+    }
+    &__text {
+        font-size: 1.125rem;
+        font-weight: 400;
+        color: $text-color;
+        margin-top: 1rem;
+        max-width: 36.25rem;
+        @include nsm {
+            font-size: 0.75rem;
+            margin-bottom: 0.5rem;
+            line-height: 185%;
+        }
+        &--bold {
+            font-weight: 600;
+            max-width: 44.2rem;
+        }
+    }
+}
+
+.terms {
+    &__title {
+        font-size: 1.75rem;
+        font-weight: bold;
+        font-family: $font-alt;
+        color: $text-color;
+        margin-left: 100px;
+        margin-bottom: 3rem;
+        @include nsm {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            margin-left: 0px;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include nmd {
+            flex-direction: column;
+        }
+    }
+    .accordion {
+        width: 48%;
+        margin: 0 auto;
+        @include nmd {
+            max-width: auto;
+            width: 80%;
+        }
+        @include nmd {
+            max-width: auto;
+            width: 100%;
+        }
+        &__title-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+            
+    }
+    .accordion__item {
+        margin: 20px auto;
+  
+        box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+		@include nsm {
+			font-size: 0.75rem;
+			border-bottom: none;
+		}
+    }
+	// .accordion__item:nth-child(2n){
+	// 	@include nsm {
+	// 		background: rgba(198, 217, 255, 0.35);
+	// 	}	
+	// }
+    
+    .accordion__item .accordion__title {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0 80px;
+        margin-bottom: 2px;
+        color: $text-color;
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 130%;
+        background: #fff;
+        height: 102px;
+        border-radius: 5px;
+        text-decoration: none;
+        -webkit-transition: background-color 0.2s;
+        transition: background-color 0.2s;
+        cursor: pointer;
+        
+		@include nsm {
+			font-size: 0.75rem;
+			line-height: 150%;
+			padding-left: 0.75rem;
+		}
+    }
+    // .accordion__item:last-child .accordion__title {
+    //     margin-left: 3em;
+    //     text-indent: -2.6em;
+    // }
+    .accordion__title-wrap .accordion__title-text {
+		display: flex;
+        font-weight: 700;
+        font-family: $font-alt;
+        font-size: 1.375rem;
+        margin-right: 1.5rem;
+        max-width: 350px;
+        @include nsm {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+        
+    }
+    .accordion__title-wrap .accordion__title-sub {
+		display: flex;
+        font-weight: 500;
+        font-family: $font-alt;
+        font-size: 1rem;  
+        @include nsm {
+            font-size: 0.75rem;
+            font-weight: 400;
+        }
+    }
+    
+    
+    .accordion__item .accordion__title:hover {
+        transition: all 0.5s ease-out;
+    }
+    .accordion__item .accordion__title:active {
+        transition: all 0.5s ease-out;
+        
+    }
+    .accordion__item .accordion-active {
+       
+        transition: all 0.2s ease-out;
+    }
+    .accordion__item .accordion__title .accordion__arrow {
+        position: absolute;
+        top: 38px; 
+        right: 30px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        color: $text-color;
+        line-height: 30px;
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-right: 5px;
+        -webkit-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+
+    // .accordion__item:last-child .accordion__title .accordion__arrow {
+    //     top: 1.5rem;
+    // }
+    
+    .accordion__item .accordion__rotate {
+        transform: rotate(-45deg);
+    }
+    
+    .accordion__item .accordion__content {
+        padding: 25px;
+        margin-bottom: 2px;
+        margin-top: -10px;
+        display: none;
+        color: $text-color;
+        background: #fff;
+        
+        border-radius: 5px;
+        p {
+            font-size: 1.125rem;
+            line-height: 156%;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+		@include nsm {
+			font-size: 0.7rem;
+			line-height: 200%;
+		}
+    }
+    .accordion__content {
+        ul {
+            margin: 1rem 0 1rem 1.5rem;
+        }
+        li {
+            list-style-type: disc;
+        }
+    }
+    .accordion__item .accordion__arrow-item {
+        font-weight: 300;
+        font-size: 3.5rem;
+		@include nsm {
+			font-size: 2.5rem;
+		}
+    }
+}
+
+.infographics {
+    overflow-x: scroll;
+    margin: 10rem 0 2rem;
+    padding-bottom: 2rem;
+    &__img {
+        width: 1178px;
+        height: auto;
+    }
+    ::-webkit-scrollbar {
+		-webkit-appearance: none;
+		width: 5px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: 5px;
+		background-color: rgba(0, 0, 0, .5);
+		box-shadow: 0 0 1px rgba(4, 247, 226, 0.5);
+	}
+}
+
