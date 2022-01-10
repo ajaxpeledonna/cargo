@@ -1514,9 +1514,16 @@ main {
 }
 
 @media all and (max-width: 767px) {
+  .terms .accordion__item .accordion__content p {
+    font-size: 0.8rem;
+  }
+}
+
+@media all and (max-width: 767px) {
   .terms .accordion__item .accordion__content {
     font-size: 0.7rem;
     line-height: 200%;
+    padding: 5px 25px 25px 15px;
   }
 }
 

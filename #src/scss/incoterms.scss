@@ -234,10 +234,14 @@ main {
             line-height: 156%;
             font-weight: 400;
             margin-bottom: 0.5rem;
+            @include nsm {
+                font-size: 0.8rem;
+            }
         }
 		@include nsm {
 			font-size: 0.7rem;
 			line-height: 200%;
+            padding: 5px 25px 25px 15px;
 		}
     }
     .accordion__content {
