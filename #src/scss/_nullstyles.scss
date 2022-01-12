@@ -291,7 +291,7 @@ p {
 .socials{
 	display: flex;
 	&__item{
-		margin-left: 0.5625rem;
+		margin-left: 0.9rem;
 		transition: 0.3s;
 		@include nsm {
 			margin-left: 0;
@@ -327,6 +327,15 @@ p {
 		}
 		&--google-plus::before{
 			background-image: url('../img/g-plus.svg');
+		}
+		&--telegram-color::before{
+			background-image: url('../img/telegram-color.svg');
+		}
+		&--whatsup-color::before{
+			background-image: url('../img/whatsup-color.svg');
+		}
+		&--viber-color::before{
+			background-image: url('../img/viber-color.svg');
 		}
 	}
 }

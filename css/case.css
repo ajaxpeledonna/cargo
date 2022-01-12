@@ -212,6 +212,64 @@ p {
   }
 }
 
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.socials__item {
+  margin-left: 0.5625rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media all and (max-width: 767px) {
+  .socials__item {
+    margin-left: 0;
+    margin-right: 0.5625rem;
+  }
+}
+
+.socials__item:first-child {
+  margin-left: 0rem;
+}
+
+.socials__item:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.socials__link:before {
+  display: block;
+  content: ' ';
+  background-size: 2rem 2rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.socials__link--facebook::before {
+  background-image: url("../img/facebook.svg");
+}
+
+.socials__link--youtube::before {
+  background-image: url("../img/youtube.svg");
+}
+
+.socials__link--inst::before {
+  background-image: url("../img/instagram.svg");
+}
+
+.socials__link--twitter::before {
+  background-image: url("../img/twitter.svg");
+}
+
+.socials__link--google-plus::before {
+  background-image: url("../img/g-plus.svg");
+}
+
 .header {
   background-color: #0A7990;
   color: #ffffff;

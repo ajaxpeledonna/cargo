@@ -219,7 +219,7 @@ p {
 }
 
 .socials__item {
-  margin-left: 0.5625rem;
+  margin-left: 0.9rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -268,6 +268,18 @@ p {
 
 .socials__link--google-plus::before {
   background-image: url("../img/g-plus.svg");
+}
+
+.socials__link--telegram-color::before {
+  background-image: url("../img/telegram-color.svg");
+}
+
+.socials__link--whatsup-color::before {
+  background-image: url("../img/whatsup-color.svg");
+}
+
+.socials__link--viber-color::before {
+  background-image: url("../img/viber-color.svg");
 }
 
 .header {
@@ -1316,9 +1328,15 @@ main {
 @media all and (max-width: 1023px) {
   .contacts__content {
     background-color: transparent;
-    padding: 0;
+    padding: 0 0 2.5rem;
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .contacts__content {
+    padding: 0 0 0.5rem;
   }
 }
 
@@ -1341,7 +1359,15 @@ main {
 @media all and (max-width: 1023px) {
   .contacts__title {
     color: #095F71;
-    margin-left: 32px;
+    margin-left: 16px;
+    margin-bottom: 38px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .contacts__title {
+    margin-left: 10px;
+    max-width: 375px;
   }
 }
 
@@ -1360,14 +1386,15 @@ main {
     width: 100%;
     background: #E6F2F4;
     padding: 4px 88px;
+    margin-bottom: -20px;
   }
 }
 
 @media all and (max-width: 767px) {
   .contacts table {
     padding: 4px 10px;
-    max-width: 345px;
-    margin: 0 auto;
+    max-width: 375px;
+    margin: -20px auto;
   }
 }
 
@@ -1410,9 +1437,40 @@ main {
   }
 }
 
+.contacts__socials {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @media all and (max-width: 1023px) {
   .contacts__socials {
-    display: none;
+    padding: 20px 0;
+    background: #E6F2F4;
+  }
+}
+
+.contacts .socials__item {
+  margin-left: 0.9rem;
+}
+
+.contacts .socials__item:first-child {
+  margin-left: 0rem;
+}
+
+.contacts .socials__link:before {
+  display: block;
+  content: ' ';
+  background-size: 2rem 2rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+@media all and (max-width: 1023px) {
+  .contacts .socials__link:before {
+    background-size: 3rem 3rem;
+    height: 3rem;
+    width: 3rem;
   }
 }
 

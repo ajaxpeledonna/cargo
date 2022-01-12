@@ -32,8 +32,11 @@ main {
         padding: 60px 30px 35px;
         @include nmd{
             background-color: transparent;
-            padding: 0;
+            padding: 0 0 2.5rem;
             box-shadow: none;
+        }
+        @include nsm{
+            padding: 0 0 0.5rem;
         }
     }
     &__table-wrap {
@@ -51,8 +54,14 @@ main {
         margin-bottom: 18px;
         @include nmd{
             color: #095F71;
-            margin-left: 32px;
+            margin-left: 16px;
+            margin-bottom: 38px;
         }
+        @include nsm{
+                margin-left: 10px;
+                max-width: 375px;
+                
+            }
     }
     table{
             text-align: left;
@@ -66,11 +75,12 @@ main {
                 width: 100%;
                 background: #E6F2F4;
                 padding: 4px 88px;
+                margin-bottom: -20px;
             }
             @include nsm{
                 padding: 4px 10px;
-                max-width: 345px;
-                margin: 0 auto;
+                max-width: 375px;
+                margin: -20px auto;
             }
             th{
                 font-style: normal;
@@ -103,10 +113,37 @@ main {
             }
         }
         &__socials{
-            @include nmd{
-                display: none;
+            justify-content: center;
+            @include nmd {
+                padding: 20px 0;
+                background: #E6F2F4;
             }
         }
+        .socials {
+
+            &__item{
+                margin-left: 0.9rem;
+                &:first-child {
+			        margin-left: 0rem;
+		        }
+            }
+            &__link{
+                &:before{
+                    display: block;
+                    content: ' ';
+                    background-size: 2rem 2rem;
+                    height: 2rem;
+                    width: 2rem;
+                    @include nmd {
+                        background-size: 3rem 3rem;
+                        height: 3rem;
+                        width: 3rem;
+                    }
+                }
+	        }
+        }
+
+           
         &__map{
             flex:  0 0 65%;
             img{
