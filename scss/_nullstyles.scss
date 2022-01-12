@@ -295,7 +295,7 @@ p {
 		transition: 0.3s;
 		@include nsm {
 			margin-left: 0;
-			margin-right: 0.5625rem;
+			// margin-right: 0.5625rem;
 		}
 		&:first-child {
 			margin-left: 0rem;

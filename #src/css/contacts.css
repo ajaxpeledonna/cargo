@@ -227,7 +227,6 @@ p {
 @media all and (max-width: 767px) {
   .socials__item {
     margin-left: 0;
-    margin-right: 0.5625rem;
   }
 }
 
@@ -1451,7 +1450,13 @@ main {
 }
 
 .contacts .socials__item {
-  margin-left: 0.9rem;
+  margin-left: 0.8rem;
+}
+
+@media all and (max-width: 1023px) {
+  .contacts .socials__item {
+    margin-left: 1.25rem;
+  }
 }
 
 .contacts .socials__item:first-child {

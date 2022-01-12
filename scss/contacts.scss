@@ -122,12 +122,15 @@ main {
         .socials {
 
             &__item{
-                margin-left: 0.9rem;
+                margin-left: 0.8rem;
+                @include nmd {
+                    margin-left: 1.25rem;
+                }
                 &:first-child {
 			        margin-left: 0rem;
 		        }
             }
-            &__link{
+            &__link{ 
                 &:before{
                     display: block;
                     content: ' ';

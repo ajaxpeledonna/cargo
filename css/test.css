@@ -220,7 +220,7 @@ p {
 }
 
 .socials__item {
-  margin-left: 0.5625rem;
+  margin-left: 0.9rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -269,6 +269,18 @@ p {
 
 .socials__link--google-plus::before {
   background-image: url("../img/g-plus.svg");
+}
+
+.socials__link--telegram-color::before {
+  background-image: url("../img/telegram-color.svg");
+}
+
+.socials__link--whatsup-color::before {
+  background-image: url("../img/whatsup-color.svg");
+}
+
+.socials__link--viber-color::before {
+  background-image: url("../img/viber-color.svg");
 }
 
 .header {
