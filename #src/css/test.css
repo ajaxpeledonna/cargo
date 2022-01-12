@@ -203,6 +203,16 @@ p {
   }
 }
 
+.hide-sm {
+  display: block;
+}
+
+@media all and (max-width: 767px) {
+  .hide-sm {
+    display: none;
+  }
+}
+
 .header {
   width: 100%;
   position: fixed;

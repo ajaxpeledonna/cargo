@@ -1,0 +1,121 @@
+// Миксины
+@import "_mixin";
+// Шрифты
+@import "_fonts";
+// Файл обнуленных стилей
+@import "_nullstyles";
+
+@import "_header";
+@import "_footer";
+
+
+main {
+    padding: 8rem 0 50px;
+}
+.contacts{
+    .container{
+        @include nmd{
+            padding: 0;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include nmd{
+            display: block;
+        }
+    }
+    &__content{
+        background: $pryme-alt;
+        box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+        padding: 60px 30px 35px;
+        @include nmd{
+            background-color: transparent;
+            padding: 0;
+            box-shadow: none;
+        }
+    }
+    &__table-wrap {
+        @include nmd{
+            background: #E6F2F4; 
+            margin-bottom: 20px;
+        }
+    }
+    &__title{
+        font-family: $font-alt;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 18px;
+        @include nmd{
+            color: #095F71;
+            margin-left: 32px;
+        }
+    }
+    table{
+            text-align: left;
+            color: #FFFFFF;
+            font-family: $font-alt;
+            max-width: 227px;
+            margin-bottom: 47px;
+            @include nmd{
+                color: #095F71;
+                max-width: none;
+                width: 100%;
+                background: #E6F2F4;
+                padding: 4px 88px;
+            }
+            @include nsm{
+                padding: 4px 10px;
+                max-width: 345px;
+                margin: 0 auto;
+            }
+            th{
+                font-style: normal;
+                font-weight: 600;
+                font-size: 11px;
+                line-height: 13px;
+                opacity: 0.7;
+                white-space: nowrap;
+                padding: 11px 0;
+            }
+            td{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 18px;
+                color: #F0F8F7;
+                padding: 11px 0 11px 15px;
+                a{
+                    color: #F0F8F7;
+                    @include nmd{
+                        color: #095F71;
+                    }
+                }
+                a[href^="mailto:"]{
+                    text-decoration: underline;
+                }
+                @include nmd{
+                        color: #095F71;
+                        width: 45%;
+                    }
+            }
+        }
+        &__socials{
+            @include nmd{
+                display: none;
+            }
+        }
+        &__map{
+            flex:  0 0 65%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            @include nlg{
+                flex: 0 0 60%;
+            }
+        }
+}
+    

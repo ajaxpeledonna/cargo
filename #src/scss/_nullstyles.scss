@@ -288,6 +288,48 @@ p {
 		display: none;
 	}
 }
+.socials{
+	display: flex;
+	&__item{
+		margin-left: 0.5625rem;
+		transition: 0.3s;
+		@include nsm {
+			margin-left: 0;
+			margin-right: 0.5625rem;
+		}
+		&:first-child {
+			margin-left: 0rem;
+		}
+		&:hover{
+			transform: scale(1.08);
+			transition: 0.3s;
+		}
+	}
+	&__link{
+		&:before{
+			display: block;
+			content: ' ';
+			background-size: 2rem 2rem;
+			height: 2rem;
+			width: 2rem;
+		}
+		&--facebook::before{
+			background-image: url('../img/facebook.svg');
+		}
+		&--youtube::before{
+			background-image: url('../img/youtube.svg');
+		}
+		&--inst::before{
+			background-image: url('../img/instagram.svg');
+		}
+		&--twitter::before{
+			background-image: url('../img/twitter.svg');
+		}
+		&--google-plus::before{
+			background-image: url('../img/g-plus.svg');
+		}
+	}
+}
 //====================================================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
