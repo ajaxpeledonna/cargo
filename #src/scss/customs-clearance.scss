@@ -17,6 +17,17 @@ main {
     background: url(../img/customs/img_banner.jpg) no-repeat right center/cover;
     min-height: 670px;
     padding: 9rem 0;
+    @include nlg {
+        background: url(../img/customs/img_banner.jpg) no-repeat center/cover;
+    }
+    @include nmd {
+        min-height: 500px;
+        padding: 6rem 0;
+    }
+    @include nsm{
+        min-height: auto;
+        padding: 1rem 0 4rem;
+    }
     &__content-wrap {
         max-width: 45.125rem;
     }
@@ -26,9 +37,23 @@ main {
         font-weight: 800;
         color: $text-color;
         line-height: 120%;
+        @include nmd {
+            font-size: 2.4rem;
+            max-width: 35rem;
+        }
+        @include nsm{
+            font-size: 1.125rem;
+            max-width: 17.125rem;
+            text-shadow: 2px 2px 10px #F3F3F3;
+        }
     }
     &__links-wrap {
         margin-top: 3.75rem;
+        @include nsm{
+          display: flex;
+          align-items: center;
+          margin-top: 2.5rem;
+        }   
     }
     &__link {
         background: $colorw;
@@ -43,6 +68,16 @@ main {
         cursor: pointer;
         transition: $transition;
         position: relative;
+        @include nsm{
+            min-height: 50px;
+            padding: 0.675rem 1.2rem;
+            width: 9rem;
+            min-width: auto;
+            font-size: 0.8rem;
+            line-height: 100%;
+            display: flex;
+            align-items: center;
+        }
         &::after {
             display: inline-block;
             position: absolute;
@@ -55,6 +90,9 @@ main {
 			height: 0.8125rem;
 			width: 1.0625rem;
 			margin-left: 0.5rem;
+            @include nsm{
+                right: 0.75rem;
+            } 
         }
         &:first-child {
             margin-right: 1.25rem;
@@ -64,21 +102,36 @@ main {
             transition: $transition;
         }
     }
+    
 }
 
 .broker {
     background: $pryme-alt;
     padding: 4.125rem 0;
+    @include nsm{
+        padding: 1.25rem 0 1rem;
+    } 
     &__wrap {
         display: inline-flex;
         justify-content: flex-start;
         align-items: center;
+        @include nmd {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
     }
     &__img-wrap {
         max-width: 850px;
         min-width: 40%;
         position: relative;
         z-index: 0;
+        @include nmd {
+            margin-top: 2rem;
+        }
+        @include nsm {
+            width: 90%;
+            margin: 0.5rem auto 0;
+        }
         &::after {
             content: '';
             position: absolute;
@@ -101,11 +154,18 @@ main {
             margin-right: 2rem;
             margin-left: 5rem;
         }
+        @include nmd {
+            margin: 0 1rem 2rem;
+        }
     }
     &__text {
         color: $colorw;
         font-size: 1.125rem;
         margin-bottom: 0.7rem;
+        @include nsm {
+            font-size: 0.8rem;
+            line-height: 185%;
+        }
         &:last-child {
             margin-bottom: 0;
         }
@@ -114,6 +174,9 @@ main {
 
 .help {
     padding: 3.2rem 0;
+    @include nsm {
+        padding: 2rem 0;
+    }
     &__wrapper {
         display: flex;
         align-items: flex-end;
@@ -131,6 +194,14 @@ main {
         bottom: 0;
         right: -300px;
         z-index: -1;
+        @include nmd {
+            opacity: 0.1;
+        }
+        @include nsm {
+            right: -50px;
+            width: 75%;
+            bottom: 10%;
+        }
     }
     &__title {
         font-size: 1.25rem;
@@ -139,15 +210,29 @@ main {
         line-height: 140%;
         max-width: 35.44rem;
         margin-bottom: 1.5rem;
+        @include nsm {
+            font-size: 1.1rem;
+            line-height: 156%;
+        }
     }
     &__list {
         margin-left: 1rem;
         margin-bottom: 3rem;
+        @include nsm {
+            margin-bottom: 2rem;
+            margin-left: 0;
+        }
     }
     &__item {
         color: $text-color;
         font-size: 1.125rem;
         margin-bottom: 1rem;
+        @include nsm {
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: baseline;
+        }
         &::before {
             content: '';
             display: inline-block;
@@ -157,6 +242,9 @@ main {
             width: 12px;
             height: 10px;
             margin-right: 0.5rem;
+            @include nsm {
+                flex: 0 0 12px;
+             }
         }
     }
     &__text {
@@ -164,9 +252,476 @@ main {
         font-size: 1.125rem;
         margin-bottom: 1rem;
         line-height: 156%;
+        @include nsm {
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            line-height: 185%;
+        }
     }
-
 }
 
-   
+.scheme {
+    position: relative;
+    padding: 6rem 0;
+    @include nsm {
+        padding: 0 0 2rem; 
+    }
+    &__wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: 860px;
+        margin: 0 auto;
+        @include nsm {
+            max-width: 100%;
+        }
+    }
+    &__col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 380px;
+        @include nmd {
+            width: 40%;
+        }
+        @include nsm {
+            width: 46%;
+            align-items: flex-start;
+        }
+        &--right {
+            margin-top: 2rem;
+        }
+    }
+    &__box {
+        margin-bottom: 3rem;
+        @include nsm {
+            margin-bottom: 1.5rem;
+        }
+        &--margin {
+            @include nsm {
+                margin-top: 10rem;
+            }
+            
+        }
+    }
+    &__box-content { 
+        background: $pryme-alt;
+        padding: 1rem 2rem;
+        position: relative;
+        min-height: 88px;
+        min-width: 380px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.25));
+        @include nmd {
+            min-width: 310px;
+        }
+        @include nsm {
+            min-width: 40%;
+            padding: 0.5rem;
+            min-height: 52px;
+        }
+    }
+    &__text {
+        color: $colorw;
+        font-size: 1.125rem;
+        font-weight: 600;
+        @include nsm {
+            font-size: 0.8rem;
+            text-align: center;
+            line-height: 115%;
+        }
+        span {
+            font-weight: 400;
+        }
+    }
+    &__num {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -27px;
+        right: -27px;
+        background: $accent-fresh;
+        width: 55px;
+        height: 55px;
+        color: $colorw;
+        font-family: $font-alt;
+        font-size: 2.5rem;
+        font-weight: 700;
+        transform: rotate(45deg);
+        @include nsm {
+            width: 22px;
+            height: 22px;
+            font-size: 1rem;
+            top: -10px;
+            right: -10px;
+        }
+        &--left {
+            right: auto;
+            left: -27px;
+            @include nsm {
+                left: -10px;
+            }
+        }
+        span {
+            display: block;
+            transform: rotate(-45deg);
+        }
+    }
+    &__img {
+        display: block;
+        margin: 1.25rem auto;
+        @include nsm {
+            width: 50%;
+        }
+        &--size {
+            @include nmd {
+                width: 100%;
+            }
+            
+        }
+    }
+    &__decor {
+        position: absolute;
+        width: 586px;
+        height: 674px;  
+        opacity: 0.05;
+        border: 70px solid #0A7991;
+        box-sizing: border-box;
+        @include nmd {
+            display: none;
+        }
+        &--left {
+            left: -12%;
+            top: 5%;
+        }
+        &--right {
+            top: 40%;
+            right: -12%;
+        }
+    }
+    
+}
+.ved {
+    background: linear-gradient(to right, #FFf 40%, $pryme-alt 35%);
+    padding: 1.5rem 0;
+    margin: 6.25rem 0;
+    @include nmd {
+        background: linear-gradient(to bottom, #FFf 40%, $pryme-alt 35%);
+        margin: 6.25rem 0 3rem;
+    }
+    @include nsm {
+        background: linear-gradient(to bottom, #FFf 15%, $pryme-alt 0%);
+        margin: 1.25rem 0;
+    }
+    &__wrap {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        @include nmd {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__img-wrap {
+        flex: 0 0 54.85%;
+        min-width: 40%;
+        position: relative;
+        z-index: 0;
+    }
+    &__img {
+        width: 100%;
+        z-index: 2;
+        @include nmd {
+            width: 96%;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    &__title{
+        font-family: $font-alt;
+        color: #F0F8F7;
+        font-weight: bold;
+        font-size: 1.375rem;
+        line-height: 110%;
+        margin-bottom: 1.875rem;
+        @include nmd {
+            font-size: 1.1rem;
+            line-height: 125%;
+            margin-bottom: 1.25rem;
+        }
+    }
+    &__text-wrap {
+        max-width: 36.25rem;
+        margin-left: 7.5rem;
+        @include nxl {
+            margin-right: 2rem;
+            margin-left: 5rem;
+        }
+        @include nmd {
+            margin: 2rem 1rem 0;
+        }
+    }
+    &__text {
+        color: $colorw;
+        font-size: 1.125rem;
+        margin-bottom: 0.7rem;
+        max-width: 35rem;
+        @include nmd {
+            font-size: 0.8rem;
+            line-height: 185%;
+        }
+        &:last-child {
+            margin-bottom: 0;
+            max-width: 30rem;
+        }
+    }
+}
+.code{
+    font-family: $font-alt;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: $text-color;
+    position: relative;
+    padding-bottom: 12rem;
+    @include nmd {
+        padding-bottom: 5rem;
+    }
+    @include nsm {
+        padding-bottom: 3rem;
+    }
+    &__wrapper{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 3.75rem;
+        @include nmd {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        @include nsm {
+            margin-bottom: 2.5rem;
+        }
+    }
+    &__content{
+        flex: 0 0 35%;
+    }
+    &__title{
+        font-family: $font-alt;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.5625rem;
+        line-height: 1.875rem;
+        color: $text-color;
+        margin-bottom: 2.3rem;
+        @include nsm {
+            font-size: 1.1rem;
+            line-height: 125%;
+        }
+    }
+    &__list-wrapper{
+        max-width: 360px;
+        margin: 0 auto 2.95rem;
+    }
+    &__list-title{
+        max-width: 305px;
+        margin-bottom: 1.25rem;
+        @include nsm {
+            font-size: 0.9rem;
+            line-height: 125%;
+        }
+    }
+    &__list{
+        list-style-position: inside;
+        @include nsm {
+            list-style-position: outside;
+            margin-left: 1rem;
+        }
+    }
+    &__list-item{
+        margin-bottom: 0.625rem;
+        font-weight: bold;
+        @include nsm {
+            font-size: 0.8rem;
+            line-height: 185%;
+        }
+        span{
+            font-weight: 500;
+        }
+    }
+    &__scheme-title{
+        font-family: $font-alt;
+        font-weight: bold;
+        max-width: 150px;
+        margin-left: auto;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        text-transform: uppercase;
+        text-align: right;
+        @include nmd {
+            text-align: left;
+            margin-left: 0;
+        }
+        @include nsm {
+            font-size: 0.9rem;
+            max-width: 13.5rem;
+            margin-bottom: 1rem;
+            
+        }
+        span{
+            &::after{
+                content: '';
+                display: block;
+                width: 67%;
+                height: 3px;
+                background: $text-color;
+                margin-left: auto;
+                @include nmd {
+                    margin-left: 0;
+                }
+                @include nsm {
+                    margin-left: auto;
+                    width: 47%;
+                }
+            }
+        }
+    }
+    &__img-wrapper{
+        margin-left: 1.625rem;
+        position: relative;
+        @include nmd {
+            margin: 3rem 1rem 0;
+        }
+        @include nsm {
+            margin: 1.5rem 0 0;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__img-text{
+        font-family: $font-alt;
+        font-weight: bold;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        @include nsm {
+            font-size: 0.6rem;
+            line-height: 100%;
+        }
+        &--1{
+            top: -4%;
+        }
+        &--2{
+            top: 12%;
+            left: 38%;
+        }
+        &--3{
+            top: 27%;
+            left: 31%;
+        }
+        &--4{
+            top: 43%;
+            left: 20%;
+        }
+        &--5{
+            top: 57%;
+            left: 10%;
+        }
+    }
+    &__note{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.25));
+        margin-bottom: 8.625rem;
+        @include nmd {
+            margin-bottom: 3.625rem;
+        }
+        @include nsm {
+            margin-bottom: 1.625rem;
+            position: relative;
+        }
+    }
+    &__note--icon{
+        width: 65px;
+        height: 65px;
+        background: $text-color;
+        font-size: 2.5rem;
+        line-height: 3.0625rem;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include nsm {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 40px;
+        }
+    }
+    &__note--text{
+        padding: 0.5rem;
+        font-weight: normal;
+        font-size: 0.8125rem;
+        line-height: 125%;
+        max-width: 665px;
+        background: $colorw;
+        @include nmd {
+            padding: 0.1375rem 0.5rem;
+            line-height: 156%;
+        }
+        @include nsm {
+            padding: 0.1375rem 0.5rem 0.1375rem 4rem;
+        }
+    }
+    &__text-wrapper{
+        max-width: 680px;
+    }
+    &__text{
+        margin-bottom: 1.25rem;
+        font-family: $fontfamily;
+        font-weight: 400;
+        font-size: 1.125rem;
+        line-height: 156%;
+        color: $text-color;
+        @include nsm {
+            font-size: 0.8rem;
+            line-height: 185%;
+        }
+    }
+    &__decor {
+        position: absolute;
+        box-sizing: border-box;
+        @include nmd {
+            display: none;
+        }
+        &--1 {
+            width: 586px;
+            height: 674px;  
+            opacity: 0.05;
+            border: 70px solid #0A7991;
+            top: 40%;
+            right: -10%;
+        }
+        &--2 {
+            width: 674px;
+            height: 528px;
+            right: 7%;
+            bottom: 6%;
+            opacity: 0.1;
+            border: 80px solid #F96B30;
+        }
+    }
+}
 

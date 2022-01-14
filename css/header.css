@@ -227,7 +227,6 @@ p {
 @media all and (max-width: 767px) {
   .socials__item {
     margin-left: 0;
-    margin-right: 0.5625rem;
   }
 }
 
