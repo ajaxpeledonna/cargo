@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customs Posts</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/customs-posts.css">
+</head>
+<body>
+  
+    <main>
+        <div class="landing-wrapper">
+            <section class="company">
+                <div class="container">
+                    <div class="company__content">
+                        <h1 class="company__title">Таможенные посты для оформления грузов</h1>
+                        <p class="company__text">Наша компания проводит таможенное оформление грузов 
+                            с минимальными издержками для участников ВЭД и в полном соответствии с Таможенным кодексом. 
+                            Также предлагаем классификацию Ваших товаров по коду ТН ВЭД.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="services">
+                <div class="services__split-bg">
+                    <div class="container">
+                        <div class="services__content">
+                            <img class="services__img" src="img/customs/truck.svg" alt="">
+                            <div class="services__text-wrap">
+                                <p class="services__text">
+                                    Мы оказываем услуги по оформлению грузов на всех автомобильных таможенных постах 
+                                    любого из таможенных управлений: от Центрального до Дальневосточного. С нами Вы избежите дополнительных расходов, 
+                                    штрафов, простоя груза на таможне.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="list-posts">
+                <div class="container">
+                    <div class="list-posts__main-wrap">
+                        <h3 class="list-posts__title">
+                            Список таможенных постов, на которых мы осуществляем оформление грузов:
+                        </h3>
+                        <div class="list-posts__wrapper">
+                            <div class="list-posts__col">
+                                <img class="list-posts__icon" src="img/customs/train.svg" alt="">
+                                <select class="list-posts__select" name="zd"> 
+                                    <option selected="true" disabled="disabled">Железнодорожные</option>
+                                    <option value="value">Кунцево-2</option>
+                                    <option value="value2">Силикатная</option>
+                                    <option value="value3">Ховрино</option>
+                                    <option value="value4">Ворсино</option>
+                                    <option value="value5">Тучково</option>
+                                </select>
+                            </div>
+                            <div class="list-posts__col">
+                                <img class="list-posts__icon" src="img/customs/ship.svg" alt="">
+                                <select class="list-posts__select"  name="sea"> 
+                                    <option selected="true" disabled="disabled">Морские</option>
+                                    <option value="value">Балтийский таможенный пост</option>
+                                    <option value="value2">Новороссийский таможенный пост</option>
+                                    <option value="value3">Владивостокский таможенный пост</option>
+                                </select>
+                            </div>
+                            <div class="list-posts__col">
+                                <img class="list-posts__icon" src="img/customs/airplane.svg" alt="">
+                                <select class="list-posts__select" name="avia"> 
+                                    <option selected="true" disabled="disabled">Авиационные</option>
+                                    <option value="value">Авиационный таможенный пост Шереметьевской таможни</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <picture>
+                            <source srcset="img/customs/map-post-mob.jpg" media="(max-width: 767px)">
+                            <source srcset="img/customs/map-post.jpg">
+                            <img class="list-posts__img" srcset="img/customs/map-post.jpg" alt="карта">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+
+        </div>  
+    </main>
+</body>
+</html>
