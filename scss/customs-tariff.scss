@@ -1,0 +1,116 @@
+// Миксины
+@import "_mixin";
+// Шрифты
+@import "_fonts";
+// Файл обнуленных стилей
+@import "_nullstyles";
+
+
+.banner {
+    background: url('../img/customs/tarif_bg.jpg') no-repeat center/cover;
+    min-height: 33.625rem;
+    padding: 4.69rem 0 1rem;
+    @include nsm {
+            min-height: 10rem;
+            padding: 1rem 0;
+        }
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: $text-color;
+        font-family: $font-alt;
+        line-height: 120%;
+        max-width: 38.65rem;
+        // background: rgba(255, 255, 255, 0.8);
+        @include nmd {
+            max-width: 30rem;
+        }
+        @include nsm {
+            font-size: 1.1rem;
+            max-width: 12rem;
+        }
+    }
+}
+
+.services {
+    padding: 2.5rem 0;
+    @include nsm {
+        padding: 1.5rem 0 0.5rem;
+    }
+    &__wrap {
+        max-width: 42.5rem;
+    }
+    &__text {
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: $text-color;
+        line-height: 156%;
+        margin-bottom: 1.25rem;
+        @include nsm {
+            font-size: 0.8rem;
+            line-height: 185%;
+        }
+    }
+}
+
+.tariffs {
+    &__title {
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: $text-color;
+        @include nsm {
+            font-size: 1.1rem;
+        }
+    }
+    &__wrap {
+        max-width: 55rem;
+        font-family: $font-alt;
+        font-size: 1rem;
+        line-height: 150%;
+        color: $text-color;
+        font-weight: 500;
+        margin: 3rem auto 5rem 100px;
+        @include nlg {
+            margin: 3rem 0 5rem;
+        }
+        @include nsm {
+            font-size: 0.8rem;
+            line-height: 138%;
+            margin: 2rem 0 3rem;
+        }
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 0;
+        width: 100%;
+        border-bottom: 1px solid rgba(9, 95, 113, 0.1);;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    &__left {
+        width: 70%;
+        min-width: 17.5rem;
+        @include nsm {
+            width: 50%;
+            min-width: auto;
+        }
+        span {
+            display: block;
+            max-width: 290px;
+            @include nsm {
+                max-width: 100%;
+            }
+        }
+    }
+    &__right {
+        width: 30%;
+        color: #129C4D;
+        @include nsm {
+            width: 48%;
+            text-align: right;
+        }
+    }
+}
