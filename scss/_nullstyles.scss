@@ -61,32 +61,32 @@
 // }
 
 //<Шрифт по умолчанию>==========================================================================================
-$fontfamily: 'Raleway', sans-serif;
-$font-alt: 'Montserrat', sans-serif;
-$font-decor: 'Roboto', sans-serif;
-$colord: #2C2C2C;
-$colorw: #F0F8F7;
+$fontfamily: "Raleway", sans-serif;
+$font-alt: "Montserrat", sans-serif;
+$font-decor: "Roboto", sans-serif;
+$colord: #2c2c2c;
+$colorw: #f0f8f7;
 $color-gray: #333333;
 $read: #454040;
-$pryme-color: linear-gradient(104.5deg, #095F71 0%, #0F778C 100%);
-$pryme-color-rev: linear-gradient(360deg, #003267 0%, #00709E 100%);
-$pryme-alt:#0A7990;
-$text-color: #095F71;
-$main-color: #0B327D; 
-$accent-color: #EB0202;
-$accent-fresh: #F96B30;
-$accent-bg: linear-gradient(180deg, #F96B30 0%, #D51B1B 100%);
+$pryme-color: linear-gradient(104.5deg, #095f71 0%, #0f778c 100%);
+$pryme-color-rev: linear-gradient(360deg, #003267 0%, #00709e 100%);
+$pryme-alt: #0a7990;
+$text-color: #095f71;
+$main-color: #0b327d;
+$accent-color: #eb0202;
+$accent-fresh: #f96b30;
+$accent-bg: linear-gradient(180deg, #f96b30 0%, #d51b1b 100%);
 $transition: 350ms all;
 
 $color1: #333;
 $color2: #ff5252;
 $color3: #d3d3d3;
-$color4: #0A7990;
+$color4: #0a7990;
 $color5: #ffe400;
 $color-white: #ffffff;
 $transition: 350ms all;
 $black: #000;
-$white: #FFF;
+$white: #fff;
 $red: #4285f4;
 
 $red-dark: #4285f4;
@@ -133,13 +133,13 @@ body {
 	min-width: $minwidth;
 	position: relative;
 	width: 100%;
-	color: #0f0f0f;
+	color: $text-color;
 	font-size: 16px;
 }
 
 main {
 	padding-top: 5.25rem;
-} 
+}
 
 body {
 	font-size: 100%;
@@ -216,7 +216,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Raleway', sans-serif;
+	font-family: "Raleway", sans-serif;
 	font-weight: inherit;
 	font-size: inherit;
 }
@@ -227,13 +227,13 @@ h6 {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
-	// &.loaded { 
+	// &.loaded {
 	// }
 }
 //</ОБОЛОЧКА>===========================================================================================================
 .landing-wrapper {
-    max-width: 1920px;
-    margin: 0 auto;
+	max-width: 1920px;
+	margin: 0 auto;
 	overflow: hidden;
 }
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
@@ -269,10 +269,21 @@ p {
 	font-size: 1rem;
 	font-style: normal;
 	font-weight: 300;
-    letter-spacing: 0.03rem;
+	letter-spacing: 0.03rem;
 	@include nsm {
-        line-height: 150%;
-    }
+		line-height: 150%;
+	}
+}
+.text {
+	font-weight: 500;
+	font-size: 1.125rem;
+	line-height: 156%;
+	letter-spacing: normal;
+	color: $text-color;
+	@include nmd {
+		font-size: 0.8rem;
+		line-height: 185%;
+	}
 }
 .title {
 	font-family: $font-alt;
@@ -296,9 +307,9 @@ p {
 		display: none;
 	}
 }
-.socials{
+.socials {
 	display: flex;
-	&__item{
+	&__item {
 		margin-left: 0.9rem;
 		transition: 0.3s;
 		@include nsm {
@@ -308,43 +319,93 @@ p {
 		&:first-child {
 			margin-left: 0rem;
 		}
-		&:hover{
+		&:hover {
 			transform: scale(1.08);
 			transition: 0.3s;
 		}
 	}
-	&__link{
-		&:before{
+	&__link {
+		&:before {
 			display: block;
-			content: ' ';
+			content: " ";
 			background-size: 2rem 2rem;
 			height: 2rem;
 			width: 2rem;
 		}
-		&--facebook::before{
-			background-image: url('../img/facebook.svg');
+		&--facebook::before {
+			background-image: url("../img/facebook.svg");
 		}
-		&--youtube::before{
-			background-image: url('../img/youtube.svg');
+		&--youtube::before {
+			background-image: url("../img/youtube.svg");
 		}
-		&--inst::before{
-			background-image: url('../img/instagram.svg');
+		&--inst::before {
+			background-image: url("../img/instagram.svg");
 		}
-		&--twitter::before{
-			background-image: url('../img/twitter.svg');
+		&--twitter::before {
+			background-image: url("../img/twitter.svg");
 		}
-		&--google-plus::before{
-			background-image: url('../img/g-plus.svg');
+		&--google-plus::before {
+			background-image: url("../img/g-plus.svg");
 		}
-		&--telegram-color::before{
-			background-image: url('../img/telegram-color.svg');
+		&--telegram-color::before {
+			background-image: url("../img/telegram-color.svg");
 		}
-		&--whatsup-color::before{
-			background-image: url('../img/whatsup-color.svg');
+		&--whatsup-color::before {
+			background-image: url("../img/whatsup-color.svg");
 		}
-		&--viber-color::before{
-			background-image: url('../img/viber-color.svg');
+		&--viber-color::before {
+			background-image: url("../img/viber-color.svg");
 		}
+	}
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+.btn-link {
+	height: 73px;
+	display: flex;
+	align-items: center;
+	background: $colorw;
+	box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	color: $text-color;
+	font-weight: 600;
+	font-size: 1.125rem;
+	line-height: 115%;
+	padding: 0 35px 0 15px;
+	transition: 0.3s all;
+	position: relative;
+	&:hover {
+		transition: 0.3s all;
+		box-shadow: 3px 3px 30px rgba(10, 121, 145, 0.3);
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		right: 1rem;
+		top: 50%;
+		transform: translateY(-50%);
+		display: block;
+		width: 1.125rem;
+		height: 1.125rem;
+		background: url("../img/customs/chevron-right.svg") center/contain no-repeat;
+		@include nmd {
+			right: 0.5rem;
+		}
+	}
+	@include nmd {
+		font-size: 0.8rem;
+		line-height: 140%;
+		padding: 0 25px 0 15px;
+		height: 50px;
 	}
 }
 //====================================================================================================

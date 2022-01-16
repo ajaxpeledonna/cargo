@@ -1,0 +1,204 @@
+// Миксины
+@import "_mixin";
+// Шрифты
+@import "_fonts";
+// Файл обнуленных стилей
+@import "_nullstyles";
+
+@import "_header";
+@import "_footer";  
+
+.cargo-insurance {
+	background-color: #fff;
+	.insurance {
+		&__body {
+			background-image: url("../img/cargo-insurance/img-box-with-shield.jpg");
+			background-repeat: no-repeat;
+			background-position: 88% center;
+			background-size: 37% auto;
+			@include nlg {
+				background-position: right center;
+			}
+			@include nsm {
+				background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.7) 50%),
+					url("../img/cargo-insurance/img-box-with-shield.jpg");
+				background-position: right bottom;
+				background-size: 215px auto;
+			}
+		}
+		&__content {
+			max-width: 610px;
+			padding: 2.7rem 0;
+			@include nmd {
+				max-width: 445px;
+				padding: 2rem 0;
+			}
+			@include nsm {
+				padding: 2rem 0 0;
+				margin: 0 0 1rem;
+			}
+		}
+		&__title {
+			font-family: $font-alt;
+			font-weight: 800;
+			font-size: 3rem;
+			line-height: 120%;
+			color: $text-color;
+			margin-bottom: 2.5rem;
+			@include nmd {
+				font-size: 1.8rem;
+				margin-bottom: 1rem;
+			}
+			@include nsm {
+				font-size: 1.065rem;
+				max-width: 270px;
+			}
+		}
+	}
+	.customs-docs {
+		position: relative;
+		background: linear-gradient(to right, #fff 45%, $pryme-alt 45%);
+		@include nsm {
+			background: $pryme-alt;
+		}
+		&__wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background: linear-gradient(to right, #fff 42%, $pryme-alt 42%);
+			@include nsm {
+				display: block;
+				background: none;
+			}
+		}
+		&__img-wrap {
+			flex: 0 0 37.335%;
+			img {
+				width: 100%;
+				height: auto;
+			}
+			@include nsm {
+				display: none;
+			}
+		}
+		&__content {
+			max-width: 600px;
+			padding: 6.7rem 0 9.25rem;
+			margin-left: 10rem;
+			@include nlg {
+				padding: 4.7rem 0 7.25rem;
+			}
+			@include nmd {
+				padding: 3rem 0 5rem;
+				margin-left: 5rem;
+			}
+			@include nsm {
+				margin-left: 0;
+				padding: 1.25rem 0 2.5rem;
+			}
+		}
+		&__text {
+			color: $colorw;
+			margin-bottom: 4.5rem;
+			@include nlg {
+				margin-bottom: 3.5rem;
+			}
+			@include nmd {
+				margin-bottom: 2rem;
+			}
+			@include nsm {
+				margin-bottom: 1.5rem;
+			}
+		}
+		&__link-wrap {
+			display: flex;
+			align-items: center;
+			@include nmd {
+				justify-content: space-between;
+			}
+		}
+		&__link {
+			max-width: 280px;
+			flex: 0 0 48.28%;
+			&:first-child {
+				margin-right: 1.25rem;
+				@include nmd {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	.permanent {
+		background-image: url("../img/cargo-insurance/permanent-boxes.jpg");
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		margin-top: 2.5rem;
+		@include nlg {
+			background-size: 1000px auto;
+		}
+		@include nmd {
+			background-size: 700px auto;
+		}
+		@include nsm {
+			background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 50%),
+				url("../img/cargo-insurance/permanent-boxes.jpg");
+			background-size: 95% auto;
+			margin: 1rem 0 2rem;
+		}
+		&__content {
+			max-width: 782px;
+			padding-bottom: 29rem;
+			@include nmd {
+				padding-bottom: 20rem;
+			}
+			@include nsm {
+				padding-bottom: 3rem;
+			}
+		}
+		&__text {
+			margin-bottom: 2.5rem;
+			&:last-child {
+				max-width: 625px;
+			}
+			@include nmd {
+				margin-bottom: 1.5rem;
+			}
+			@include nsm {
+				margin-bottom: 1rem;
+			}
+		}
+		&__title {
+			font-weight: bold;
+			font-size: 1.125rem;
+			line-height: 135%;
+			color: $text-color;
+			max-width: 430px;
+			margin-bottom: 1.25rem;
+			@include nmd {
+				font-size: 1rem;
+				max-width: 385px;
+			}
+			@include nsm {
+				font-size: 0.94rem;
+				max-width: 288px;
+				margin-bottom: 1rem;
+			}
+		}
+		&__list {
+			margin-bottom: 2.5rem;
+			padding-left: 1.5rem;
+			@include nsm {
+				padding-left: 1rem;
+				margin-bottom: 1rem;
+			}
+		}
+		&__list-item {
+			margin-bottom: 0.7rem;
+			list-style-image: url("../img/customs/check.svg");
+			list-style-position: inside;
+			@include nsm {
+				list-style-position: outside;
+			}
+		}
+	}
+}
