@@ -1,0 +1,106 @@
+// Миксины
+@import "_mixin";
+// Шрифты
+@import "_fonts";
+// Файл обнуленных стилей
+@import "_nullstyles";
+
+.customs-list{
+    .hero{
+        &__content{
+            padding: 7rem 0;
+            background: url('../img/customs/emblem.jpg') right center/auto 100% no-repeat;
+        }
+        &__title{
+            font-family: $font-alt;
+            font-weight: 800;
+            font-size: 2.5rem;
+            line-height: 1;
+            color: $text-color;
+            margin-bottom: 7.5rem;
+        }
+        &__link-wrap{
+            display: flex;
+            align-items: center;
+        }
+        &__link {
+			max-width: 280px;
+			flex: 0 0 48.28%;
+			&:first-child {
+				margin-right: 1.25rem;
+				@include nmd {
+					margin-right: 0;
+				}
+			}
+		}
+    }
+    .info{
+        .info-table{
+            width: 100%; 
+            border-collapse: collapse;
+            font-family: $font-alt;
+            border-spacing:  2rem;
+            td, th {
+                padding: 1rem 1.25rem;
+                text-align: left;
+                
+                    a{
+                        display: block;
+                        color: #129C4D;
+                    }
+                }
+            tbody{
+                tr {
+                border-bottom: 1px solid #e8e9eb;
+                 font-family: $font-alt;
+                 color: #454040;
+            }
+                th{
+                    font-weight: 600;
+                }
+            }
+            
+            thead  {
+                tr{
+                    font-weight: bold; 
+                    border-bottom: 1px solid #e8e9eb;
+                    color: $text-color;
+                    font-size: 1.6rem;
+                    text-align: left;
+                    padding: 1rem 1.25rem;
+                }
+                th{
+                    &:first-child{
+                        width: 45%;
+                    }
+                    &:last-child{
+                        width: 27%;
+                    }
+                }
+                
+            }
+            
+            .accardion-row{
+                background-color: #CEE4E9;
+                border-radius: 3px;
+                font-weight: bold;
+                position: relative;
+                color: $text-color;
+                a{
+                    color: $text-color;
+                }
+                
+                span{
+                    width: 51px;
+                    height: 51px;
+                    background: $pryme-alt;
+                    position: absolute;
+                    top: 50%;
+                    right: 1rem;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

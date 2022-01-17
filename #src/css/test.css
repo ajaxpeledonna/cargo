@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;0,700;0,800;1,300&family=Staatliches&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 * {
   padding: 0px;
@@ -36,8 +36,12 @@ body {
   min-width: 320px;
   position: relative;
   width: 100%;
-  color: #0f0f0f;
+  color: #095f71;
   font-size: 16px;
+}
+
+main {
+  padding-top: 5.25rem;
 }
 
 body {
@@ -126,7 +130,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: inherit;
   font-size: inherit;
 }
@@ -181,6 +185,21 @@ p {
 @media all and (max-width: 767px) {
   p {
     line-height: 150%;
+  }
+}
+
+.text {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 156%;
+  letter-spacing: normal;
+  color: #095f71;
+}
+
+@media all and (max-width: 1023px) {
+  .text {
+    font-size: 0.8rem;
+    line-height: 185%;
   }
 }
 
@@ -250,7 +269,7 @@ p {
 
 .socials__link:before {
   display: block;
-  content: ' ';
+  content: " ";
   background-size: 2rem 2rem;
   height: 2rem;
   width: 2rem;
@@ -286,6 +305,74 @@ p {
 
 .socials__link--viber-color::before {
   background-image: url("../img/viber-color.svg");
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.btn-link {
+  height: 73px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f0f8f7;
+  -webkit-box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+          box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  color: #095f71;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 115%;
+  padding: 0 35px 0 15px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  position: relative;
+}
+
+.btn-link:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-box-shadow: 3px 3px 30px rgba(10, 121, 145, 0.3);
+          box-shadow: 3px 3px 30px rgba(10, 121, 145, 0.3);
+}
+
+.btn-link::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  width: 1.125rem;
+  height: 1.125rem;
+  background: url("../img/customs/chevron-right.svg") center/contain no-repeat;
+}
+
+@media all and (max-width: 1023px) {
+  .btn-link::after {
+    right: 0.5rem;
+  }
+}
+
+@media all and (max-width: 1023px) {
+  .btn-link {
+    font-size: 0.8rem;
+    line-height: 140%;
+    padding: 0 25px 0 15px;
+    height: 50px;
+  }
 }
 
 .header {
@@ -413,7 +500,7 @@ p {
 }
 
 .header__contacts li {
-  color: #F0F8F7;
+  color: #f0f8f7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -421,7 +508,7 @@ p {
 }
 
 .header__contacts a {
-  color: #F0F8F7;
+  color: #f0f8f7;
   font-family: "Montserrat", sans-serif;
   line-height: 170%;
 }
@@ -506,7 +593,7 @@ p {
 
 .header ul li a {
   text-decoration: none;
-  color: #F0F8F7;
+  color: #f0f8f7;
   padding: 10px 29px 10px 25px;
   display: inline-block;
   border-left: 4px solid transparent;
@@ -544,7 +631,7 @@ p {
 }
 
 .header .menu li:hover {
-  border-left: 4px solid #F96B30;
+  border-left: 4px solid #f96b30;
   -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
           box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
@@ -614,7 +701,7 @@ p {
     position: relative;
   }
   .header .menu li .submenu li a {
-    color: #0A7990;
+    color: #0a7990;
     padding: 10px 20px;
     line-height: 34px;
     display: block;
@@ -626,15 +713,15 @@ p {
             transform: rotate(-45deg);
   }
   .header .menu li .submenu li:hover {
-    background: #0A7990;
-    border-left: 4px solid #F96B30;
+    background: #0a7990;
+    border-left: 4px solid #f96b30;
   }
   .header .menu li .submenu li:hover > a {
-    color: #F0F8F7;
+    color: #f0f8f7;
   }
   .header .menu li .submenu .menu a:hover {
-    color: #F0F8F7;
-    border-left: 4px solid #F96B30;
+    color: #f0f8f7;
+    border-left: 4px solid #f96b30;
   }
   .header .menu li .submenu .submenu {
     position: absolute;
@@ -695,8 +782,8 @@ p {
     text-align: right;
     position: relative;
     padding: 15px 30px 15px 20px;
-    color: #F0F8F7;
-    background: #0A7990;
+    color: #f0f8f7;
+    background: #0a7990;
   }
   .header .mobile-menu li a .navtrigger {
     position: absolute;
@@ -736,7 +823,7 @@ p {
     position: relative;
     padding: 20px;
     padding-left: 50px;
-    background: #0A7990;
+    background: #0a7990;
     font-size: 0.85rem;
   }
   .header .mobile-menu li .submenu .backmenu-row .back-trigger {
@@ -747,7 +834,7 @@ p {
     bottom: 0;
     width: 30px;
     display: block;
-    background: #0A7990;
+    background: #0a7990;
   }
   .header .mobile-menu li .submenu .backmenu-row .back-trigger:before {
     content: "";
@@ -772,9 +859,9 @@ p {
 
 .calc-btn {
   font-size: 0.875rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#F96B30), to(#D51B1B));
-  background: linear-gradient(180deg, #F96B30 0%, #D51B1B 100%);
-  color: #F0F8F7;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f96b30), to(#d51b1b));
+  background: linear-gradient(180deg, #f96b30 0%, #d51b1b 100%);
+  color: #f0f8f7;
   display: none;
   padding: 14px 15px;
   text-align: center;
@@ -819,7 +906,7 @@ p {
 
 .calculation__title {
   font-size: 3.75rem;
-  color: #F0F8F7;
+  color: #f0f8f7;
   font-weight: 700;
   line-height: 110%;
   margin-bottom: 1.875rem;
@@ -827,7 +914,7 @@ p {
 
 .calculation__text {
   font-size: 1rem;
-  color: #F0F8F7;
+  color: #f0f8f7;
   max-width: 28.25rem;
   font-weight: 300;
   line-height: 156%;
@@ -848,7 +935,7 @@ p {
   width: 11.25rem;
   padding: 0 0.625rem;
   font-size: 0.75rem;
-  color: #2C2C2C;
+  color: #2c2c2c;
   position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -875,9 +962,9 @@ p {
 
 .calculation__btn {
   padding: 0.8rem 1rem;
-  background: #EB0202;
+  background: #eb0202;
   font-size: 1.125rem;
-  color: #F0F8F7;
+  color: #f0f8f7;
   font-weight: 500;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -903,8 +990,8 @@ p {
   height: auto;
   max-width: 37rem;
   padding: 2rem 1.1rem 2rem 2rem;
-  background: linear-gradient(104.5deg, #095F71 0%, #0F778C 100%);
-  color: #F0F8F7;
+  background: linear-gradient(104.5deg, #095f71 0%, #0f778c 100%);
+  color: #f0f8f7;
   margin-top: 1.25rem;
 }
 
@@ -955,7 +1042,7 @@ p {
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 120%;
-  color: linear-gradient(104.5deg, #095F71 0%, #0F778C 100%);
+  color: linear-gradient(104.5deg, #095f71 0%, #0f778c 100%);
   display: block;
   z-index: 1;
 }
@@ -971,12 +1058,12 @@ p {
   font-family: 'Staatliches', cursive;
   opacity: 0.1;
   color: transparent;
-  -webkit-text-stroke: 3px #0A7990;
+  -webkit-text-stroke: 3px #0a7990;
 }
 
 .about__text {
   max-width: 31.25rem;
-  color: #2C2C2C;
+  color: #2c2c2c;
   margin-top: 3.125rem;
 }
 
@@ -991,7 +1078,7 @@ p {
   height: auto;
   padding: 30px 0;
   margin: 66px 0;
-  color: linear-gradient(104.5deg, #095F71 0%, #0F778C 100%);
+  color: linear-gradient(104.5deg, #095f71 0%, #0f778c 100%);
 }
 
 .about__author-wrap {
@@ -1063,7 +1150,7 @@ p {
 
 .about__sub-title {
   font-size: 2rem;
-  color: linear-gradient(104.5deg, #095F71 0%, #0F778C 100%);
+  color: linear-gradient(104.5deg, #095f71 0%, #0f778c 100%);
   font-weight: 700;
   width: 18rem;
   line-height: 120%;
@@ -1081,13 +1168,13 @@ p {
 .about__tel {
   font-size: 0.9rem;
   margin-top: 0.65rem;
-  color: linear-gradient(104.5deg, #095F71 0%, #0F778C 100%);
+  color: linear-gradient(104.5deg, #095f71 0%, #0f778c 100%);
   font-weight: 300;
 }
 
 .about__mail {
   font-size: 0.9rem;
-  color: linear-gradient(104.5deg, #095F71 0%, #0F778C 100%);
+  color: linear-gradient(104.5deg, #095f71 0%, #0f778c 100%);
   font-weight: 300;
 }
 

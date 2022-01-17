@@ -35,7 +35,7 @@ body {
   min-width: 320px;
   position: relative;
   width: 100%;
-  color: #0f0f0f;
+  color: #095f71;
   font-size: 16px;
 }
 
@@ -129,7 +129,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: inherit;
   font-size: inherit;
 }
@@ -184,6 +184,21 @@ p {
 @media all and (max-width: 767px) {
   p {
     line-height: 150%;
+  }
+}
+
+.text {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 156%;
+  letter-spacing: normal;
+  color: #095f71;
+}
+
+@media all and (max-width: 1023px) {
+  .text {
+    font-size: 0.8rem;
+    line-height: 185%;
   }
 }
 
@@ -253,7 +268,7 @@ p {
 
 .socials__link:before {
   display: block;
-  content: ' ';
+  content: " ";
   background-size: 2rem 2rem;
   height: 2rem;
   width: 2rem;
@@ -289,6 +304,74 @@ p {
 
 .socials__link--viber-color::before {
   background-image: url("../img/viber-color.svg");
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.btn-link {
+  height: 73px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f0f8f7;
+  -webkit-box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+          box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  color: #095f71;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 115%;
+  padding: 0 35px 0 15px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  position: relative;
+}
+
+.btn-link:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-box-shadow: 3px 3px 30px rgba(10, 121, 145, 0.3);
+          box-shadow: 3px 3px 30px rgba(10, 121, 145, 0.3);
+}
+
+.btn-link::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  width: 1.125rem;
+  height: 1.125rem;
+  background: url("../img/customs/chevron-right.svg") center/contain no-repeat;
+}
+
+@media all and (max-width: 1023px) {
+  .btn-link::after {
+    right: 0.5rem;
+  }
+}
+
+@media all and (max-width: 1023px) {
+  .btn-link {
+    font-size: 0.8rem;
+    line-height: 140%;
+    padding: 0 25px 0 15px;
+    height: 50px;
+  }
 }
 
 .company {
@@ -338,7 +421,7 @@ p {
   font-size: 3rem;
   font-weight: 800;
   font-family: "Montserrat", sans-serif;
-  color: #095F71;
+  color: #095f71;
   line-height: 120%;
   margin-bottom: 2rem;
 }
@@ -358,7 +441,7 @@ p {
 
 .company__text {
   font-size: 1.125rem;
-  color: #095F71;
+  color: #095f71;
   line-height: 156%;
   font-weight: 500;
 }
@@ -378,7 +461,7 @@ p {
 
 .services {
   padding: 3.25rem 0;
-  background: #0A7990;
+  background: #0a7990;
 }
 
 @media all and (max-width: 767px) {
@@ -388,15 +471,15 @@ p {
 }
 
 .services__split-bg {
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #FFf), color-stop(50%, #0A7990));
-  background: linear-gradient(to right, #FFf 50%, #0A7990 50%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #FFf), color-stop(50%, #0a7990));
+  background: linear-gradient(to right, #FFf 50%, #0a7990 50%);
   padding: 2.5rem 0;
 }
 
 @media all and (max-width: 767px) {
   .services__split-bg {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(57%, #FFf), color-stop(43%, #0A7990));
-    background: linear-gradient(to bottom, #FFf 57%, #0A7990 43%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(57%, #FFf), color-stop(43%, #0a7990));
+    background: linear-gradient(to bottom, #FFf 57%, #0a7990 43%);
   }
 }
 
@@ -439,7 +522,7 @@ p {
 }
 
 .services__text {
-  color: #F0F8F7;
+  color: #f0f8f7;
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 156%;
@@ -482,7 +565,7 @@ p {
 .list-posts__title {
   font-size: 1.375rem;
   font-weight: 700;
-  color: #095F71;
+  color: #095f71;
   max-width: 30rem;
   line-height: 127%;
 }
@@ -541,7 +624,7 @@ p {
 }
 
 .list-posts__select {
-  color: #0A7990;
+  color: #0a7990;
   padding: 1rem 2rem;
   -webkit-box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
           box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
@@ -554,7 +637,7 @@ p {
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: #F0F8F7 url("../img/customs/arrow-down.svg") no-repeat right 1rem center;
+  background: #f0f8f7 url("../img/customs/arrow-down.svg") no-repeat right 1rem center;
   outline: 0;
   overflow: hidden;
   white-space: nowrap;

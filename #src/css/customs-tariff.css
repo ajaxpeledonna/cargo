@@ -35,7 +35,7 @@ body {
   min-width: 320px;
   position: relative;
   width: 100%;
-  color: #0f0f0f;
+  color: #095f71;
   font-size: 16px;
 }
 
@@ -129,7 +129,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: inherit;
   font-size: inherit;
 }
@@ -184,6 +184,21 @@ p {
 @media all and (max-width: 767px) {
   p {
     line-height: 150%;
+  }
+}
+
+.text {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 156%;
+  letter-spacing: normal;
+  color: #095f71;
+}
+
+@media all and (max-width: 1023px) {
+  .text {
+    font-size: 0.8rem;
+    line-height: 185%;
   }
 }
 
@@ -253,7 +268,7 @@ p {
 
 .socials__link:before {
   display: block;
-  content: ' ';
+  content: " ";
   background-size: 2rem 2rem;
   height: 2rem;
   width: 2rem;
@@ -291,6 +306,74 @@ p {
   background-image: url("../img/viber-color.svg");
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.btn-link {
+  height: 73px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f0f8f7;
+  -webkit-box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+          box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  color: #095f71;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 115%;
+  padding: 0 35px 0 15px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  position: relative;
+}
+
+.btn-link:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-box-shadow: 3px 3px 30px rgba(10, 121, 145, 0.3);
+          box-shadow: 3px 3px 30px rgba(10, 121, 145, 0.3);
+}
+
+.btn-link::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  width: 1.125rem;
+  height: 1.125rem;
+  background: url("../img/customs/chevron-right.svg") center/contain no-repeat;
+}
+
+@media all and (max-width: 1023px) {
+  .btn-link::after {
+    right: 0.5rem;
+  }
+}
+
+@media all and (max-width: 1023px) {
+  .btn-link {
+    font-size: 0.8rem;
+    line-height: 140%;
+    padding: 0 25px 0 15px;
+    height: 50px;
+  }
+}
+
 .banner {
   background: url("../img/customs/tarif_bg.jpg") no-repeat center/cover;
   min-height: 33.625rem;
@@ -307,7 +390,7 @@ p {
 .banner__title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #095F71;
+  color: #095f71;
   font-family: "Montserrat", sans-serif;
   line-height: 120%;
   max-width: 38.65rem;
@@ -343,7 +426,7 @@ p {
 .services__text {
   font-size: 1.125rem;
   font-weight: 500;
-  color: #095F71;
+  color: #095f71;
   line-height: 156%;
   margin-bottom: 1.25rem;
 }
@@ -358,7 +441,7 @@ p {
 .tariffs__title {
   font-size: 1.75rem;
   font-weight: bold;
-  color: #095F71;
+  color: #095f71;
 }
 
 @media all and (max-width: 767px) {
@@ -372,7 +455,7 @@ p {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   line-height: 150%;
-  color: #095F71;
+  color: #095f71;
   font-weight: 500;
   margin: 3rem auto 5rem 100px;
 }

@@ -43,7 +43,7 @@ $(document).ready(function(){
     }
     return false;
   });
-  
+
   // While open submenu add class
   $(document).on('click', '.navtrigger', function(){
     $(this).parents('li').addClass('sub-open');

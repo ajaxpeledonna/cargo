@@ -689,6 +689,14 @@
     .menu {
       transition: $transition;
       display: block;
+      .submenu .submenu .submenu{
+          li{
+            a{
+              justify-content: flex-start;
+              text-align: left;
+            }
+          }
+        }
       li {
       margin: 0;
       border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);;
@@ -696,13 +704,15 @@
       a {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: flex-end; 
         text-align: right;
         position: relative;
         padding: 15px 30px 15px 20px;
         color: $colorw;
         background: $pryme-alt;
-        
+        &.flag{
+          justify-content: flex-start;
+        }
         .navtrigger {
           position: absolute;
           right: 0;
@@ -739,6 +749,7 @@
         li {
           font-size: 1rem;
         }
+        
         .backmenu-row {
           position: relative;
           padding: 20px;
