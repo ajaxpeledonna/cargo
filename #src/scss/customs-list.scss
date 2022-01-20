@@ -6,10 +6,38 @@
 @import "_nullstyles";
 
 .customs-list{
+    background: #fff;
+    padding-bottom: 3rem;
     .hero{
-        &__content{
+        &__body{
             padding: 7rem 0;
             background: url('../img/customs/emblem.jpg') right center/auto 100% no-repeat;
+            @include nlg{
+                background-size: auto 85%;
+            }
+            @include nmd{
+                background-size: auto 75%;
+                padding: 5rem 0;
+            }
+            @include nsm{
+                background: none;
+                padding: 2rem 0;
+            }
+        }
+        &__img{
+            @include nsm{
+                width: 100%;
+                height: auto;
+            }
+        }
+        &__content{
+            max-width: 615px;
+            @include nmd{
+                max-width: 425px;
+            }
+            @include nsm{
+                max-width: 100%;
+            }
         }
         &__title{
             font-family: $font-alt;
@@ -18,14 +46,32 @@
             line-height: 1;
             color: $text-color;
             margin-bottom: 7.5rem;
+            @include nlg{
+                font-size: 2.2rem;
+                line-height: 145%;
+            }
+            @include nmd{
+                font-size: 2rem;
+                margin-bottom: 5rem;
+            }
+            @include nsm{
+                font-size: 1.07rem;
+                margin-bottom: 2rem;
+            }
         }
         &__link-wrap{
             display: flex;
             align-items: center;
+            @include nmd{
+                justify-content: space-between;
+            }
         }
         &__link {
 			max-width: 280px;
 			flex: 0 0 48.28%;
+            @include nsm{
+                flex: 0 0 47%;
+            }
 			&:first-child {
 				margin-right: 1.25rem;
 				@include nmd {
@@ -37,27 +83,48 @@
     .info{
         .info-table{
             width: 100%; 
-            border-collapse: collapse;
+            border-collapse: separate;
             font-family: $font-alt;
-            border-spacing:  2rem;
+            border-spacing: 0 1.25rem;
+            @include nsm{
+                font-size: 0.8rem;
+                border-collapse: collapse;
+            }
             td, th {
                 padding: 1rem 1.25rem;
                 text-align: left;
-                
+                    @include nmd{
+                        padding: 1rem 0.8rem;
+                    }
+                    @include nsm{
+                        padding: 0.625rem 1.25rem;
+                    }
                     a{
                         display: block;
                         color: #129C4D;
                     }
+                    @include nsm{
+                            display: block;
+                        }
                 }
             tbody{
                 tr {
                 border-bottom: 1px solid #e8e9eb;
                  font-family: $font-alt;
                  color: #454040;
+                 @include nsm{
+                            display: block;
+                            margin-bottom: 1.25rem;
+                        }
             }
                 th{
                     font-weight: 600;
+                    // text-transform: lowercase;
+                    @include nsm{
+                        font-weight: 700;
+                    }
                 }
+               
             }
             
             thead  {
@@ -68,39 +135,218 @@
                     font-size: 1.6rem;
                     text-align: left;
                     padding: 1rem 1.25rem;
+                    @include nmd{
+                        padding: 1rem 0.8rem;
+                        font-size: 1.2rem;
+                    }
+                    @include nsm{
+                        display: block;
+                        padding: 0.625rem 1.25rem;
+                        font-size: 0;
+                    }
                 }
                 th{
+                    border-bottom: 1px solid #e8e9eb;
                     &:first-child{
-                        width: 45%;
+                        width: 42%;
+                        @include nlg{
+                            width: 37%;
+                        }
+                        @include nmd{
+                            width: 35%;
+                        }
+                        @include nsm{
+                            width: auto;
+                        }
                     }
                     &:last-child{
                         width: 27%;
+                        @include nlg{
+                            width: 28%;
+                        }
+                        @include nmd{
+                            width: 32%;
+                        }
+                        @include nsm{
+                            width: auto;
+                        }
                     }
+                    
                 }
-                
+               @include nsm{
+                   visibility: collapse;
+               } 
             }
-            
-            .accardion-row{
+            &--fade{
+                border-collapse: collapse;
+               thead{
+                   visibility: collapse;
+                   th{
+                       border-bottom: none;
+                   }
+               } 
+               tr{
+                   vertical-align: top;
+                   &:last-child{
+                       border-bottom: none;
+                   }
+                   &:first-child{
+                       td, th {
+                            padding: 0 1.25rem 1rem 1.25rem;
+                                @include nmd{
+                            
+                                    padding: 0 0.8rem 1rem 0.8rem;
+                                }
+                                @include nsm{
+                                
+                                    padding: 0 1.25rem 0.625rem 1.25rem;
+                                }
+                        }
+                   }
+                   td{
+                       &:last-child{
+                           @include nsm{
+                               padding: 0;
+                           }
+                       }
+                       a{
+                           @include nsm{
+                               text-decoration: underline;
+                               font-weight: 500;
+                           }
+                       }
+                   }
+               }
+               
+            }
+            .accordion-row{
                 background-color: #CEE4E9;
                 border-radius: 3px;
                 font-weight: bold;
-                position: relative;
                 color: $text-color;
+                @include nsm{
+                    border-radius: 5px;
+                    padding: 0.625rem 0;
+                }
+                th,td{
+                    font-weight: 600;
+                }
+                th{
+                    @include nsm{
+                        font-weight: 700;
+                    }
+                }
                 a{
                     color: $text-color;
+                    font-weight: 600;
+                    
                 }
-                
-                span{
-                    width: 51px;
-                    height: 51px;
+                .accordion__btn{
+                     width: 3.19rem;
+                    height: 3.19rem;
                     background: $pryme-alt;
-                    position: absolute;
-                    top: 50%;
-                    right: 1rem;
-                    transform: translateY(-50%);
+                    display: block;
+                    position: relative;
+                    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+                    border-radius: 5px;
+                    transition: 0.3s all;
                     cursor: pointer;
+                    &:hover{
+                        transition: 0.3s all;
+		                box-shadow: 3px 3px 30px rgba(10, 121, 145, 0.3);
+                    }
+                    &::before{
+                        content: '';
+                        display: block;
+                        width: 1.7rem;
+                        height: 1.7rem;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        transition: 0.3s all;
+                        background: url('../img/customs/arrow-down-white.svg') center/contain no-repeat;
+                        @include nmd{
+                            background-size: 1rem;
+                        }
+                        @include nsm{
+                            left: auto;
+                            right: 22px;
+                            transform: translateY(-50%);
+                            width: 1rem;
+                            height: 1rem;
+                        }
+                    }
+                    &.accordion__rotate{
+                        transition: 0.3s all;
+                        &::before{
+                            transform: translate(-50%,-50%) rotate(180deg);
+                            transition: 0.3s all;
+                        }
+                    }
+                    @include nmd{
+                        width: 35px;
+                        height: 35px;
+                    }
+                    @include nsm{
+                        display: flex;
+                        align-items: center;
+                        width: 192px;
+                        height: 39px;
+                        background: $pryme-alt;
+                        padding: 0 22px;
+                        margin-left: auto;
+                    }
+                }
+
+                .accordion__btn--text{
+                    &.visually-hidden{
+                        @include nsm{
+                            font-family: $fontfamily;
+                            position: static;
+                            color: $colorw;
+                            font-weight: 600;
+                            font-size: 0.8rem;
+                            line-height: 140%;
+                            width: auto;
+                            height: auto;
+                            margin: 0;
+                        }
+                    }
                 }
             }
+            .accordion__content{
+                display: none;
+                > td{
+                    padding: 0;
+                }
+            }
+            .accordion__close{
+                display: none;
+                @include nsm{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    font-family: $font-alt;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 0.8rem;
+                    color: $text-color;
+                    margin-right: 1rem;
+                    cursor: pointer;
+                    padding: 1rem 0;
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 12px;
+                        height: 12px;
+                        background: url('../img/customs/close.svg')center/contain no-repeat;
+                        margin-left: 12px;
+                    }
+                }
+            }
+            
+        
         }
     }
 }
