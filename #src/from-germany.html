@@ -8,9 +8,10 @@
     <meta name="keywords" content="международная перевозка грузов" />
 	<meta name="description" content="международная перевозка грузов" />
     <meta name="robots" content="all"/>
-
+    
     <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/popup.css">
     <link rel="stylesheet" type="text/css" href="css/country.css">
 
 	<title>Global Expeditors</title>
@@ -523,7 +524,7 @@
                             Мы осуществляем независимые от субъективных и объективных обстоятельств международные грузоперевозки 
                             оперативно и по доступному большинству заказчиков прайсу.
                         </p>
-                        <button class="from-germany__btn" type="button">Рассчитать стоимость</button>
+                        <button class="from-germany__btn calc-btn" type="button">Рассчитать стоимость</button>
                     </div>
                 </div>
             </div>
@@ -548,7 +549,7 @@
                             Мы осуществляем независимые от субъективных и объективных обстоятельств международные грузоперевозки 
                             оперативно и по доступному большинству заказчиков прайсу.
                         </p>
-                        <button class="from-germany__btn" type="button">Рассчитать стоимость</button>
+                        <button class="from-germany__btn calc-btn" type="button">Рассчитать стоимость</button>
                     </div>
                 </div>   
             </div>
@@ -2613,7 +2614,37 @@
                 </div>
             </div>
         </section> -->
-
+        <div class="popup">
+            <div class="popup__body">
+                <button class="popup__close-btn"><img src="img/customs/close-white.svg" alt=""></button>
+                <div class="popup__form">
+                    <h2 class="popup__title visually-hidden">ПОЛУЧИТЬ РАСЧЕТ</h2>
+                    <form action="" method="POST" class="feedback-form" id="popup-form">
+                        <div class="feedback-form__body">
+                            <label for="name"><input class="feedback-form__input" type="text" name="name" placeholder="Ваше имя" id="name" required></label>
+                            <label for="tel"><input class="feedback-form__input" type="tel" name="tel" placeholder="Ваш телефон" id="tel"
+                                required></label>
+                            <label for="email"><input class="feedback-form__input" type="email" name="email" placeholder="Ваш email" id="email"
+                                required></label>
+                        </div>
+                        <div class="feedback-form__btn-wrapper">
+                            <input class="custom-checkbox" type="checkbox" name="accept" id="accept" onchange="document.getElementById('mc-embedded-subscribe').disabled = !this.checked" checked/> 
+                            <label class="feedback-form__check" for="accept"><div class="feedback-form__check--text">Соглание на обработку <a href="" class="feedback-form__link" target="_blank">персональных данных</a></div></label>
+                            <button type="submit" class="feedback-form__btn popup-btn" id="mc-embedded-subscribe">ПОЛУЧИТЬ РАСЧЕТ</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="popup-form-success">
+                    <div class="popup-form-success__content">
+                        <img class="popup-form-success__img" src="img/customs/arrow-done.svg" alt="">
+                        <h2 class="popup-form-success__title">Спасибо за вашу заявку!</h2>
+                        <p class="popup-form-success__text">В ближайшее время наш менеджер свяжется с Вами, чтобы обсудить детали</p>
+                        <a href="index.html" class="popup-form-success__link popup-btn">На главную</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
         <footer class="footer">
             <div class="container">
                 <div class="footer__row">
@@ -2668,8 +2699,11 @@
     </div>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
-  
-    <!-- <script src="js/jquery-3.6.0.js"></script> -->
+    <script src="js/jquery.inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"
+    integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
+    crossorigin="anonymous"></script>
+    <script src="js/popup.js"></script>
     <script src="js/header.js"></script>
     <script src="js/script.js"></script>
 </body>

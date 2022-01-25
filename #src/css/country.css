@@ -2050,6 +2050,8 @@ p {
   .from-germany__mob-content {
     display: block;
     margin-bottom: 2rem;
+    position: relative;
+    z-index: 3;
   }
 }
 
