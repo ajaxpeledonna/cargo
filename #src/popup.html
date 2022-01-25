@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+    <div class="popup">
+        <div class="popup__body">
+            <button class="popup__close-btn"><img src="img/customs/close-white.svg" alt=""></button>
+            <div class="popup__form">
+                <h2 class="popup__title visually-hidden">ПОЛУЧИТЬ РАСЧЕТ</h2>
+                <form action="" method="POST" class="feedback-form" id="popup-form">
+                    <div class="feedback-form__body">
+                        <label for="name"><input class="feedback-form__input" type="text" name="name" placeholder="Ваше имя" id="name" required></label>
+                        <label for="tel"><input class="feedback-form__input" type="tel" name="tel" placeholder="Ваш телефон" id="tel"
+                            required></label>
+                        <label for="email"><input class="feedback-form__input" type="email" name="email" placeholder="Ваш email" id="email"
+                            required></label>
+                    </div>
+                    <div class="feedback-form__btn-wrapper">
+                        <input class="custom-checkbox" type="checkbox" name="accept" id="accept" onchange="document.getElementById('mc-embedded-subscribe').disabled = !this.checked" checked/> 
+                        <label class="feedback-form__check" for="accept"><div class="feedback-form__check--text">Соглание на обработку <a href="" class="feedback-form__link" target="_blank">персональных данных</a></div></label>
+                        <button type="submit" class="feedback-form__btn popup-btn" id="mc-embedded-subscribe">ПОЛУЧИТЬ РАСЧЕТ</button>
+                    </div>
+                </form>
+            </div>
+            <div class="popup-form-success">
+                <div class="popup-form-success__content">
+                    <img class="popup-form-success__img" src="img/customs/arrow-done.svg" alt="">
+                    <h2 class="popup-form-success__title">Спасибо за вашу заявку!</h2>
+                    <p class="popup-form-success__text">В ближайшее время наш менеджер свяжется с Вами, чтобы обсудить детали</p>
+                    <a href="index.html" class="popup-form-success__link popup-btn">На главную</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.6.0.js" type="text/javascript"></script>  
+    <script src="js/jquery.inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"
+    integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
+    crossorigin="anonymous"></script>
+    <script src="js/popup.js"></script>
+</body>
+</html>
