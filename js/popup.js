@@ -2,14 +2,14 @@
 //Попап
 $('.calc-btn').click(function (event) {
 	$('.popup').fadeIn(400);
-	$('body').addClass('lock');
+	//$('body').addClass('lock');
 	$('.popup__form').show();
 	$('.popup-form-success').hide();
 });
 $('.popup__close-btn').on('click', function (event) {
 	event.preventDefault();
 	$('.popup').fadeOut(400);
-	$('body').removeClass('lock');
+	//$('body').removeClass('lock');
 	$('[required]').removeClass('error');
 });
  
