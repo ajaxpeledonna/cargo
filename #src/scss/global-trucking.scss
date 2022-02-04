@@ -1,0 +1,934 @@
+// Миксины
+@import "_mixin";
+// Шрифты
+@import "_fonts";
+// Файл обнуленных стилей
+@import "_nullstyles";
+
+.global-trucking{
+    color: #454040;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 150%;
+    p{
+        font-weight: 400;
+        @include nsm {
+            font-size: 0.8125rem;
+            line-height: 169%;
+        }
+    }
+    @include nsm {
+        font-size: 0.8125rem;
+        line-height: 169%;
+    }
+    .block-title{
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-family: $font-alt;
+        line-height: 115%;
+        color: $text-color;
+        display: flex;
+        span{
+            display: block;
+            margin-right: 10px;
+            @include nsm{
+                margin-right: 5px;
+            }
+        }
+        @include nmd {
+            font-size: 1.25rem;
+        }
+        @include nsm{
+            font-size: 15px;
+            line-height: 22px;
+        }
+    }
+    
+    .contract {
+        height: auto;
+        width: 100%;
+        background: url('../img/global/img_banner.jpg')  bottom no-repeat;
+        padding-bottom: 2.5rem;
+        @include nsm {
+            background: none;
+            padding-bottom: 1rem;
+        }
+        &__title {
+            font-size: 3rem;
+            font-family: $font-alt;
+            font-weight: 800;
+            line-height: 115%;
+            margin: 5rem 0 7rem;
+            color: $text-color;
+            @include nsm {
+                font-size: 1.1rem; 
+                margin: 1.875rem 0 1rem;
+                max-width: 17rem;
+                line-height: 120%;
+            }
+        }
+        &__sub-title {
+            margin-bottom: 1.25rem;
+        }
+        &__text {
+            color: $read;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            &:last-child {
+                margin-bottom: 0rem;
+            }
+            @include nsm {
+                font-size: 0.8125rem;
+                line-height: 169%;
+            }
+        }
+        &__wrap {
+            max-width: 36.25rem;
+        }
+        &__content {
+            background: #fff;
+            padding: 1rem;
+            box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
+        &__list {
+            margin-top: 1rem;
+            margin-left: 3rem;
+            @include nsm {
+                 margin-left: 1rem;
+            }
+        }
+        &__item {
+            color: $read;
+            font-weight: 400;
+            line-height: 100%;
+            position: relative;
+            margin-bottom: 1.5rem;
+            @include nsm {
+                font-size: 0.8125rem;
+                line-height: 169%;
+                margin-bottom: 0.8rem;
+            }
+
+            &::before {
+                content: ""; 
+                background-color: #129C4D;
+                width: 8px; 
+                height: 8px;
+                display: block;
+                border-radius: 50%;
+                position: absolute;
+                left: -1rem;
+                top: 50%;
+                transform: translateY(-50%);
+                @include nsm {
+                    top: 10px;
+                    width: 6px; 
+                    height: 6px;
+                }
+            }
+            
+        }
+        .img-sm {
+            @include nsm {
+                margin-bottom: 1.875rem;
+            }
+        }
+}
+
+.appeal {
+    padding: 3.75rem 0;
+    position: relative;
+    @include nsm {
+        padding: 1rem 0;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include nmd{
+            display: block;
+        }
+    }
+    &__sub-title {
+        margin-bottom: 1.25rem;
+        min-height: 58px;
+        @include nmd {
+            min-height: auto;
+        }
+    }
+    &__text {
+        color: $read;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        line-height: 150%;
+        &:last-child {
+            margin-bottom: 0rem;
+        }
+        @include nsm {
+            font-size: 0.8125rem;
+            line-height: 169%;
+        }
+    }
+    &__wrap {
+            flex: 0 0 48.35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include nmd{
+                display: block;
+                margin-bottom: 1.875rem;
+            }
+            @include nsm{
+                margin-bottom: 2rem;
+            }
+    }
+    &__content {
+        background: #fff;
+        padding: 1rem;
+        box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 200px;
+        @include nmd{
+            display: block;
+            min-height: auto;
+            padding: 1.25rem 1rem;
+        }
+    }
+    &__decor {
+        height: 30px;
+        width: 33%;
+        background-color: $accent-fresh;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        @include nsm {
+            display: none;
+        }
+    }
+}
+
+.docs {
+    background-color: $pryme-alt;
+    padding: 3.75rem 0;
+    position: relative;
+    z-index: 0;
+    min-height: 900px;
+    @include nlg{
+        min-height: auto;
+    }
+    @include nsm{
+        padding: 0 0 1.25rem;
+    }
+    &__img {
+        position: absolute;
+        right: 0;
+        top: 117px;
+        z-index: -1;
+        width: 65%;
+        height: auto;
+        @include nmd{
+            width: 100%;
+        }
+        @include nsm{
+            position: static;
+        }
+    }
+    
+    &__title{
+        margin-bottom: 5rem;
+        color: $colorw;
+        @include nsm{
+            margin: 1.25rem 0;
+        }
+    }
+    &__content{
+        max-width: 780px;
+        padding: 1.25rem;
+        background: #FFFFFF;
+        box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+    }
+    &__text{
+        margin-bottom: 1.5rem;
+        @include nsm {
+            font-size: 0.8125rem;
+            line-height: 169%;
+            margin-bottom: 1rem;
+        }
+    }
+    &__list{
+        > li{
+            font-weight: 600;
+            list-style: none;
+            position: relative;
+            border-bottom: 1px solid rgba(10, 121, 145, 0.2);
+            padding: 10px 0;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        span{
+            @include nsm{
+                padding-right: 2rem;
+            }
+        }
+        &:before{
+            content: ""; 
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #129C4D; 
+            margin-right: 10px;
+            flex-shrink: 0;
+            @include nsm {
+                width: 6px;
+                height: 6px;
+                margin-right: 5px;
+            }
+        }
+        &:after{
+            content: '';
+            display: block;
+            width: 27px;
+            height: 27px;
+            background-color: #0A7991;
+            border-radius: 5px;
+            margin-left: auto;
+            cursor: pointer;
+            flex-shrink: 0;
+            background-image: url('../img/customs/arrow-down-white.svg');
+            background-size: 13px;
+            background-position: center;
+            background-repeat: no-repeat;
+            @include nsm {
+                width: 50px;
+                height: 30px;
+            }
+        }
+
+    }
+    .accordion-row.accordion-active{
+        .docs__item{
+            &:after{
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__sub-list{
+        padding: 10px 20px;
+        li{
+            margin-bottom: 0.9rem;
+            font-weight: normal;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        a{
+            text-decoration-line: underline;
+            color: #095F71;
+            font-weight: normal;
+        }
+        @include nsm {
+            font-size: 0.8125rem;
+            line-height: 169%;
+        }
+    }
+    .accordion__title {
+        @include nsm {
+            font-size: 0.8125rem;
+            line-height: 169%;
+        }
+    }
+    .accordion__content{
+         display: none;
+    }
+}
+
+.ved {
+    padding: 3.75rem 0;
+    position: relative;
+    z-index: 0;
+    padding: 7% 0;
+    display: flex;
+    @include nsm{
+        display: block;
+    }
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 10%;
+        z-index: -1;
+        max-width: 50%;
+        @include nmd{
+            display: none;
+        }
+    }
+    &__sub-title {
+        margin-bottom: 1.25rem;
+        @include nsm{
+            margin-bottom: 1rem;
+        }
+    }
+    &__text {
+        color: $read;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+        &:last-child {
+            margin-bottom: 0rem;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-left: 50%;
+        @include nmd{
+            margin-left: 0;
+        }
+    }
+    &__wrap {
+        max-width: 36.25rem;
+        margin-left: 3.75rem;
+        @include nlg {
+            max-width: 45%;
+        }
+        @include nmd{
+            max-width: 70%;
+            margin-left: 0rem;
+        }
+        @include nsm{
+            max-width: none;
+        }
+    }
+    &__content {
+        background: #fff;
+        padding: 1rem;
+        box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 200px;
+    }
+    &__link {
+        font-family: $font-alt;
+        color: $text-color;
+        font-weight: 600;
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 1rem;
+        text-decoration: underline;
+        &::after {
+            content: '';
+            background: url('../img/customs/chevron-right.svg') no-repeat;
+            height: 14px;
+            width: 9px;
+            background-size: 9px 14px;
+            display: flex;
+            margin-left: 1rem;
+        }
+        @include nsm{
+            height: auto;
+            font-size: 14px;
+        }
+
+    }
+    .img-sm{
+        @include nsm{
+            width: 86%;
+            margin-bottom: 1.25rem;
+        }
+    }
+}
+.price{
+    background: url('../img/global/img_customs-value.jpg') no-repeat;
+    background-position: 100% center;
+    padding-bottom: 3.75rem;
+    @include nlg {
+        background-position: 600px center;
+    }
+    @include nmd {
+        background: none;
+    }
+    @include nsm{
+        padding-bottom: 1.25rem;
+    }
+    &__title{
+        margin-bottom: 1.875rem;
+        @include nsm{
+            margin-bottom: 1.25rem;
+        }
+    }
+    &__content{
+        max-width: 780px;
+        padding: 1.25rem;
+        background: #FFFFFF;
+        box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+    }
+    &__text{
+        margin-bottom: 1rem;
+    }
+    &__list{
+        margin-top: 1.875rem;
+        padding: 0 1rem;
+        @include nsm{
+            padding: 0;
+            margin-top: 1rem;
+        }
+        > dt{
+            font-weight: 600;
+            list-style: none;
+            padding: 10px 0;
+            counter-increment: list;
+            margin-top: 1.5rem;
+            @include nsm{
+                margin-top: 0.8rem;
+                padding: 5px 0;
+            }
+            &:first-child{
+                padding: 0 0 10px;
+                margin-top: 1rem;
+                @include nsm{
+                    margin-top: 0.8rem;
+                    padding:  0 0 5px;
+                }
+            }
+            &:before{
+                box-sizing: border-box;
+                content: counter(list)')';
+                display: inline-block;
+                margin-right: 2px;
+                vertical-align: middle;
+            }
+        }
+
+        dd{
+            padding: 5px 0;
+        }
+    }
+    &__link{
+        margin-top: 1.875rem;
+        font-family: $font-alt;
+        font-weight: 600;
+        text-decoration-line: underline;
+        color: $text-color;
+        display: flex;
+        align-items: center;
+        &:after{
+            content: '';
+            display: block;
+            width: 9px;
+            height: 14px;
+            margin-left: 1rem;
+            background-image: url('../img/customs/chevron-right.svg');
+            background-size: 9px 14px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        @include nsm{
+            margin-top: 1rem;
+            font-size: 14px;
+        }
+    }
+}
+
+.depot {
+    padding: 6rem 0;
+    position: relative;
+    background: $pryme-alt;
+    @include nmd{
+        padding: 3.75rem 0;
+    }
+    @include nsm{
+        padding: 1.25rem 0;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -30px;
+        display: block;
+        height: 30px;
+        width: 33%;
+        background-color: $accent-fresh;
+        z-index: 0;
+        @include nsm{
+            height: 15px;
+            bottom: -15px;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        @include nmd{
+            display: block;
+        }
+    }
+    &__sub-title {
+        margin-bottom: 1.25rem;
+        min-height: 58px;
+        color: $colorw;
+        span {
+            margin-right: 10px;
+        }
+        @include nmd{
+            min-height: auto;
+        }
+        @include nsm{
+            margin-bottom: 1rem;
+        }
+    }
+    &__text {
+        color: $read;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+        &:last-child {
+            margin-bottom: 0rem;
+        }
+    }
+    &__wrap {
+            flex: 0 0 48.35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include nmd{
+                display: block;
+                margin-bottom: 1.875rem;
+            }
+            &:last-child{
+                @include nsm{
+                    margin-bottom: 0;
+                }
+            }
+    }
+    &__content {
+        background: #fff;
+        padding: 1rem;
+        box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 200px;
+        @include nmd{
+            display: block;
+            min-height: auto;
+            padding: 1.25rem 1rem;
+        }
+    }
+    
+}
+
+.marking {
+    padding: 3.75rem 0 5.625rem;
+    @include nsm{
+        padding: 1.825rem 0 3rem;
+    }
+    &__wrapper {
+        display: flex;
+        //justify-content: space-between;
+        align-items: center;
+        @include nmd {
+            flex-direction: column;
+        }
+    }
+    &__col {
+        &--content{
+            flex: 0 0 50%;
+            @include nlg{
+                flex: 0 0 60%;
+            }
+        }
+        &--img-wrapper{
+            margin-left: 9.5%;
+            @include nlg{
+                margin-left: 6.5%;
+            }
+            @include nmd {
+                margin-left: 0;
+                margin-top: 3rem;
+            }
+            @include nsm{
+                margin-top: 1.25rem;
+            }
+        }
+    }
+  
+    &__content {
+        background: #fff;
+        padding: 1.25rem;
+        box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        @include nsm{
+            padding: 1.25rem 1rem;
+        }
+    }
+    &__list {
+        margin-top: 1rem;
+        padding: 0 3rem;
+        @include nsm{
+            padding: 0 1rem;
+        }
+    }
+    &__item {
+        color: $read;
+        font-weight: 400;
+        line-height: 150%;
+        position: relative;
+        margin-bottom: 1rem;
+        &::before {
+            content: ""; 
+            width: 8px; 
+            height: 8px;
+            display: flex;
+            border-radius: 50%;
+            background-color: #129C4D;
+            position: absolute;
+            left: -1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            @include nsm{
+                width: 6px; 
+                height: 6px; 
+            }
+        }
+    }
+    &__sub-title{
+        margin-bottom: 1.25rem;
+    }
+    &__text{
+        &:first-child{
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+    }
+    ol{
+       .marking__item{
+           list-style-type: decimal;
+           &::before{
+               content: none;
+           }
+       } 
+    }
+    &__img {
+        width: 100%;
+        display: block;
+        max-width: 390px;
+    }
+    &__code-desc{
+        font-family: $font-alt;
+        font-style: normal;
+        font-weight: 600;
+        color: #454040;
+        margin-top: 3.75rem;
+        max-width: 390px;
+        @include nsm{
+            margin-top: 1.25rem;
+        }
+    }
+}
+.moscow-wh{
+    &__wrapper{
+        padding: 1.875rem 0;
+        display: flex;
+        align-items: center;
+        background: $pryme-alt;
+        @include nmd {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        @include nsm{
+            padding: 1.25rem 0;
+        }
+    }
+    &__col{
+        flex: 0 0 50%;
+    }
+    &__img{
+        margin-top: -3.875rem;
+        width: 100%;
+        max-width: 950px;
+        height: auto;
+        @include nmd {
+            width: 94%;
+            margin-left: 3%;
+        }
+    }
+    &__content{
+        padding: 1.25rem;
+        max-width: 580px;
+        @include nsm{
+            padding: 0 1.25rem;
+        }
+    }
+    &__title{
+        color: $colorw;
+        margin-bottom: 1.25rem;
+        @include nsm{
+            margin: 1rem 0;
+        }
+    }
+    &__text{
+        background: #FFFFFF;
+        box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        padding: 1rem;
+    }
+}
+    .delivery{
+        margin: 3.75rem 0 2.5rem;
+        @include nsm{
+             margin: 1.25rem 0 2rem;
+        }
+        &__title{
+            margin-bottom: 2.875rem;
+            @include nsm{
+                margin-bottom: 1rem;
+            }
+        }
+        &__img{
+            display: block;
+            width: 80.75%;
+            height: auto;
+            margin-left: auto;
+            @include nlg{
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+    .declaration{
+        margin: 3.75rem 0;
+        @include nsm{
+            margin: 1.25rem 0;
+        }
+        &__title{
+            margin-bottom: 1.25rem;
+            max-width: 776px;
+            @include nsm{
+                margin-bottom: 1rem;
+            }
+        }
+        &__content{
+            max-width: 780px;
+            padding: 1.25rem;
+            background: #FFFFFF;
+            box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            margin-bottom: 3.75rem;
+            @include nsm{
+               padding: 1.25rem 1rem; 
+               margin-bottom: 1.5rem;
+            }
+        }
+        &__text{
+            &:first-child{
+                margin-bottom: 1rem;
+            }
+        }
+        &__list{
+            margin-top: 1.875rem;
+            padding: 0 1.685rem;
+            @include nsm{
+                margin-top: 1rem;
+                padding: 0;
+            }
+            > dt{
+                font-weight: 600;
+                list-style: none;
+                padding: 5px 0;
+                counter-increment: list;
+                margin-top: 1.5rem;
+                &:first-child{
+                    padding: 0 0 10px;
+                    margin-top: 1rem;
+                }
+                &:before{
+                    box-sizing: border-box;
+                    content: counter(list)')';
+                    display: inline-block;
+                    margin-right: 2px;
+                    vertical-align: middle;
+                }
+                @include nsm{
+                    margin-top: 0.8rem;
+                }
+            }
+
+            dd{
+                padding: 5px 0;
+            }
+        }
+        &__sublist{
+            margin-top: 1rem;
+            padding: 0 2.5rem;
+            @include nsm{
+                margin-top: 1rem;
+                padding: 0;
+            }
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                font-weight: 400;
+                line-height: 150%;
+                position: relative;
+                &:not(:last-child){
+                    margin-bottom: 1rem;
+                }
+                &:before{
+                    content: "";
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: #129C4D;
+                    margin-right: 10px;
+                    flex-shrink: 0;
+                }
+            }
+        }
+        &__subtitle{
+            margin-bottom: 3.125rem;
+            @include nsm{
+               margin-bottom: 1.25rem;
+               max-width: 250px;
+            }
+        }
+        &__img-wrap{
+            max-width: 780px;
+            margin: 0 auto 3.75rem;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            @include nsm{
+                margin-bottom: 1.5rem;
+            }
+        }
+  
+    }
+
+
+
+}
+
