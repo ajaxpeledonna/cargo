@@ -303,3 +303,32 @@ jQuery(document).ready(function($){
     // }
     });
 
+// var techElement;
+
+// if($(window).width() < 768){
+//   techElement = '.img-mob';
+// } else{
+//   techElement = '.technology__img';
+// }
+
+  let technology = setInterval(function () {
+  technologySlides();
+  }, 5000);
+
+  function technologySlides() {
+      let elements = $('.hero__img');
+
+      for (let i = 0; i < elements.length; i++) {
+          if (i < 3) {
+              if (elements[i].classList.contains('img-show')) {
+                  elements[i].classList.remove('img-show');
+                  elements[i + 1].classList.add('img-show');
+                  break;
+              }
+          } else {
+              elements[i].classList.remove('img-show');
+              elements[0].classList.add('img-show');
+              break;
+          }
+      }
+  }

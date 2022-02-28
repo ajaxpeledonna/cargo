@@ -1,0 +1,242 @@
+// Миксины
+@import "_mixin";
+// Шрифты
+@import "_fonts";
+// Файл обнуленных стилей
+@import "_nullstyles";
+
+.hero{
+    background: $text-color;
+	position: relative;
+    height: auto;
+    margin-top: 5.25rem;
+	overflow: hidden;
+    @include nsm {
+        background: $text-color;
+    }
+    &__main-wrap{
+        position: relative;
+        z-index: 2;
+        &::after{
+            content: '';
+            display: block;
+            background: $pryme-alt;
+            opacity: 0.4;
+            height: 150%;
+            width: 145%;
+            position: absolute;
+            top: 0;
+            left: -100%;
+            z-index: 1;
+        }
+    }
+	&__text-wrap {
+		padding: 7rem 0 7rem;
+		max-width: 40rem;
+        
+        @include nxl {
+            padding: 3.5rem 0 3rem;
+            max-width: 42rem;
+        }
+        @include nlg {
+            padding: 2rem 0 2rem; 
+            max-width: 40rem;
+        }
+		@include nmd {
+            padding: 1rem 0; 
+        }
+		@include nsm {
+            padding: 2rem 0 6rem; 
+        }
+	}
+
+
+	&__title {
+		font-size: 3rem;
+		color: #fff;
+		font-weight: 700;
+		line-height: 110%;
+		margin-bottom: 1.875rem;
+		text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+        @include nxl {
+            font-size: 2.8rem;
+			margin-bottom: 1.5rem;
+        }
+		@include nlg {
+            font-size: 2rem;
+        }
+		@include nmd {
+            font-size: 1.5rem;
+			margin-bottom: 1rem;
+        }
+		@include nsm {
+            font-size: 1.625rem;
+			text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.8);
+			max-width: 18rem;
+        }
+	}
+	&__text {
+		font-size: 1.125rem;
+		color: $colorw;
+		max-width: 30rem;
+		font-weight: 500;
+		line-height: 156%;
+		text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+        @include nxl {
+            font-size: 1.125rem;
+        }
+		@include nmd {
+            font-size: 1rem;
+        }
+		@include nsm {
+            font-size: 0.75rem;
+			text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.8);
+			max-width: 9rem;
+			line-height: 200%;
+        }
+        
+	}
+	
+	&__from {
+        background: $colorw;
+        padding: 7px 10px;
+        max-width: 12rem;
+    }
+	&__btn {
+		padding: 0.8rem 1rem;
+		background: $accent-bg;
+		font-size: 1.125rem;
+		color: $colorw;
+		font-weight: 500;
+		box-sizing: border-box;
+		transition: 0.2s;
+		@include nmd {
+			font-size: 1rem;
+			padding: 0.6rem 1rem;
+		}
+		@include nsm {
+			margin: 0 auto;
+			display: block;
+			font-size: 0.75rem;
+			font-weight: 700;
+			padding: 0.8rem 1rem;
+		}
+	}
+	&__btn:hover {
+		filter: drop-shadow(0px 0px 10px #EC3737);
+		transition: 0.2s;
+	}
+	&__btn:active {
+		box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.6);
+		transition: 0.2s;
+	}
+	&__info-block {
+		height: auto;
+		max-width: 36rem;
+		padding: 2.5rem 1.5rem 2.5rem 2.5rem;
+		background: $text-color;
+		color: $colorw;
+		margin: 1.25rem 0 7rem 6.25rem;
+		z-index: 3;
+		@include nxl {
+			padding: 2rem 1.5rem 2rem 2rem;
+			margin: 1rem 0 6rem 6.25rem;
+		}
+		@include nlg {
+			margin: 0;
+			padding: 1.5rem 0.5rem 1rem 1rem;
+			max-width: 34rem;
+		}
+		@include nmd {
+			margin: 0.5rem 0 1rem 0rem;
+		}
+		@include nsm {
+			display: none;
+		}
+	}
+	&__info-block-mob {
+		display: none;
+		@include nsm {
+			display: block;
+			height: auto;
+			background: $text-color;
+			color: $colorw;
+			z-index: 3;
+		}
+	}
+	&__mob-content {
+		display: none;
+		@include nsm {
+			display: block;
+			margin-bottom: 2rem;
+			position: relative;
+			z-index: 3;
+		}
+	}
+	&__info-title {
+		font-size: 1.875rem;
+		font-weight: 600;
+		@include nlg {
+			font-size: 1.5rem;
+		}
+		@include nmd {
+			font-size: 1rem;
+		}
+		@include nsm {
+			font-size: 1.25rem;
+			margin-top: 1.5rem;
+		}
+	}
+	&__info-text {
+		margin: 1.75rem 0 2rem;
+		font-size: 1.125rem;
+		@include nlg {
+			font-size: 1rem;
+			margin-top: 1rem;
+		}
+		@include nmd {
+			font-size: 0.82rem;
+			margin: 1rem 0;
+		}
+		@include nsm {
+			font-size: 0.875rem;
+			margin-top: 1rem;
+		}
+	}
+    &__img-wrapper{
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: auto;
+        width: 100%;
+        background: $text-color;  
+        @include nxl{
+            height: 100%;
+            width: auto;
+        }
+        
+    }
+	&__img {
+		position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        // height: 100%;
+        // width: auto;
+        width: 100%;
+        height: auto;
+		display: block;
+        transition: all 0.3s;
+        opacity: 0;
+        @include nxl{
+            height: 100%;
+            width: auto;
+        }
+        &.img-show{
+            opacity: 1;
+            transition: all 0.3s;
+        }
+	}
+
+}

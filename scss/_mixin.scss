@@ -4,7 +4,7 @@
 	}
 }
 @mixin nlg {
-	@media all and (max-width: 1240px) {
+	@media all and (max-width: 1280px) {
 		@content;
 	}
 }
