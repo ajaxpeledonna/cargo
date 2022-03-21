@@ -60,3 +60,53 @@ $('.tab-title>a').click(function(e){
          .parent('ul.tabs').siblings('.tabs-content').children('.content').removeClass('active')
          .eq(index).addClass('active');
   });
+
+  $(".docs-slider").slick({
+
+  // normal options...
+  infinite: true,
+  dots: true,
+  variableWidth: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  slidesToShow: 5,
+  // the magic
+  responsive: [{
+
+      breakpoint: 1440,
+      settings: {
+        slidesToShow: 4,
+        infinite: true
+      }
+
+    }, {
+
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        dots: true
+      }
+
+    }, {
+
+      breakpoint: 500,
+      settings: {
+        dots: false
+      }
+
+    },
+    {
+
+      breakpoint: 300,
+      settings: "unslick" // destroys slick
+
+    }]
+});
+$(".slider-services__body").slick({
+  infinite: false,
+  dots: true,
+  arrows: true,
+  autoplay: false,
+  slidesToShow: 1,
+  slideToScroll: 1
+});

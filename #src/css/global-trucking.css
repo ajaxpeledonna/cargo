@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@100;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@100;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&family=Roboto:wght@300;400;700;900&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -45,7 +45,7 @@ body {
   font-size: 100%;
   line-height: 140%;
   background: #ffffff;
-  font-family: "Raleway", sans-serif;
+  font-family: "Manrope", sans-serif;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -127,7 +127,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: inherit;
   font-size: inherit;
 }
@@ -315,6 +315,63 @@ p {
   clip: rect(0 0 0 0);
 }
 
+.btn {
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+          box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 115%;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  position: relative;
+  cursor: pointer;
+  padding: 12px 5px;
+}
+
+.btn--orange {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F96B30), to(#D51B1B));
+  background: linear-gradient(180deg, #F96B30 0%, #D51B1B 100%);
+}
+
+.btn:hover {
+  -webkit-filter: drop-shadow(0px 0px 10px #EC3737);
+          filter: drop-shadow(0px 0px 10px #EC3737);
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.btn:active, .btn:focus {
+  -webkit-box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+@media all and (max-width: 1023px) {
+  .btn {
+    height: 38px;
+    font-size: 1rem;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .btn {
+    font-size: 0.75rem;
+    font-weight: 700;
+    max-width: 167px;
+  }
+}
+
 .btn-link {
   height: 73px;
   display: -webkit-box;
@@ -326,7 +383,7 @@ p {
   background: #f0f8f7;
   -webkit-box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
           box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+  border-radius: 10px;
   color: #095f71;
   font-weight: 600;
   font-size: 1.125rem;
@@ -335,6 +392,15 @@ p {
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
   position: relative;
+}
+
+.btn-link--orange {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F96B30), to(#D51B1B));
+  background: linear-gradient(180deg, #F96B30 0%, #D51B1B 100%);
+  -webkit-box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+          box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.25);
+  -webkit-filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.25));
 }
 
 .btn-link:hover {
@@ -696,14 +762,14 @@ p {
 }
 
 .global-trucking .docs {
-  background-color: #0a7990;
+  background-color: #0a7991;
   padding: 3.75rem 0;
   position: relative;
   z-index: 0;
   min-height: 900px;
 }
 
-@media all and (max-width: 1240px) {
+@media all and (max-width: 1280px) {
   .global-trucking .docs {
     min-height: auto;
   }
@@ -961,7 +1027,7 @@ p {
   margin-left: 3.75rem;
 }
 
-@media all and (max-width: 1240px) {
+@media all and (max-width: 1280px) {
   .global-trucking .ved__wrap {
     max-width: 45%;
   }
@@ -1046,7 +1112,7 @@ p {
   padding-bottom: 3.75rem;
 }
 
-@media all and (max-width: 1240px) {
+@media all and (max-width: 1280px) {
   .global-trucking .price {
     background-position: 600px center;
   }
@@ -1176,7 +1242,7 @@ p {
 .global-trucking .depot {
   padding: 6rem 0;
   position: relative;
-  background: #0a7990;
+  background: #0a7991;
 }
 
 @media all and (max-width: 1023px) {
@@ -1350,7 +1416,7 @@ p {
           flex: 0 0 50%;
 }
 
-@media all and (max-width: 1240px) {
+@media all and (max-width: 1280px) {
   .global-trucking .marking__col--content {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 60%;
@@ -1362,7 +1428,7 @@ p {
   margin-left: 9.5%;
 }
 
-@media all and (max-width: 1240px) {
+@media all and (max-width: 1280px) {
   .global-trucking .marking__col--img-wrapper {
     margin-left: 6.5%;
   }
@@ -1483,7 +1549,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #0a7990;
+  background: #0a7991;
 }
 
 @media all and (max-width: 1023px) {
@@ -1581,7 +1647,7 @@ p {
   margin-left: auto;
 }
 
-@media all and (max-width: 1240px) {
+@media all and (max-width: 1280px) {
   .global-trucking .delivery__img {
     width: 100%;
     margin-left: 0;
