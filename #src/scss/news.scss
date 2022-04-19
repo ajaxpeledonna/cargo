@@ -1,0 +1,96 @@
+// Миксины
+@import "_mixin";
+// Шрифты
+@import "_fonts";
+// Файл обнуленных стилей
+@import "_nullstyles";
+
+.dark-theme {
+  --text-color: #f0f8f7;
+  --bkg-color: #0a7991;
+  --anchor-color: #f0f8f7;
+    .slick-dots li {
+        background: $pryme-alt;
+        border: 1px solid $colorw;
+    }
+    .slick-dots .slick-active {
+        background: $colorw;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        background-image: url('../img/customs/arrow-right-white.svg');
+    }
+    
+}
+.light-theme{
+  --text-color: #0a7991;
+  --bkg-color-w: #ffffff;
+  --bkg-color-lb: #f0f8f7;
+  --anchor-color: #0a7991;
+   .slick-dots li {
+        background: $colorw;
+        border: 1px solid $pryme-alt;
+    }
+    .slick-dots .slick-active {
+        background: $pryme-alt;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        background-image: url('../img/arrow-right.svg');
+    }
+}
+
+.news {
+    padding: 3.75rem 0;
+    @include nsm {
+        padding: 1.875rem 0;
+    }
+    &.light-theme{
+        background: var(--bkg-color-w);
+        color: var(--text-color);
+		.news__title, .news__sub-title {
+			color: #454040;
+		}
+        .news__text {
+            color: #000;
+        }
+    }
+    &.dark-theme{
+        background: var(--bkg-color);
+        color: var(--text-color);
+    }
+    &__title {
+        font-size: 2.125rem;
+        font-weight: 800;
+        max-width: 42rem;
+        line-height: 130%;
+        margin-bottom: 1.25rem;
+        @include nsm {
+            font-size: 1.0625rem;
+            margin-bottom: 0.7rem;
+        }
+    }
+    &__sub-title {
+        font-weight: 400;
+        @include nsm {
+            font-size: 0.8125rem;
+            line-height: 144%;
+        }
+    }
+    &__text-wrap {
+        margin-top: 1.5rem;
+    }
+    &__text{
+        font-weight: 300;
+        @include nsm {
+            font-size: 0.8125rem;
+            line-height: 180%;
+        }
+    }
+    &__img-wrap {
+        margin-top: 1rem;
+    }
+    &__img {
+        width: 100%;
+    }
+}

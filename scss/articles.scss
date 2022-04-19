@@ -1,0 +1,137 @@
+// Миксины
+@import "_mixin";
+// Шрифты
+@import "_fonts";
+// Файл обнуленных стилей
+@import "_nullstyles";
+
+.dark-theme {
+  --text-color: #f0f8f7;
+  --bkg-color: #0a7991;
+  --anchor-color: #f0f8f7;
+    .slick-dots li {
+        background: $pryme-alt;
+        border: 1px solid $colorw;
+    }
+    .slick-dots .slick-active {
+        background: $colorw;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        background-image: url('../img/customs/arrow-right-white.svg');
+    }
+    
+}
+.light-theme{
+  --text-color: #0a7991;
+  --bkg-color-w: #ffffff;
+  --bkg-color-lb: #f0f8f7;
+  --anchor-color: #0a7991;
+   .slick-dots li {
+        background: $colorw;
+        border: 1px solid $pryme-alt;
+    }
+    .slick-dots .slick-active {
+        background: $pryme-alt;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        background-image: url('../img/arrow-right.svg');
+    }
+}
+.articles{
+	padding: 3rem 0 ;
+	@include nsm{
+		padding: 1.5rem 0;
+	}
+	 &.light-theme{
+        background: var(--bkg-color-lb);
+        color: var(--text-color);
+		.articles__item{
+			color: #454040;
+		}
+		.articles__link{
+			color: var(--text-color);
+			border-bottom: 1px solid $pryme-alt;
+		}
+    }
+    &.dark-theme{
+        background: var(--bkg-color);
+        color: var(--text-color);
+		.articles__item{
+			color: var(--anchor-color);
+		}
+		.articles__link{
+			border-bottom: 1px solid $colorw;
+			color: var(--anchor-color);
+		}
+    }
+	&__title{
+		font-size: 2.5rem;
+		font-weight: 700;
+		font-family: $font-alt;
+		margin-bottom: 2.75rem;
+		@include nmd {
+			font-size: 2rem;
+		}
+		@include nsm {
+			font-size: 1.2rem;
+			margin-bottom: 1rem;
+		}
+	}
+	&__items{
+		max-width: 980px;
+		margin: 0 auto;
+	}
+	&__item{
+		display: flex;
+		justify-content: space-between;
+		&:not(:last-child){
+			margin-bottom: 35px;
+			@include nsm{
+				margin-bottom: 30px;
+			}
+		}
+		@include nsm{
+			display: block;
+		}
+	}
+	&__item-img{
+		flex: 0 0 38.776%;
+		margin-right: 20px;
+		max-height: 195px;
+		filter: drop-shadow(1px 1px 15px rgba(0, 0, 0, 0.4));
+		overflow: hidden;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@include nsm{
+			max-height: 148px;
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+	}
+	&__item-title{
+		font-family: $font-manrope;
+		font-weight: 600;
+		font-size: 22px;
+		line-height: 30px;
+		margin-bottom: 1rem;
+		@include nsm{
+			font-size: 15px;
+			line-height: 20px;
+		}
+	}
+	&__item-text{
+		font-family: $font-manrope;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 22px;
+		@include nsm{
+			font-size: 0.875rem;
+    		line-height: 190%;
+		}
+	}
+}
