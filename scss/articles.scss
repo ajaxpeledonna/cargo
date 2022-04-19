@@ -23,8 +23,8 @@
     
 }
 .light-theme{
-  --text-color: #0a7991;
-  --bkg-color-w: #ffffff;
+  --text-color: #0a7991;  
+  --bkg-color-w: #ffffff;  
   --bkg-color-lb: #f0f8f7;
   --anchor-color: #0a7991;
    .slick-dots li {
@@ -39,7 +39,7 @@
         background-image: url('../img/arrow-right.svg');
     }
 }
-.articles{
+.articles{    
 	padding: 3rem 0 ;
 	@include nsm{
 		padding: 1.5rem 0;
@@ -51,7 +51,7 @@
 			color: #454040;
 		}
 		.articles__link{
-			color: var(--text-color);
+			color: var(--text-color);  
 			border-bottom: 1px solid $pryme-alt;
 		}
     }
@@ -134,4 +134,94 @@
     		line-height: 190%;
 		}
 	}
+}
+
+.pagination {
+	padding: 0.5rem 0 6rem;
+	&.light-theme{
+        background: var(--bkg-color-lb);
+        color: var(--text-color);
+		.pagination__btn {
+			background: var(--text-color);
+			color: var(--bkg-color-w);
+		}
+		.pagination__num {
+			color: var(--text-color);
+			border: 1px solid #0A7991;
+		}
+		.pagination__btn:hover {
+			filter: drop-shadow(0px 0px 5px grey);
+			transition: 0.3s;
+		}
+		.pagination__btn:active {
+			box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.4);
+		}
+		.pagination__num:active {
+			box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.4);
+		}
+		.pagination__num:hover {
+			filter: drop-shadow(0px 0px 2px grey);
+			transition: 0.3s;
+		}
+    }
+    &.dark-theme{
+        background: var(--bkg-color);
+        color: var(--text-color);
+		.pagination__btn {
+			background: var(--text-color);
+			color: var(--bkg-color);
+		}
+		.pagination__num {
+			color: var(--bkg-color-w);
+			border: 1px solid #fff;
+		}
+		.pagination__btn:hover {
+			filter: drop-shadow(0px 0px 5px #fafafa);
+		}
+		.pagination__btn:active {
+			box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.4);
+		}
+		.pagination__num:hover {
+			filter: drop-shadow(0px 0px 5px #fafafa);
+		}
+		.pagination__num:active {
+			box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.4);
+		}
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+		li {
+			margin: 0 2.5px;
+		}
+    }
+	
+	&__btn{
+		font-family: $font-manrope;
+		font-weight: 500;
+		font-size: 14px;
+		border-radius: 3px;
+		padding: 0 12px;
+		min-height: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: 0.3s;
+	}   
+    &__num {
+		height: 24px;
+		width: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+        font-family: $font-alt;
+        font-weight: 600;
+        font-size: 14px; 
+		box-sizing: border-box;
+		border-radius: 5px;
+		transition: 0.3s;
+    }
+    
 }
